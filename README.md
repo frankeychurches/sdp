@@ -1,2 +1,2 @@
 # sdp
-SDP practices for sharing
+SDP practices for sharing between partners
