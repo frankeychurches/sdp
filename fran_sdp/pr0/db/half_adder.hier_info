@@ -1,0 +1,9 @@
+|half_adder_ver
+S << comb.DB_MAX_OUTPUT_PORT_TYPE
+C << comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
