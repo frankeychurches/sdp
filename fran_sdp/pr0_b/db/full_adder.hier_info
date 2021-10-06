@@ -1,4 +1,45 @@
-|full_adder
+|adder_4b
+sum[0] <= full_adder_v1:fa0.port3
+sum[1] <= full_adder_v1:fa1.port3
+sum[2] <= full_adder_v1:fa2.port3
+sum[3] <= full_adder_v1:fa3.port3
+c_out <= full_adder_v1:fa3.port4
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+c_in => c_in.IN1
+
+
+|adder_4b|full_adder_v1:fa0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_4b|full_adder_v1:fa1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_4b|full_adder_v1:fa2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_4b|full_adder_v1:fa3
 a => Add0.IN1
 b => Add0.IN2
 cin => Add1.IN4
