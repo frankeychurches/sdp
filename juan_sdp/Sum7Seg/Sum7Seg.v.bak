@@ -1,0 +1,14 @@
+module Sum7Seg (
+    input [3:0] a,b;
+    input cin;
+    output reg [0:6] segment;
+);
+
+wire [3:0] sum;
+wire cout;
+
+adder_4b adder0 (sum, c_out, a, b, cin);
+hex7seg display0 (sum, segment);
+
+
+endmodule

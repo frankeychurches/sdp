@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Oct 09 19:20:53 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Sum7Seg
+Top-level Entity Name : Sum7Seg
+Family : Cyclone IV E
+Total logic elements : 15
+    Total combinational functions : 15
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 16
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,38 @@
+|lights_game
+clk => clk.IN1
+reset => reset.IN1
+enable => enable.IN1
+up_down => up_down.IN1
+count[0] << n_counter:counter_16.port4
+count[1] << n_counter:counter_16.port4
+count[2] << n_counter:counter_16.port4
+count[3] << n_counter:counter_16.port4
+TC << n_counter:counter_16.port5
+
+
+|lights_game|n_counter:counter_16
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+enable => count[3]~reg0.ENA
+enable => count[2]~reg0.ENA
+enable => count[1]~reg0.ENA
+enable => count[0]~reg0.ENA
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => TC.IN1
+up_down => TC.IN1
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TC <= TC.DB_MAX_OUTPUT_PORT_TYPE
+
+

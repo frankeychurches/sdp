@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Counter/simulation/qsim
+vhard_block
+Z1 !s110 1633805777
+!i10b 1
+!s100 J;a90hmR?34cHGIWb4X?Q3
+IH<@]:nE42_LSj<mZWN8kW3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1633805776
+Z4 8n_counter.vo
+Z5 Fn_counter.vo
+L0 426
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1633805777.000000
+Z8 !s107 n_counter.vo|
+Z9 !s90 -work|work|n_counter.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vn_counter
+R1
+!i10b 1
+!s100 F74I`8Gg^WZZDLj6J<hD`2
+InF6nz5AWa28mPMXI4WS3]0
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vn_counter_vlg_vec_tst
+R1
+!i10b 1
+!s100 83Dn>TzQgLj;^NCVkUQ9V1
+I3UhcUJnH00I^]^:KK7Gdz1
+R2
+R0
+w1633805775
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11

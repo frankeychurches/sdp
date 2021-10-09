@@ -1,0 +1,85 @@
+|Sum7Seg
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+segment[0] <= hex7seg:display0.port1
+segment[1] <= hex7seg:display0.port1
+segment[2] <= hex7seg:display0.port1
+segment[3] <= hex7seg:display0.port1
+segment[4] <= hex7seg:display0.port1
+segment[5] <= hex7seg:display0.port1
+segment[6] <= hex7seg:display0.port1
+
+
+|Sum7Seg|adder_4b:adder0
+sum[0] <= full_adder_v1:fa0.port3
+sum[1] <= full_adder_v1:fa1.port3
+sum[2] <= full_adder_v1:fa2.port3
+sum[3] <= full_adder_v1:fa3.port3
+c_out <= full_adder_v1:fa3.port4
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+c_in => c_in.IN1
+
+
+|Sum7Seg|adder_4b:adder0|full_adder_v1:fa0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sum7Seg|adder_4b:adder0|full_adder_v1:fa1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sum7Seg|adder_4b:adder0|full_adder_v1:fa2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sum7Seg|adder_4b:adder0|full_adder_v1:fa3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sum7Seg|hex7seg:display0
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[1] => Decoder1.IN2
+hex[2] => Decoder0.IN1
+hex[2] => Decoder1.IN1
+hex[3] => Decoder0.IN0
+hex[3] => Decoder1.IN0
+segment[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

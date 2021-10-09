@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Shift_reg/simulation/qsim
+vhard_block
+Z1 !s110 1633805339
+!i10b 1
+!s100 O`n@AQYcYZ`SVGb]m5PUo2
+IE>T?z>z2X6E6Idge5WgV31
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1633805338
+Z4 8n_shift_reg.vo
+Z5 Fn_shift_reg.vo
+L0 550
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1633805339.000000
+Z8 !s107 n_shift_reg.vo|
+Z9 !s90 -work|work|n_shift_reg.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vn_shift_reg
+R1
+!i10b 1
+!s100 C4RJig5hK^AiV?a9LEXXN1
+I[TeB<Ydz^];]SiDdeSA182
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vn_shift_reg_vlg_vec_tst
+R1
+!i10b 1
+!s100 BRBlJ_>?Pk6:RfcPWb:BX0
+Igz:Hz]7A2CM:^X6O>gA2P0
+R2
+R0
+w1633805337
+8shift_reg.vwf.vt
+Fshift_reg.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 shift_reg.vwf.vt|
+!s90 -work|work|shift_reg.vwf.vt|
+!i113 1
+R10
+R11

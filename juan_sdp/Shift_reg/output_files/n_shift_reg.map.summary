@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Oct 09 20:45:21 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : n_shift_reg
+Top-level Entity Name : n_shift_reg
+Family : Cyclone IV E
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 7
+Total registers : 7
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
