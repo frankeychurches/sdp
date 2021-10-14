@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat Oct 09 20:55:35 2021
+Analysis & Synthesis Status : Successful - Thu Oct 14 12:12:48 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : n_counter
 Top-level Entity Name : n_counter
 Family : Cyclone IV E
-Total logic elements : 7
-    Total combinational functions : 7
-    Dedicated logic registers : 4
-Total registers : 4
-Total pins : 9
+Total logic elements : 3
+    Total combinational functions : 3
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 7
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

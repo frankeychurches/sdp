@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Counter/simulation/qsim
 vhard_block
-Z1 !s110 1633805777
+Z1 !s110 1634206472
 !i10b 1
-!s100 J;a90hmR?34cHGIWb4X?Q3
-IH<@]:nE42_LSj<mZWN8kW3
+!s100 Sk:BFZ0F@9i[XJYJ[[IiW1
+I2cGGK]1k0OG7=Hj:6n0DX2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1633805776
+Z3 w1634206471
 Z4 8n_counter.vo
 Z5 Fn_counter.vo
-L0 426
+L0 275
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1633805777.000000
+Z7 !s108 1634206472.000000
 Z8 !s107 n_counter.vo|
 Z9 !s90 -work|work|n_counter.vo|
 !i113 1
@@ -32,8 +32,8 @@ Z11 tCvgOpt 0
 vn_counter
 R1
 !i10b 1
-!s100 F74I`8Gg^WZZDLj6J<hD`2
-InF6nz5AWa28mPMXI4WS3]0
+!s100 S75375lEM7>15Nc3D;PUf3
+I52aMPjDNBI<4I6>SQVV8;3
 R2
 R0
 R3
@@ -53,11 +53,11 @@ R11
 vn_counter_vlg_vec_tst
 R1
 !i10b 1
-!s100 83Dn>TzQgLj;^NCVkUQ9V1
-I3UhcUJnH00I^]^:KK7Gdz1
+!s100 YJcjgaNQXhC<WIEd8>R:z0
+I5^^]GZ<GE9V`0[:ENfLzj0
 R2
 R0
-w1633805775
+w1634206470
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

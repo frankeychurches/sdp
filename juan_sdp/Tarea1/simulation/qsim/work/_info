@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/simulation/qsim
 vhard_block
-Z1 !s110 1634201537
+Z1 !s110 1634206776
 !i10b 1
-!s100 ZGR[@0hz[[6G[3?:6KT@o2
-ISz@2o2b<FDWz9XhALES=W1
+!s100 ZG71;EeaP>A<K;B7PdZ8Q3
+Io7X10USdGP17FfajaUfA_1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1634201536
+Z3 w1634206775
 Z4 8lights_game.vo
 Z5 Flights_game.vo
-L0 1720
+L0 1486
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1634201537.000000
+Z7 !s108 1634206776.000000
 Z8 !s107 lights_game.vo|
 Z9 !s90 -work|work|lights_game.vo|
 !i113 1
@@ -32,8 +32,8 @@ Z11 tCvgOpt 0
 vlights_game
 R1
 !i10b 1
-!s100 7WI9go92_<g]GW8oMflQe2
-I2PS[dFY=8=?:2W3e_SmS11
+!s100 L96QOTB034EYCd=M]K0EJ3
+IZ7?keJUDaY^f8<=if;09D3
 R2
 R0
 R3
@@ -57,7 +57,7 @@ R1
 IgcXZF[8iJ;kQWmnEm=VBV3
 R2
 R0
-w1634201535
+w1634206773
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

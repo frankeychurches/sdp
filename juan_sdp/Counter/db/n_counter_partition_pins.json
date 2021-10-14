@@ -12,14 +12,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "count[2]",
-					"strict" : false
-				},
-				{
-					"name" : "count[3]",
-					"strict" : false
-				},
-				{
 					"name" : "TC",
 					"strict" : false
 				},
@@ -32,11 +24,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "enable",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "enable",
 					"strict" : false
 				}
 			]

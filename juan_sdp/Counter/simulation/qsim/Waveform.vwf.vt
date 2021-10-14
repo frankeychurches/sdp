@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/09/2021 20:56:15"
+// Generated on "10/14/2021 12:14:30"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          n_counter
 // 
@@ -35,7 +35,7 @@ reg reset;
 reg up_down;
 // wires                                               
 wire TC;
-wire [3:0] count;
+wire [1:0] count;
 
 // assign statements (if any)                          
 n_counter i1 (

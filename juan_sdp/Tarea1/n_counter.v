@@ -1,6 +1,6 @@
 module n_counter(clk, reset, enable, up_down, count, TC);
 
-parameter end_count = 15; //Maximum number to count to
+parameter end_count = 16; //Maximum number to count to plus 1
 
 `include "MathFun.vh"
 

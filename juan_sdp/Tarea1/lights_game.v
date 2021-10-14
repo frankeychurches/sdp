@@ -1,7 +1,7 @@
 module lights_game(clk, reset, enable, up_down, leds);
 
 //parameter end_count = 12500000; //Maximum number to count to
-parameter end_count = 3; //Maximum number to count to
+parameter end_count = 4; //Maximum number to count to
 
 `include "MathFun.vh"
 
@@ -37,8 +37,10 @@ case (PR)
     14'b11111111111100 : leds = 8'b00010000; 
     14'b11111111111110 : leds = 8'b00100000; 
     14'b11111111111111 : leds = 8'b01000000; 
-    default: leds = 8'b11111111;
+    default: leds = 8'b00000000;
 endcase
+
+//Tengo que usar un assign porque el registro usa flip flops y va retrasado una unidad 
 
 endmodule
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lights_game
-Thu Oct 14 10:51:31 2021
+Thu Oct 14 12:18:57 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 14 10:51:31 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 14 12:18:57 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; lights_game                                 ;
 ; Top-level Entity Name              ; lights_game                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 55                                          ;
-;     Total combinational functions  ; 55                                          ;
+; Total logic elements               ; 42                                          ;
+;     Total combinational functions  ; 42                                          ;
 ;     Dedicated logic registers      ; 24                                          ;
 ; Total registers                    ; 24                                          ;
 ; Total pins                         ; 12                                          ;
@@ -184,16 +184,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 55        ;
+; Estimated Total logic elements              ; 42        ;
 ;                                             ;           ;
-; Total combinational functions               ; 55        ;
+; Total combinational functions               ; 42        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 23        ;
-;     -- 3 input functions                    ; 17        ;
-;     -- <=2 input functions                  ; 15        ;
+;     -- 4 input functions                    ; 17        ;
+;     -- 3 input functions                    ; 9         ;
+;     -- <=2 input functions                  ; 16        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 55        ;
+;     -- normal mode                          ; 42        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 24        ;
@@ -206,8 +206,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 24        ;
-; Total fan-out                               ; 257       ;
-; Average fan-out                             ; 2.50      ;
+; Total fan-out                               ; 211       ;
+; Average fan-out                             ; 2.34      ;
 +---------------------------------------------+-----------+
 
 
@@ -216,7 +216,7 @@ refer to the applicable agreement for further details.
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
-; |lights_game                ; 55 (38)             ; 24 (8)                    ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |lights_game                        ; lights_game ; work         ;
+; |lights_game                ; 42 (25)             ; 24 (8)                    ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |lights_game                        ; lights_game ; work         ;
 ;    |n_counter:counter_leds| ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game|n_counter:counter_leds ; n_counter   ; work         ;
 ;    |n_shift_reg:reg_14|     ; 15 (15)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game|n_shift_reg:reg_14     ; n_shift_reg ; work         ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
@@ -252,7 +252,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; end_count      ; 3     ; Signed Integer                                     ;
+; end_count      ; 4     ; Signed Integer                                     ;
 ; N              ; 2     ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -263,7 +263,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------+
 ; Parameter Name ; Value ; Type                                       ;
 +----------------+-------+--------------------------------------------+
-; end_count      ; 3     ; Signed Integer                             ;
+; end_count      ; 4     ; Signed Integer                             ;
 ; N              ; 2     ; Signed Integer                             ;
 +----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -298,14 +298,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 14                          ;
 ;     ENA SCLR          ; 1                           ;
 ;     plain             ; 9                           ;
-; cycloneiii_lcell_comb ; 55                          ;
-;     normal            ; 55                          ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 23                          ;
+; cycloneiii_lcell_comb ; 42                          ;
+;     normal            ; 42                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 17                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.84                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -324,7 +324,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Oct 14 10:51:18 2021
+    Info: Processing started: Thu Oct 14 12:18:44 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lights_game -c lights_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -345,14 +345,14 @@ Info (12128): Elaborating entity "n_shift_reg" for hierarchy "n_shift_reg:reg_14
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 55 logic cells
+    Info (21061): Implemented 42 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Thu Oct 14 10:51:31 2021
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Thu Oct 14 12:18:57 2021
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Total CPU time (on all processors): 00:00:29
 
 
