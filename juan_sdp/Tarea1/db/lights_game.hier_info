@@ -3,14 +3,14 @@ clk => clk.IN2
 reset => reset.IN2
 enable => enable.IN1
 up_down => up_down.IN1
-leds[0] <= leds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[1] <= leds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[2] <= leds[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[3] <= leds[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[4] <= leds[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[5] <= leds[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[6] <= leds[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-leds[7] <= leds[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[0] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= leds.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lights_game|n_counter:counter_leds
