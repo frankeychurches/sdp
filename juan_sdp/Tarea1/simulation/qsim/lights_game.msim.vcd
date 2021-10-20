@@ -3,7 +3,7 @@ $comment
 		vcd file lights_game.msim.vcd -direction
 $end
 $date
-	Thu Oct 14 11:37:14 2021
+	Tue Oct 19 17:30:31 2021
 $end
 $version
 	ModelSim Version 10.5b

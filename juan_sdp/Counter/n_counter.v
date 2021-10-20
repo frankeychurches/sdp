@@ -1,6 +1,6 @@
 module n_counter(clk, reset, enable, up_down, count, TC);
 
-parameter end_count = 3; //Maximum number to count to
+parameter end_count = 16; //Maximum number to count to plus 1
 
 `include "MathFun.vh"
 
@@ -12,17 +12,17 @@ output TC;
 
 always @(posedge clk) 
 begin
-
+	 if (!reset) 
+		count <= 0;
+		
+	else
     if (enable && clk)
-        if (!reset) 
-            count <= 0;
-        else
             if (up_down)
                 count <= count + 1;
             else
                 count <= count - 1;
     else
-        count <=count;  
+        count <= count;  
 end
 
 assign TC = (up_down && count == end_count - 1)? 1 : (!up_down && !count)? 1 : 0; 

@@ -12,17 +12,17 @@ output TC;
 
 always @(posedge clk) 
 begin
-
+	 if (!reset) 
+		count <= 0;
+		
+	else
     if (enable && clk)
-        if (!reset) 
-            count <= 0;
-        else
             if (up_down)
                 count <= count + 1;
             else
                 count <= count - 1;
     else
-        count <=count;  
+        count <= count;  
 end
 
 assign TC = (up_down && count == end_count - 1)? 1 : (!up_down && !count)? 1 : 0; 

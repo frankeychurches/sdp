@@ -1,6 +1,6 @@
 Flow report for lights_game
-Thu Oct 14 11:37:12 2021
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Tue Oct 19 19:05:57 2021
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
 ---------------------
@@ -37,26 +37,26 @@ refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Flow Summary                                                                     ;
-+------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 14 11:37:12 2021       ;
-; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                      ; lights_game                                 ;
-; Top-level Entity Name              ; lights_game                                 ;
-; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE115F29C7                               ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 49 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 49 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 16 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 16                                          ;
-; Total pins                         ; 12 / 529 ( 2 % )                            ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-+------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Flow Summary                                                                                  ;
++------------------------------------+----------------------------------------------------------+
+; Flow Status                        ; Successful - Tue Oct 19 19:05:54 2021                    ;
+; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                      ; lights_game                                              ;
+; Top-level Entity Name              ; lights_game                                              ;
+; Family                             ; Cyclone IV E                                             ;
+; Device                             ; EP4CE115F29C7                                            ;
+; Timing Models                      ; Final                                                    ;
+; Total logic elements               ; 106 / 114,480 ( < 1 % )                                  ;
+;     Total combinational functions  ; 106 / 114,480 ( < 1 % )                                  ;
+;     Dedicated logic registers      ; 38 / 114,480 ( < 1 % )                                   ;
+; Total registers                    ; 38                                                       ;
+; Total pins                         ; 12 / 529 ( 2 % )                                         ;
+; Total virtual pins                 ; 0                                                        ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                                    ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                          ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                            ;
++------------------------------------+----------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/14/2021 11:35:31 ;
+; Start date & time ; 10/19/2021 19:05:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lights_game         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 260097671512790.163420413018264        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 335035121444.163466312907308           ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -93,15 +93,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4763 MB             ; 00:00:30                           ;
-; Fitter                    ; 00:00:15     ; 1.0                     ; 5683 MB             ; 00:00:24                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4678 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4833 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4626 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4626 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:37     ; --                      ; --                  ; 00:01:04                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4787 MB             ; 00:00:17                           ;
+; Fitter                    ; 00:00:13     ; 1.0                     ; 5884 MB             ; 00:00:20                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4683 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4867 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:41                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,14 +106,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; dise05           ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; dise05           ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; dise05           ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; dise05           ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
@@ -128,10 +120,6 @@ quartus_map --read_settings_files=on --write_settings_files=off lights_game -c l
 quartus_fit --read_settings_files=off --write_settings_files=off lights_game -c lights_game
 quartus_asm --read_settings_files=off --write_settings_files=off lights_game -c lights_game
 quartus_sta lights_game -c lights_game
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lights_game -c lights_game --vector_source="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/Waveform.vwf" --testbench_file="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/simulation/qsim/Waveform.vwf.vt"
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/simulation/qsim/" lights_game -c lights_game
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lights_game -c lights_game --vector_source="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/Waveform.vwf" --testbench_file="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/simulation/qsim/Waveform.vwf.vt"
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/simulation/qsim/" lights_game -c lights_game
 
 
 
