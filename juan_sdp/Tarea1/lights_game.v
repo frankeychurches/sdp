@@ -1,53 +1,86 @@
-module lights_game(clk, reset, enable, up_down, leds);
+// --------------------------------------------------------------------
+// Universitat Politècnica de València
+// Departamento de Ingeniería Electrónica
+// --------------------------------------------------------------------
+// Sistemas Digitales Programables MUISE
+// Curso 2021 - 2022
+// --------------------------------------------------------------------
+// Nombre del archivo: lights_game.v
+//
+// Descripción: Este código de verilog implementa un juego de luces
+// del coche fantástico. Las entradas y salidas de este programa son:
+// 1. clk -> Reloj activo por flanco de subida  (Entrada)
+// 2. reset -> Reset activo a nivel bajo (Entrada)
+// 3. enable -> Habilitador de cuenta y funcionamiento (Entrada)
+// 4. leds -> Vector de 8 leds (salida)
 
-parameter end_count = 12500000; //Maximum number to count to
-//parameter end_count = 4; //Maximum number to count to
+//
+// --------------------------------------------------------------------
+// Versión: V1.0| Fecha Modificación: 21/10/2021
+//
+// Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
+// Ordenador de trabajo: Portátil
+//
+// --------------------------------------------------------------------
+
+
+module lights_game(clk, reset, enable, leds);
 
 `include "MathFun.vh"
 
-parameter N = CLogB2(end_count - 1);
-
-input clk, reset, enable, up_down;
+input clk, reset, enable;
 output [7:0] leds;
 
 reg [7:0] leds_aux;
-wire [N-1:0] count;
-wire TC, shift_in, shift_out;
-wire [13:0] PR;
+wire TC, shift_out;
+wire [6:0] PR;
 
-assign shift_in = ~shift_out;
+n_counter #(.fin_cuenta(4)) counter_leds  //Sólo para Simulación
+//n_counter #(.fin_cuenta(12500000)) counter_leds 
+(
+	.clk(clk), 
+	.reset(reset), 
+	.enable(enable), 
+	.up_down(1), 
+	.count(), 
+	.TC(TC)
+);
 
-n_counter #(end_count) counter_leds (clk, reset, enable, up_down, count, TC);
+n_shift_reg #(.N(7)) reg_7 
+(
+	.clk(clk),
+	.rst(reset), 
+	.enable(TC), 
+	.SR_in(~shift_out), 
+	.PR(PR), 
+	.SR_out(shift_out)
+);
 
-n_shift_reg #(14) reg_14 (clk, reset, TC, shift_in, PR, shift_out);
-
-
-always @(clk)
+// Lógica de salida de los leds en función de los estados 
+always @(posedge clk)
 
 	if (!reset)
 		leds_aux = 0;
-		
 	else
-		if (PR == 14'b10000000000000 || PR == ~14'b10000000000000)
-			leds_aux[7] = 1;
-		else if (PR == 14'b11000000000000 || PR == ~14'b11000000000000 || PR == 14'b11111111111111)
-			leds_aux[6] = 1;
-		else if (PR == 14'b11100000000000 || PR == ~14'b11100000000000 || PR == 14'b11111111111110 || PR == ~14'b11111111111110)
-			leds_aux[5] = 1;
-		else if (PR == 14'b11110000000000 || PR == ~14'b11110000000000 || PR == 14'b11111111111100 || PR == ~14'b11111111111100)
-			leds_aux[4] = 1;
-		else if (PR == 14'b11111000000000 || PR == ~14'b11111000000000 || PR == 14'b11111111111000 || PR == ~14'b11111111111000)
-			leds_aux[3] = 1;
-		else if (PR == 14'b11111100000000 || PR == ~14'b11111100000000 || PR == 14'b11111111110000 || PR == ~14'b11111111110000)
-			leds_aux[2] = 1;
-		else if (PR == 14'b11111110000000 || PR == ~14'b11111110000000 || PR == 14'b11111111100000 || PR == ~14'b11111111100000)
-			leds_aux[1] = 1;
-		else if (PR == 14'b11111111000000 || PR == ~14'b11111111000000)
-			leds_aux[0] = 1;
-		else
-			leds_aux[7] = 1;
+		case (PR)
+			7'b0000000: leds_aux = 1 << 7;
+			7'b1000000: leds_aux = 1 << 6;
+			7'b1100000: leds_aux = 1 << 5;
+			7'b1110000: leds_aux = 1 << 4;
+			7'b1111000: leds_aux = 1 << 3;
+			7'b1111100: leds_aux = 1 << 2;
+			7'b1111110: leds_aux = 1 << 1;
+			7'b1111111: leds_aux = 1 << 0;
+			7'b0111111: leds_aux = 1 << 1;
+			7'b0011111: leds_aux = 1 << 2;
+			7'b0001111: leds_aux = 1 << 3;
+			7'b0000111: leds_aux = 1 << 4;
+			7'b0000011: leds_aux = 1 << 5;
+			7'b0000001: leds_aux = 1 << 6;
+			default: leds_aux = 0;
+		endcase
 
-
+// Asignaciones de los leds
 assign leds[7] = leds_aux[7];
 assign leds[6] = leds_aux[6];
 assign leds[5] = leds_aux[5];

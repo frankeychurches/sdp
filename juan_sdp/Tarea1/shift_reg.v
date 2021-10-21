@@ -1,3 +1,31 @@
+// --------------------------------------------------------------------
+// Universitat Politècnica de València
+// Departamento de Ingeniería Electrónica
+// --------------------------------------------------------------------
+// Sistemas Digitales Programables MUISE
+// Curso 2021 - 2022
+// --------------------------------------------------------------------
+// Nombre del archivo: shift_reg.v
+//
+// Descripción: Este código de verilog implementa un contador registro de 
+// desplazamiento a la derecha parametrizable de N bits. Las entradas y 
+// salidas de este programa son:
+// 1. clk -> Reloj activo por flanco de subida  (Entrada)
+// 2. reset -> Reset activo a nivel bajo (Entrada)
+// 3. enable -> Habilitador de cuenta y funcionamiento (Entrada)
+// 4. SR_in -> Nuevo bit a insertar en el registro (Entrada)
+// 5. PR -> Valor actual del registro (Salida)
+// 6. SR_out ->  Bit de salida del registro (salida)
+
+//
+// --------------------------------------------------------------------
+// Versión: V1.0| Fecha Modificación: 21/10/2021
+//
+// Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
+// Ordenador de trabajo: Portátil
+//
+// -------------------------------------------------------------------
+
 module n_shift_reg (clk, rst, enable, SR_in, PR, SR_out);
 
 parameter N = 7;

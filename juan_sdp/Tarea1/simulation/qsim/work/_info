@@ -7,35 +7,35 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/simulation/qsim
+Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/simulation/qsim
 vhard_block
-Z0 !s110 1634657430
+Z1 !s110 1634803047
 !i10b 1
-!s100 Z;QfeCcC;lzMb;2kiX`ia1
-I3kNz4C?CKKghKbDl112;90
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/Users/jplaave/Desktop/sdp-juan_dev/juan_sdp/Tarea1/simulation/qsim
-Z3 w1634657428
+!s100 H7]fXXViJ0B@:cnHWV64]3
+IJWgTJbUe[2mG[cXh9YO2L0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1634803046
 Z4 8lights_game.vo
 Z5 Flights_game.vo
-L0 1452
+L0 1044
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1634657430.000000
+Z7 !s108 1634803047.000000
 Z8 !s107 lights_game.vo|
 Z9 !s90 -work|work|lights_game.vo|
 !i113 1
 Z10 o-work work
 Z11 tCvgOpt 0
 vlights_game
-R0
-!i10b 1
-!s100 R`NFOh8B:f_zB:@`QDYE^1
-Ie]16m<G5g`o1_zG4;BSd^2
 R1
+!i10b 1
+!s100 TEU0Bc8jhi;0]kY48WCJ[3
+I=z<eBQge49Fo4Zk0Tj9:M1
 R2
+R0
 R3
 R4
 R5
@@ -51,13 +51,13 @@ R9
 R10
 R11
 vlights_game_vlg_vec_tst
-R0
-!i10b 1
-!s100 ;1ZJJ_@[VhfWi_6WBTT933
-IKEB=PE2M[G[T79RSLBnW03
 R1
+!i10b 1
+!s100 :3@MmFT8UYPkWV0PX``hB2
+IL5JYNHI;=<bB;FSOA>nOn0
 R2
-w1634657427
+R0
+w1634803045
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

@@ -36,15 +36,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "up_down",
+					"name" : "reset",
 					"strict" : false
 				},
 				{

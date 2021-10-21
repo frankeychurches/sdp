@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/19/2021 17:30:27"
+// Generated on "10/21/2021 09:57:25"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          lights_game
 // 
@@ -32,7 +32,6 @@ module lights_game_vlg_vec_tst();
 reg clk;
 reg enable;
 reg reset;
-reg up_down;
 // wires                                               
 wire [7:0] leds;
 
@@ -42,8 +41,7 @@ lights_game i1 (
 	.clk(clk),
 	.enable(enable),
 	.leds(leds),
-	.reset(reset),
-	.up_down(up_down)
+	.reset(reset)
 );
 initial 
 begin 
@@ -68,12 +66,10 @@ end
 initial
 begin
 	reset = 1'b1;
-end 
-
-// up_down
-initial
-begin
-	up_down = 1'b1;
+	reset = #1100000 1'b0;
+	reset = #140000 1'b1;
+	reset = #480000 1'b0;
+	reset = #40000 1'b1;
 end 
 endmodule
 
