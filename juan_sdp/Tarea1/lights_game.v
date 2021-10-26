@@ -35,8 +35,8 @@ reg [7:0] leds_aux;
 wire TC, shift_out;
 wire [6:0] PR;
 
-n_counter #(.fin_cuenta(4)) counter_leds  //Sólo para Simulación
-//n_counter #(.fin_cuenta(12500000)) counter_leds 
+//n_counter #(.fin_cuenta(4)) counter_leds 
+n_counter #(.fin_cuenta(12500000)) counter_leds 
 (
 	.clk(clk), 
 	.reset(reset), 
