@@ -1,5 +1,5 @@
 Fitter report for lights_game
-Tue Oct 26 18:06:56 2021
+Tue Oct 26 18:29:18 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 26 18:06:56 2021       ;
+; Fitter Status                      ; Successful - Tue Oct 26 18:29:18 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; lights_game                                 ;
 ; Top-level Entity Name              ; lights_game                                 ;
@@ -158,7 +158,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processors 3-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -1602,13 +1603,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/output_files/lights_game.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5678 megabytes
-    Info: Processing ended: Tue Oct 26 18:06:56 2021
-    Info: Elapsed time: 00:00:18
+    Info: Peak virtual memory: 5679 megabytes
+    Info: Processing ended: Tue Oct 26 18:29:18 2021
+    Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:28
 
 

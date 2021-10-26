@@ -81,14 +81,7 @@ always @(posedge clk)
 		endcase
 
 // Asignaciones de los leds
-assign leds[7] = leds_aux[7];
-assign leds[6] = leds_aux[6];
-assign leds[5] = leds_aux[5];
-assign leds[4] = leds_aux[4];
-assign leds[3] = leds_aux[3];
-assign leds[2] = leds_aux[2];
-assign leds[1] = leds_aux[1];
-assign leds[0] = leds_aux[0];
+assign leds = leds_aux;
 
 endmodule
 

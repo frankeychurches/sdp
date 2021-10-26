@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lights_game
-Tue Oct 26 18:06:37 2021
+Tue Oct 26 18:29:00 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 26 18:06:37 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 26 18:29:00 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; lights_game                                 ;
 ; Top-level Entity Name              ; lights_game                                 ;
@@ -317,7 +317,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 26 18:06:25 2021
+    Info: Processing started: Tue Oct 26 18:28:47 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lights_game -c lights_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -360,9 +360,9 @@ Info (21057): Implemented 66 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 55 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4763 megabytes
-    Info: Processing ended: Tue Oct 26 18:06:37 2021
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Tue Oct 26 18:29:00 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
 
 

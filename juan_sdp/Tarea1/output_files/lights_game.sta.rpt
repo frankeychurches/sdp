@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for lights_game
-Tue Oct 26 18:07:04 2021
+Tue Oct 26 18:29:26 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -1136,7 +1136,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 26 18:07:01 2021
+    Info: Processing started: Tue Oct 26 18:29:24 2021
 Info: Command: quartus_sta lights_game -c lights_game
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1209,8 +1209,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Tue Oct 26 18:07:04 2021
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Tue Oct 26 18:29:26 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
