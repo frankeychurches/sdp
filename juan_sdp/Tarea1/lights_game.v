@@ -57,10 +57,10 @@ n_shift_reg #(.N(7)) reg_7
 );
 
 // Lógica de salida de los leds en función de los estados 
-always @(posedge clk)
+always @(PR)
 
 	if (!reset)
-		leds_aux = 0;
+		leds_aux = 0; //De esta forma evitamos que se solape con el led 7
 	else
 		case (PR)
 			7'b0000000: leds_aux = 1 << 7;
