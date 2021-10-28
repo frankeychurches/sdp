@@ -1,5 +1,5 @@
 Archive Project report for lights_game
-Tue Oct 26 19:11:19 2021
+Thu Oct 28 11:33:49 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Tue Oct 26 19:11:19 2021 ;
+; Archive Project Status ; Successful - Thu Oct 28 11:33:49 2021 ;
 ; Revision Name          ; lights_game                           ;
 ; Top-level Entity Name  ; lights_game                           ;
 ; Family                 ; Cyclone IV E                          ;
@@ -45,9 +45,11 @@ refer to the applicable agreement for further details.
 +--------------------------+
 ; Archive Project Messages ;
 +--------------------------+
-Info: File Set 'Source control' contains:
+Info: File Set 'Service request' contains:
     Info: Project source and settings files
     Info: Automatically detected source files
+    Info: Report files
+    Info: Programming output files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/
@@ -59,8 +61,8 @@ Info: ----------------------------------------------------------
 Info: Generated report 'lights_game.archive.rpt'
 Info (23030): Evaluation of Tcl script d:/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Tue Oct 26 19:11:19 2021
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Thu Oct 28 11:33:49 2021
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
@@ -77,6 +79,20 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; lights_game.v                                    ;
 ; MathFun.vh                                       ;
 ; n_counter.v                                      ;
+; output_files/lights_game.asm.rpt                 ;
+; output_files/lights_game.eda.rpt                 ;
+; output_files/lights_game.fit.rpt                 ;
+; output_files/lights_game.fit.smsg                ;
+; output_files/lights_game.fit.summary             ;
+; output_files/lights_game.flow.rpt                ;
+; output_files/lights_game.jdi                     ;
+; output_files/lights_game.map.rpt                 ;
+; output_files/lights_game.map.summary             ;
+; output_files/lights_game.pin                     ;
+; output_files/lights_game.sld                     ;
+; output_files/lights_game.sof                     ;
+; output_files/lights_game.sta.rpt                 ;
+; output_files/lights_game.sta.summary             ;
 ; shift_reg.v                                      ;
 ; tb_count.v                                       ;
 ; Waveform.vwf                                     ;

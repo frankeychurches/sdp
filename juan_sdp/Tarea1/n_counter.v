@@ -28,7 +28,7 @@
 
 module n_counter(clk, reset, enable, up_down, count, TC);
 
-parameter fin_cuenta = 16; //Maximum number to count to plus 1
+parameter fin_cuenta = 16; //Contador de 0 a 15
 
 `include "MathFun.vh"
 

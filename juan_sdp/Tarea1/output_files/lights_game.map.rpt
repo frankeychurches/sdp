@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lights_game
-Tue Oct 26 19:00:44 2021
+Thu Oct 28 11:32:41 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -46,15 +46,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 26 19:00:44 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 28 11:32:41 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; lights_game                                 ;
 ; Top-level Entity Name              ; lights_game                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 55                                          ;
-;     Total combinational functions  ; 55                                          ;
-;     Dedicated logic registers      ; 39                                          ;
-; Total registers                    ; 39                                          ;
+; Total logic elements               ; 57                                          ;
+;     Total combinational functions  ; 57                                          ;
+;     Dedicated logic registers      ; 31                                          ;
+; Total registers                    ; 31                                          ;
 ; Total pins                         ; 11                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -183,20 +183,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 55          ;
+; Estimated Total logic elements              ; 57          ;
 ;                                             ;             ;
-; Total combinational functions               ; 55          ;
+; Total combinational functions               ; 57          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 21          ;
-;     -- 3 input functions                    ; 0           ;
-;     -- <=2 input functions                  ; 34          ;
+;     -- 4 input functions                    ; 20          ;
+;     -- 3 input functions                    ; 2           ;
+;     -- <=2 input functions                  ; 35          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 32          ;
+;     -- normal mode                          ; 34          ;
 ;     -- arithmetic mode                      ; 23          ;
 ;                                             ;             ;
-; Total registers                             ; 39          ;
-;     -- Dedicated logic registers            ; 39          ;
+; Total registers                             ; 31          ;
+;     -- Dedicated logic registers            ; 31          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 11          ;
@@ -204,9 +204,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 41          ;
-; Total fan-out                               ; 311         ;
-; Average fan-out                             ; 2.68        ;
+; Maximum fan-out                             ; 37          ;
+; Total fan-out                               ; 291         ;
+; Average fan-out                             ; 2.65        ;
 +---------------------------------------------+-------------+
 
 
@@ -215,7 +215,7 @@ refer to the applicable agreement for further details.
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
-; |lights_game                ; 55 (15)             ; 39 (8)                    ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |lights_game                        ; lights_game ; work         ;
+; |lights_game                ; 57 (17)             ; 31 (0)                    ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |lights_game                        ; lights_game ; work         ;
 ;    |n_counter:counter_leds| ; 32 (32)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game|n_counter:counter_leds ; n_counter   ; work         ;
 ;    |n_shift_reg:reg_7|      ; 8 (8)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game|n_shift_reg:reg_7      ; n_shift_reg ; work         ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
@@ -227,8 +227,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 39    ;
-; Number of registers using Synchronous Clear  ; 32    ;
+; Total registers                              ; 31    ;
+; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -242,8 +242,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |lights_game|n_shift_reg:reg_7|PR_aux[6]     ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |lights_game|n_counter:counter_leds|count[3] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |lights_game|n_shift_reg:reg_7|PR_aux[0]     ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |lights_game|n_counter:counter_leds|count[4] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
@@ -285,20 +285,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 11                          ;
-; cycloneiii_ff         ; 39                          ;
+; cycloneiii_ff         ; 31                          ;
 ;     ENA               ; 7                           ;
 ;     ENA SCLR          ; 24                          ;
-;     SCLR              ; 8                           ;
-; cycloneiii_lcell_comb ; 55                          ;
+; cycloneiii_lcell_comb ; 57                          ;
 ;     arith             ; 23                          ;
 ;         2 data inputs ; 23                          ;
-;     normal            ; 32                          ;
+;     normal            ; 34                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 10                          ;
-;         4 data inputs ; 21                          ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 20                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.30                        ;
-; Average LUT depth     ; 2.30                        ;
+; Average LUT depth     ; 2.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -317,7 +317,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 26 19:00:32 2021
+    Info: Processing started: Thu Oct 28 11:32:26 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lights_game -c lights_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -328,11 +328,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file shift_r
 Info (12021): Found 1 design units, including 1 entities, in source file lights_game.v
     Info (12023): Found entity 1: lights_game File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file hex7seg.v
-    Info (12023): Found entity 1: hex7seg File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/hex7seg.v Line: 18
+    Info (12023): Found entity 1: hex7seg File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/hex7seg.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file tb_count.v
-    Info (12023): Found entity 1: tb_count File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/tb_count.v Line: 8
+    Info (12023): Found entity 1: tb_count File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/tb_count.v Line: 25
 Info (12127): Elaborating entity "lights_game" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at lights_game.v(66): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 66
+Warning (10235): Verilog HDL Always Construct warning at lights_game.v(63): variable "reset" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 63
 Warning (10230): Verilog HDL assignment warning at lights_game.v(67): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 67
 Warning (10230): Verilog HDL assignment warning at lights_game.v(68): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 68
 Warning (10230): Verilog HDL assignment warning at lights_game.v(69): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 69
@@ -346,23 +346,24 @@ Warning (10230): Verilog HDL assignment warning at lights_game.v(76): truncated 
 Warning (10230): Verilog HDL assignment warning at lights_game.v(77): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 77
 Warning (10230): Verilog HDL assignment warning at lights_game.v(78): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 78
 Warning (10230): Verilog HDL assignment warning at lights_game.v(79): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 79
-Info (12128): Elaborating entity "n_counter" for hierarchy "n_counter:counter_leds" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 47
+Warning (10230): Verilog HDL assignment warning at lights_game.v(80): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 80
+Info (12128): Elaborating entity "n_counter" for hierarchy "n_counter:counter_leds" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 45
 Warning (10230): Verilog HDL assignment warning at n_counter.v(49): truncated value with size 32 to match size of target (24) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/n_counter.v Line: 49
 Warning (10230): Verilog HDL assignment warning at n_counter.v(51): truncated value with size 32 to match size of target (24) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/n_counter.v Line: 51
 Warning (10230): Verilog HDL assignment warning at n_counter.v(56): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/n_counter.v Line: 56
-Info (12128): Elaborating entity "n_shift_reg" for hierarchy "n_shift_reg:reg_7" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 57
+Info (12128): Elaborating entity "n_shift_reg" for hierarchy "n_shift_reg:reg_7" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea1/lights_game.v Line: 55
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 55 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Tue Oct 26 19:00:44 2021
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21061): Implemented 58 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Thu Oct 28 11:32:41 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:34
 
 

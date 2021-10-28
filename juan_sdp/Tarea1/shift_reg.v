@@ -41,11 +41,12 @@ begin
         PR_aux <= 0;
     else
         if (enable)
-            PR_aux[N-1:0] <= {SR_in, PR_aux[N-1:1]};
+            PR_aux[N-1:0] <= {SR_in, PR_aux[N-1:1]}; //Desplazamiento hacia la derecha
         else
             PR_aux <= PR_aux;
 end
 
+// Asignaciones de salida
 assign SR_out = PR[0];
 assign PR = PR_aux;
 

@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Oct 26 19:01:02 2021
+Fitter Status : Successful - Thu Oct 28 11:32:59 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : lights_game
 Top-level Entity Name : lights_game
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 55 / 114,480 ( < 1 % )
-    Total combinational functions : 55 / 114,480 ( < 1 % )
-    Dedicated logic registers : 39 / 114,480 ( < 1 % )
-Total registers : 39
+Total logic elements : 58 / 114,480 ( < 1 % )
+    Total combinational functions : 57 / 114,480 ( < 1 % )
+    Dedicated logic registers : 31 / 114,480 ( < 1 % )
+Total registers : 31
 Total pins : 11 / 529 ( 2 % )
 Total virtual pins : 0
 Total memory bits : 0 / 3,981,312 ( 0 % )

@@ -15,6 +15,7 @@
 // Ordenador de trabajo: Portátil
 //
 // -------------------------------------------------------------------
+
 module hex7seg (
     input [3:0] hex,
     output reg [6:0] segment);

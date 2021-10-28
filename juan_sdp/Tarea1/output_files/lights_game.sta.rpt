@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for lights_game
-Tue Oct 26 19:01:11 2021
+Thu Oct 28 11:33:08 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -103,7 +103,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.3%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processors 3-4         ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -116,13 +117,13 @@ refer to the applicable agreement for further details.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                        ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 286.29 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                       ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; 289.1 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++-----------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -137,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; clk   ; -2.493 ; -60.021            ;
+; clk   ; -2.459 ; -50.848            ;
 +-------+--------+--------------------+
 
 
@@ -146,7 +147,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.444 ; 0.000              ;
+; clk   ; 0.453 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -167,116 +168,116 @@ No paths to report.
 +-------+--------+----------------------------------+
 ; Clock ; Slack  ; End Point TNS                    ;
 +-------+--------+----------------------------------+
-; clk   ; -3.000 ; -53.115                          ;
+; clk   ; -3.000 ; -42.835                          ;
 +-------+--------+----------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'clk'                                                                                                            ;
-+--------+----------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                        ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+----------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
-; -2.493 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.412      ;
-; -2.493 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.412      ;
-; -2.493 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.412      ;
-; -2.493 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.412      ;
-; -2.493 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.412      ;
-; -2.493 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.412      ;
-; -2.493 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.412      ;
-; -2.489 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.408      ;
-; -2.489 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.408      ;
-; -2.489 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.408      ;
-; -2.489 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.408      ;
-; -2.489 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.408      ;
-; -2.489 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.408      ;
-; -2.489 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.408      ;
-; -2.417 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.334      ;
-; -2.417 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.334      ;
-; -2.417 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.334      ;
-; -2.417 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.334      ;
-; -2.417 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.334      ;
-; -2.417 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.334      ;
-; -2.417 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.334      ;
-; -2.414 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.331      ;
-; -2.414 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.331      ;
-; -2.414 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.331      ;
-; -2.414 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.331      ;
-; -2.414 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.331      ;
-; -2.414 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.331      ;
-; -2.414 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.331      ;
-; -2.325 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.244      ;
-; -2.325 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.244      ;
-; -2.325 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.244      ;
-; -2.325 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.244      ;
-; -2.325 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.244      ;
-; -2.325 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.244      ;
-; -2.325 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.244      ;
-; -2.283 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.202      ;
-; -2.283 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.202      ;
-; -2.283 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.202      ;
-; -2.283 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.202      ;
-; -2.283 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.202      ;
-; -2.283 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.202      ;
-; -2.283 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.202      ;
-; -2.280 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.199      ;
-; -2.280 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.199      ;
-; -2.280 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.199      ;
-; -2.280 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.199      ;
-; -2.280 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.199      ;
-; -2.280 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.199      ;
-; -2.280 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.199      ;
-; -2.264 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.181      ;
-; -2.264 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.181      ;
-; -2.264 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.181      ;
-; -2.264 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.181      ;
-; -2.264 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.181      ;
-; -2.264 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.181      ;
-; -2.264 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.181      ;
-; -2.255 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.172      ;
-; -2.255 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.172      ;
-; -2.255 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.172      ;
-; -2.255 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.172      ;
-; -2.255 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.172      ;
-; -2.255 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.172      ;
-; -2.255 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.172      ;
-; -2.231 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.150      ;
-; -2.231 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.150      ;
-; -2.231 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.150      ;
-; -2.231 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.150      ;
-; -2.231 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.150      ;
-; -2.231 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.150      ;
-; -2.231 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.150      ;
-; -2.211 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.130      ;
-; -2.211 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.130      ;
-; -2.211 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.130      ;
-; -2.211 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.130      ;
-; -2.211 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.130      ;
-; -2.211 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.130      ;
-; -2.211 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.130      ;
-; -2.208 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.125      ;
-; -2.208 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.125      ;
-; -2.208 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.125      ;
-; -2.208 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.125      ;
-; -2.208 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.125      ;
-; -2.208 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.125      ;
-; -2.208 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.125      ;
-; -2.200 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.119      ;
-; -2.200 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.119      ;
-; -2.200 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.119      ;
-; -2.200 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.119      ;
-; -2.200 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.119      ;
-; -2.200 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.119      ;
-; -2.200 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.119      ;
-; -2.199 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.116      ;
-; -2.199 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.116      ;
-; -2.199 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.116      ;
-; -2.199 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.116      ;
-; -2.199 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.116      ;
-; -2.199 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.116      ;
-; -2.199 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.081     ; 3.116      ;
-; -2.192 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.111      ;
-; -2.192 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.079     ; 3.111      ;
-+--------+----------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                 ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.459 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.377      ;
+; -2.459 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.377      ;
+; -2.459 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.377      ;
+; -2.459 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.377      ;
+; -2.459 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.377      ;
+; -2.459 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.377      ;
+; -2.459 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.377      ;
+; -2.445 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.360      ;
+; -2.445 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.360      ;
+; -2.445 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.360      ;
+; -2.445 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.360      ;
+; -2.445 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.360      ;
+; -2.445 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.360      ;
+; -2.445 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.360      ;
+; -2.440 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.355      ;
+; -2.440 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.355      ;
+; -2.440 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.355      ;
+; -2.440 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.355      ;
+; -2.440 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.355      ;
+; -2.440 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.355      ;
+; -2.440 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.355      ;
+; -2.403 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.321      ;
+; -2.403 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.321      ;
+; -2.403 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.321      ;
+; -2.403 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.321      ;
+; -2.403 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.321      ;
+; -2.403 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.321      ;
+; -2.403 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.321      ;
+; -2.395 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.313      ;
+; -2.395 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.313      ;
+; -2.395 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.313      ;
+; -2.395 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.313      ;
+; -2.395 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.313      ;
+; -2.395 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.313      ;
+; -2.395 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.313      ;
+; -2.285 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.200      ;
+; -2.285 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.200      ;
+; -2.285 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.200      ;
+; -2.285 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.200      ;
+; -2.285 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.200      ;
+; -2.285 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.200      ;
+; -2.285 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.200      ;
+; -2.251 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.169      ;
+; -2.251 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.169      ;
+; -2.251 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.169      ;
+; -2.251 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.169      ;
+; -2.251 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.169      ;
+; -2.251 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.169      ;
+; -2.251 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.169      ;
+; -2.249 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.167      ;
+; -2.249 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.167      ;
+; -2.249 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.167      ;
+; -2.249 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.167      ;
+; -2.249 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.167      ;
+; -2.249 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.167      ;
+; -2.249 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.167      ;
+; -2.218 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.133      ;
+; -2.218 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.133      ;
+; -2.218 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.133      ;
+; -2.218 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.133      ;
+; -2.218 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.133      ;
+; -2.218 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.133      ;
+; -2.218 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.133      ;
+; -2.215 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.130      ;
+; -2.215 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.130      ;
+; -2.215 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.130      ;
+; -2.215 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.130      ;
+; -2.215 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.130      ;
+; -2.215 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.130      ;
+; -2.215 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.130      ;
+; -2.168 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.086      ;
+; -2.168 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.086      ;
+; -2.168 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.086      ;
+; -2.168 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.086      ;
+; -2.168 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.086      ;
+; -2.168 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.086      ;
+; -2.168 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.086      ;
+; -2.163 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.078      ;
+; -2.163 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.078      ;
+; -2.163 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.078      ;
+; -2.163 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.078      ;
+; -2.163 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.078      ;
+; -2.163 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.078      ;
+; -2.163 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.078      ;
+; -2.150 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 1.000        ; -0.076     ; 3.072      ;
+; -2.140 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 1.000        ; -0.076     ; 3.062      ;
+; -2.121 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 1.000        ; -0.076     ; 3.043      ;
+; -2.089 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.007      ;
+; -2.089 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.007      ;
+; -2.089 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.007      ;
+; -2.089 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.007      ;
+; -2.089 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.007      ;
+; -2.089 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.007      ;
+; -2.089 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.080     ; 3.007      ;
+; -2.086 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.001      ;
+; -2.086 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.001      ;
+; -2.086 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.001      ;
+; -2.086 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.001      ;
+; -2.086 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.001      ;
+; -2.086 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.083     ; 3.001      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -284,106 +285,106 @@ No paths to report.
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.444 ; n_shift_reg:reg_7|PR_aux[0]      ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.710      ;
-; 0.450 ; n_shift_reg:reg_7|PR_aux[5]      ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.716      ;
-; 0.451 ; n_shift_reg:reg_7|PR_aux[6]      ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.717      ;
-; 0.452 ; n_shift_reg:reg_7|PR_aux[3]      ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.718      ;
-; 0.453 ; n_shift_reg:reg_7|PR_aux[2]      ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.719      ;
+; 0.453 ; n_shift_reg:reg_7|PR_aux[6]      ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.718      ;
+; 0.462 ; n_shift_reg:reg_7|PR_aux[1]      ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.727      ;
+; 0.466 ; n_shift_reg:reg_7|PR_aux[4]      ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.731      ;
+; 0.467 ; n_shift_reg:reg_7|PR_aux[5]      ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.732      ;
 ; 0.640 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.906      ;
 ; 0.640 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.906      ;
-; 0.641 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.907      ;
 ; 0.641 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.907      ;
-; 0.642 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.908      ;
-; 0.642 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.908      ;
+; 0.642 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.907      ;
 ; 0.642 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[1]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.908      ;
+; 0.643 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.908      ;
+; 0.643 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.908      ;
 ; 0.644 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.910      ;
 ; 0.644 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[2]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.910      ;
-; 0.645 ; n_counter:counter_leds|count[23] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.911      ;
-; 0.645 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.911      ;
-; 0.645 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.911      ;
 ; 0.645 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.911      ;
 ; 0.645 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.911      ;
-; 0.646 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.912      ;
-; 0.646 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.912      ;
+; 0.646 ; n_counter:counter_leds|count[23] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.911      ;
+; 0.646 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.911      ;
+; 0.646 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.911      ;
+; 0.646 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.911      ;
 ; 0.646 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.912      ;
-; 0.647 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.913      ;
+; 0.647 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.912      ;
+; 0.647 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.912      ;
 ; 0.647 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.913      ;
-; 0.649 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.915      ;
-; 0.649 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.915      ;
-; 0.661 ; n_shift_reg:reg_7|PR_aux[1]      ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.927      ;
+; 0.648 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.913      ;
+; 0.650 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.915      ;
 ; 0.661 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.927      ;
-; 0.664 ; n_shift_reg:reg_7|PR_aux[4]      ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.930      ;
 ; 0.670 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[0]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.936      ;
-; 0.679 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.944      ;
-; 0.692 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.957      ;
-; 0.786 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.051      ;
-; 0.787 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[4]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.052      ;
-; 0.789 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.054      ;
-; 0.793 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[3]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.058      ;
-; 0.807 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.073      ;
-; 0.812 ; n_shift_reg:reg_7|PR_aux[5]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.077      ;
-; 0.817 ; n_shift_reg:reg_7|PR_aux[2]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.082      ;
-; 0.873 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[5]                      ; clk          ; clk         ; 0.000        ; 0.078      ; 1.137      ;
-; 0.883 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[2]                      ; clk          ; clk         ; 0.000        ; 0.078      ; 1.147      ;
-; 0.885 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.150      ;
-; 0.913 ; n_shift_reg:reg_7|PR_aux[1]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.178      ;
-; 0.924 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.189      ;
-; 0.941 ; n_shift_reg:reg_7|PR_aux[2]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.206      ;
+; 0.672 ; n_shift_reg:reg_7|PR_aux[2]      ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.937      ;
+; 0.686 ; n_shift_reg:reg_7|PR_aux[0]      ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.951      ;
+; 0.812 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.077      ;
+; 0.833 ; n_shift_reg:reg_7|PR_aux[3]      ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.098      ;
+; 0.955 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.083      ; 1.224      ;
 ; 0.958 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.224      ;
-; 0.959 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.225      ;
 ; 0.959 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.225      ;
-; 0.959 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.225      ;
-; 0.959 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.224      ;
 ; 0.960 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[2]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.226      ;
-; 0.960 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.226      ;
-; 0.960 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.078      ; 1.224      ;
+; 0.960 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.225      ;
+; 0.960 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.225      ;
+; 0.961 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.226      ;
 ; 0.961 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.227      ;
 ; 0.962 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.228      ;
-; 0.963 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.229      ;
+; 0.963 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.228      ;
+; 0.964 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.229      ;
 ; 0.971 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.237      ;
 ; 0.972 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.238      ;
-; 0.972 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.238      ;
-; 0.972 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.238      ;
 ; 0.973 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.239      ;
-; 0.973 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.239      ;
-; 0.974 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.240      ;
+; 0.973 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.238      ;
+; 0.973 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.238      ;
+; 0.974 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.239      ;
 ; 0.974 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[1]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.240      ;
 ; 0.974 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.240      ;
-; 0.976 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.242      ;
-; 0.976 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.242      ;
+; 0.974 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.083      ; 1.243      ;
+; 0.975 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.240      ;
 ; 0.976 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.242      ;
-; 0.977 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.243      ;
-; 0.977 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.243      ;
+; 0.977 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.242      ;
 ; 0.978 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.244      ;
-; 0.978 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.244      ;
+; 0.978 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.243      ;
+; 0.978 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.243      ;
 ; 0.979 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[2]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.245      ;
-; 0.979 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.245      ;
-; 0.979 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.078      ; 1.243      ;
+; 0.979 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.244      ;
 ; 0.979 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.245      ;
-; 0.981 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.247      ;
+; 0.980 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.245      ;
+; 0.982 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.247      ;
 ; 0.988 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.254      ;
 ; 0.993 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.259      ;
-; 1.010 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.275      ;
-; 1.012 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.277      ;
-; 1.021 ; n_shift_reg:reg_7|PR_aux[5]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.286      ;
-; 1.021 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[4]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.286      ;
-; 1.022 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[3]                      ; clk          ; clk         ; 0.000        ; 0.079      ; 1.287      ;
-; 1.073 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[2]                      ; clk          ; clk         ; 0.000        ; 0.078      ; 1.337      ;
-; 1.079 ; n_shift_reg:reg_7|PR_aux[2]      ; leds_aux[2]                      ; clk          ; clk         ; 0.000        ; 0.078      ; 1.343      ;
+; 1.076 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.083      ; 1.345      ;
 ; 1.079 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.345      ;
 ; 1.080 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.346      ;
-; 1.080 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.346      ;
-; 1.080 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.346      ;
 ; 1.081 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.347      ;
-; 1.081 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.078      ; 1.345      ;
-; 1.081 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.347      ;
+; 1.081 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.346      ;
+; 1.081 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.083      ; 1.350      ;
+; 1.081 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.346      ;
+; 1.081 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.083      ; 1.350      ;
+; 1.082 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.347      ;
 ; 1.082 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.348      ;
 ; 1.083 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.349      ;
-; 1.084 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.350      ;
+; 1.084 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.349      ;
+; 1.085 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.350      ;
 ; 1.085 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.351      ;
-; 1.085 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.351      ;
-; 1.085 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.351      ;
 ; 1.086 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.352      ;
+; 1.086 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.351      ;
+; 1.086 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.351      ;
+; 1.087 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.352      ;
+; 1.087 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.353      ;
+; 1.088 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.354      ;
+; 1.090 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.355      ;
+; 1.095 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.083      ; 1.364      ;
+; 1.097 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.363      ;
+; 1.099 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.365      ;
+; 1.099 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.364      ;
+; 1.099 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.364      ;
+; 1.100 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.366      ;
+; 1.100 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.365      ;
+; 1.100 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.083      ; 1.369      ;
+; 1.100 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.366      ;
+; 1.101 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.083      ; 1.370      ;
+; 1.101 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.366      ;
+; 1.102 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.368      ;
+; 1.103 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.368      ;
+; 1.104 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.369      ;
+; 1.104 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.079      ; 1.369      ;
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -398,7 +399,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 311.62 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 315.56 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -408,7 +409,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -2.209 ; -50.224           ;
+; clk   ; -2.169 ; -42.685           ;
 +-------+--------+-------------------+
 
 
@@ -417,7 +418,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.402 ; 0.000             ;
+; clk   ; 0.417 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -438,116 +439,116 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -53.115                         ;
+; clk   ; -3.000 ; -42.835                         ;
 +-------+--------+---------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'clk'                                                                                                             ;
-+--------+----------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                        ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+----------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
-; -2.209 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.137      ;
-; -2.209 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.137      ;
-; -2.209 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.137      ;
-; -2.209 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.137      ;
-; -2.209 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.137      ;
-; -2.209 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.137      ;
-; -2.209 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.137      ;
-; -2.207 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.135      ;
-; -2.207 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.135      ;
-; -2.207 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.135      ;
-; -2.207 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.135      ;
-; -2.207 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.135      ;
-; -2.207 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.135      ;
-; -2.207 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.071     ; 3.135      ;
-; -2.137 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.137 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.064      ;
-; -2.022 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.950      ;
-; -2.022 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.950      ;
-; -2.022 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.950      ;
-; -2.022 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.950      ;
-; -2.022 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.950      ;
-; -2.022 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.950      ;
-; -2.022 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.950      ;
-; -2.017 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.945      ;
-; -2.017 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.945      ;
-; -2.017 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.945      ;
-; -2.017 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.945      ;
-; -2.017 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.945      ;
-; -2.017 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.945      ;
-; -2.017 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.945      ;
-; -2.016 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.944      ;
-; -2.016 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.944      ;
-; -2.016 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.944      ;
-; -2.016 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.944      ;
-; -2.016 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.944      ;
-; -2.016 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.944      ;
-; -2.016 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.944      ;
-; -2.001 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.928      ;
-; -2.001 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.928      ;
-; -2.001 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.928      ;
-; -2.001 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.928      ;
-; -2.001 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.928      ;
-; -2.001 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.928      ;
-; -2.001 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.928      ;
-; -1.974 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.902      ;
-; -1.974 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.902      ;
-; -1.974 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.902      ;
-; -1.974 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.902      ;
-; -1.974 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.902      ;
-; -1.974 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.902      ;
-; -1.974 ; n_counter:counter_leds|count[21] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.902      ;
-; -1.962 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.890      ;
-; -1.962 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.890      ;
-; -1.962 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.890      ;
-; -1.962 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.890      ;
-; -1.962 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.890      ;
-; -1.962 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.890      ;
-; -1.962 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.890      ;
-; -1.951 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.878      ;
-; -1.951 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.878      ;
-; -1.951 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.878      ;
-; -1.951 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.878      ;
-; -1.951 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.878      ;
-; -1.951 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.878      ;
-; -1.951 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.878      ;
-; -1.935 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.863      ;
-; -1.935 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.863      ;
-; -1.935 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.863      ;
-; -1.935 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.863      ;
-; -1.935 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.863      ;
-; -1.935 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.863      ;
-; -1.935 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.071     ; 2.863      ;
-; -1.899 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.826      ;
-; -1.899 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.826      ;
-; -1.899 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.826      ;
-; -1.899 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.826      ;
-; -1.899 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.826      ;
-; -1.899 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.826      ;
-; -1.899 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.826      ;
-; -1.893 ; n_counter:counter_leds|count[2]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.820      ;
-; -1.893 ; n_counter:counter_leds|count[2]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.820      ;
-; -1.893 ; n_counter:counter_leds|count[2]  ; n_shift_reg:reg_7|PR_aux[1] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.820      ;
-; -1.893 ; n_counter:counter_leds|count[2]  ; n_shift_reg:reg_7|PR_aux[2] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.820      ;
-; -1.893 ; n_counter:counter_leds|count[2]  ; n_shift_reg:reg_7|PR_aux[3] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.820      ;
-; -1.893 ; n_counter:counter_leds|count[2]  ; n_shift_reg:reg_7|PR_aux[4] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.820      ;
-; -1.893 ; n_counter:counter_leds|count[2]  ; n_shift_reg:reg_7|PR_aux[5] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.820      ;
-; -1.891 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[6] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.818      ;
-; -1.891 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[0] ; clk          ; clk         ; 1.000        ; -0.072     ; 2.818      ;
-+--------+----------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                  ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.169 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.093      ;
+; -2.169 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.093      ;
+; -2.169 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.093      ;
+; -2.169 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.093      ;
+; -2.169 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.093      ;
+; -2.169 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.093      ;
+; -2.169 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.093      ;
+; -2.167 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.091      ;
+; -2.167 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.091      ;
+; -2.167 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.091      ;
+; -2.167 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.091      ;
+; -2.167 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.091      ;
+; -2.167 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.091      ;
+; -2.167 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.075     ; 3.091      ;
+; -2.162 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.090      ;
+; -2.162 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.090      ;
+; -2.162 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.090      ;
+; -2.162 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.090      ;
+; -2.162 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.090      ;
+; -2.162 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.090      ;
+; -2.162 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.090      ;
+; -2.079 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.007      ;
+; -2.079 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.007      ;
+; -2.079 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.007      ;
+; -2.079 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.007      ;
+; -2.079 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.007      ;
+; -2.079 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.007      ;
+; -2.079 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.007      ;
+; -2.077 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.005      ;
+; -2.077 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.005      ;
+; -2.077 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.005      ;
+; -2.077 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.005      ;
+; -2.077 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.005      ;
+; -2.077 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.005      ;
+; -2.077 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.071     ; 3.005      ;
+; -1.982 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.906      ;
+; -1.982 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.906      ;
+; -1.982 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.906      ;
+; -1.982 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.906      ;
+; -1.982 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.906      ;
+; -1.982 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.906      ;
+; -1.982 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.978 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.906      ;
+; -1.943 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.867      ;
+; -1.943 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.867      ;
+; -1.943 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.867      ;
+; -1.943 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.867      ;
+; -1.943 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.867      ;
+; -1.943 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.867      ;
+; -1.943 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.867      ;
+; -1.942 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.866      ;
+; -1.942 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.866      ;
+; -1.942 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.866      ;
+; -1.942 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.866      ;
+; -1.942 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.866      ;
+; -1.942 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.866      ;
+; -1.942 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.866      ;
+; -1.922 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.846      ;
+; -1.922 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.846      ;
+; -1.922 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.846      ;
+; -1.922 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.846      ;
+; -1.922 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.846      ;
+; -1.922 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.846      ;
+; -1.922 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.846      ;
+; -1.918 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.846      ;
+; -1.918 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.846      ;
+; -1.918 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.846      ;
+; -1.918 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.846      ;
+; -1.918 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.846      ;
+; -1.918 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.846      ;
+; -1.918 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.846      ;
+; -1.842 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.770      ;
+; -1.842 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.770      ;
+; -1.842 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.770      ;
+; -1.842 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.770      ;
+; -1.842 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.770      ;
+; -1.842 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.770      ;
+; -1.842 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.071     ; 2.770      ;
+; -1.809 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 1.000        ; -0.068     ; 2.740      ;
+; -1.794 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.718      ;
+; -1.794 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.718      ;
+; -1.794 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.718      ;
+; -1.794 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.718      ;
+; -1.794 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.718      ;
+; -1.794 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.718      ;
+; -1.794 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.075     ; 2.718      ;
+; -1.791 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 1.000        ; -0.068     ; 2.722      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -555,106 +556,106 @@ No paths to report.
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.402 ; n_shift_reg:reg_7|PR_aux[0]      ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.645      ;
-; 0.415 ; n_shift_reg:reg_7|PR_aux[5]      ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.658      ;
-; 0.415 ; n_shift_reg:reg_7|PR_aux[6]      ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.658      ;
-; 0.416 ; n_shift_reg:reg_7|PR_aux[3]      ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.659      ;
-; 0.417 ; n_shift_reg:reg_7|PR_aux[2]      ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.660      ;
+; 0.417 ; n_shift_reg:reg_7|PR_aux[6]      ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.659      ;
+; 0.426 ; n_shift_reg:reg_7|PR_aux[1]      ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.668      ;
+; 0.429 ; n_shift_reg:reg_7|PR_aux[4]      ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.671      ;
+; 0.430 ; n_shift_reg:reg_7|PR_aux[5]      ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.672      ;
 ; 0.585 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.827      ;
+; 0.586 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.829      ;
 ; 0.586 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.828      ;
-; 0.587 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.829      ;
+; 0.587 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.830      ;
+; 0.587 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.830      ;
 ; 0.587 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.829      ;
-; 0.588 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.830      ;
-; 0.588 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.830      ;
+; 0.588 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.831      ;
 ; 0.588 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[2]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.830      ;
 ; 0.588 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[1]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.830      ;
-; 0.589 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.831      ;
-; 0.590 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.832      ;
+; 0.589 ; n_counter:counter_leds|count[23] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.832      ;
+; 0.589 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.832      ;
+; 0.590 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.833      ;
+; 0.590 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.833      ;
+; 0.590 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.833      ;
 ; 0.590 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.832      ;
 ; 0.590 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.832      ;
-; 0.591 ; n_counter:counter_leds|count[23] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.833      ;
-; 0.591 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.833      ;
+; 0.591 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.834      ;
 ; 0.591 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.833      ;
 ; 0.591 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.833      ;
-; 0.592 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.834      ;
-; 0.592 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.834      ;
 ; 0.592 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.834      ;
-; 0.594 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.836      ;
-; 0.594 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.836      ;
-; 0.603 ; n_shift_reg:reg_7|PR_aux[1]      ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.846      ;
+; 0.593 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.836      ;
 ; 0.605 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
-; 0.607 ; n_shift_reg:reg_7|PR_aux[4]      ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.850      ;
+; 0.613 ; n_shift_reg:reg_7|PR_aux[2]      ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.855      ;
 ; 0.613 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[0]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.855      ;
-; 0.636 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.878      ;
-; 0.639 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.881      ;
-; 0.723 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[4]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.965      ;
-; 0.723 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.965      ;
-; 0.725 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.967      ;
-; 0.735 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[3]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.977      ;
-; 0.750 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.992      ;
-; 0.756 ; n_shift_reg:reg_7|PR_aux[5]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.998      ;
-; 0.760 ; n_shift_reg:reg_7|PR_aux[2]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.002      ;
-; 0.794 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[2]                      ; clk          ; clk         ; 0.000        ; 0.069      ; 1.034      ;
-; 0.814 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[5]                      ; clk          ; clk         ; 0.000        ; 0.069      ; 1.054      ;
-; 0.817 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.059      ;
-; 0.847 ; n_shift_reg:reg_7|PR_aux[1]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.089      ;
-; 0.855 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.097      ;
-; 0.866 ; n_shift_reg:reg_7|PR_aux[2]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.108      ;
-; 0.872 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.070      ; 1.113      ;
+; 0.628 ; n_shift_reg:reg_7|PR_aux[0]      ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.870      ;
+; 0.751 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.994      ;
+; 0.769 ; n_shift_reg:reg_7|PR_aux[3]      ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.011      ;
+; 0.867 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.075      ; 1.113      ;
 ; 0.872 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.114      ;
+; 0.872 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.115      ;
+; 0.873 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.116      ;
 ; 0.873 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.115      ;
-; 0.873 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.115      ;
 ; 0.874 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[2]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.116      ;
-; 0.874 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.116      ;
-; 0.875 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.117      ;
+; 0.874 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.117      ;
+; 0.876 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.119      ;
 ; 0.876 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.118      ;
+; 0.877 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.120      ;
 ; 0.877 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.119      ;
-; 0.877 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.119      ;
+; 0.877 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.120      ;
+; 0.877 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.120      ;
 ; 0.878 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.120      ;
 ; 0.878 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.120      ;
-; 0.878 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.120      ;
-; 0.879 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.121      ;
+; 0.878 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.121      ;
 ; 0.879 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.121      ;
-; 0.879 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.121      ;
-; 0.880 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.122      ;
+; 0.879 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.122      ;
 ; 0.880 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[1]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.122      ;
 ; 0.880 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.122      ;
-; 0.882 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.124      ;
-; 0.882 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.124      ;
+; 0.881 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.124      ;
+; 0.885 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.075      ; 1.131      ;
+; 0.887 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.130      ;
 ; 0.887 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.129      ;
-; 0.888 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.130      ;
-; 0.889 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.131      ;
-; 0.889 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.131      ;
-; 0.890 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.070      ; 1.131      ;
+; 0.888 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.131      ;
+; 0.889 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.132      ;
 ; 0.890 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.132      ;
-; 0.890 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.132      ;
+; 0.890 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.133      ;
 ; 0.891 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[2]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.133      ;
-; 0.891 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.133      ;
 ; 0.891 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.133      ;
-; 0.893 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.135      ;
+; 0.892 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.135      ;
 ; 0.893 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.135      ;
 ; 0.904 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.146      ;
-; 0.926 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.168      ;
-; 0.928 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.170      ;
-; 0.935 ; n_shift_reg:reg_7|PR_aux[5]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.177      ;
-; 0.936 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[4]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.178      ;
-; 0.936 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[3]                      ; clk          ; clk         ; 0.000        ; 0.071      ; 1.178      ;
+; 0.966 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.075      ; 1.212      ;
 ; 0.971 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.213      ;
-; 0.971 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.070      ; 1.212      ;
+; 0.971 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.214      ;
+; 0.972 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.215      ;
 ; 0.972 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.214      ;
-; 0.972 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.214      ;
 ; 0.973 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.215      ;
-; 0.973 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.215      ;
-; 0.974 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.216      ;
+; 0.973 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.216      ;
+; 0.976 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.219      ;
+; 0.976 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.219      ;
 ; 0.976 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.218      ;
 ; 0.977 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.219      ;
-; 0.978 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.220      ;
-; 0.982 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.070      ; 1.223      ;
-; 0.983 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.070      ; 1.224      ;
+; 0.977 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.075      ; 1.223      ;
+; 0.978 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.075      ; 1.224      ;
+; 0.982 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.225      ;
+; 0.983 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.226      ;
 ; 0.983 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.225      ;
-; 0.983 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.225      ;
 ; 0.984 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.226      ;
-; 0.984 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.226      ;
+; 0.984 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.227      ;
+; 0.984 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.075      ; 1.230      ;
+; 0.986 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.229      ;
+; 0.986 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.228      ;
+; 0.987 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.230      ;
+; 0.987 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.229      ;
+; 0.987 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.230      ;
+; 0.988 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.230      ;
+; 0.988 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.231      ;
+; 0.989 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.231      ;
+; 0.989 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.232      ;
+; 0.990 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.232      ;
+; 0.990 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.232      ;
+; 0.991 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.234      ;
+; 0.995 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.075      ; 1.241      ;
+; 0.996 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.075      ; 1.242      ;
+; 0.997 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.240      ;
+; 0.997 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.239      ;
+; 0.998 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.241      ;
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -669,7 +670,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -0.649 ; -10.267           ;
+; clk   ; -0.680 ; -9.962            ;
 +-------+--------+-------------------+
 
 
@@ -678,7 +679,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.199 ; 0.000             ;
+; clk   ; 0.202 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -699,7 +700,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -44.469                         ;
+; clk   ; -3.000 ; -35.910                         ;
 +-------+--------+---------------------------------+
 
 
@@ -708,106 +709,106 @@ No paths to report.
 +--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.649 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.595      ;
-; -0.649 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.595      ;
-; -0.649 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.595      ;
-; -0.649 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.595      ;
-; -0.649 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.595      ;
-; -0.649 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.595      ;
-; -0.649 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.595      ;
-; -0.647 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.593      ;
-; -0.647 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.593      ;
-; -0.647 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.593      ;
-; -0.647 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.593      ;
-; -0.647 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.593      ;
-; -0.647 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.593      ;
-; -0.647 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.593      ;
-; -0.633 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.579      ;
-; -0.633 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.579      ;
-; -0.633 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.579      ;
-; -0.633 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.579      ;
-; -0.633 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.579      ;
-; -0.633 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.579      ;
-; -0.633 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.579      ;
-; -0.615 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.560      ;
-; -0.615 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.560      ;
-; -0.615 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.560      ;
-; -0.615 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.560      ;
-; -0.615 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.560      ;
-; -0.615 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.560      ;
-; -0.615 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.560      ;
-; -0.614 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.559      ;
-; -0.614 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.559      ;
-; -0.614 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.559      ;
-; -0.614 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.559      ;
-; -0.614 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.559      ;
-; -0.614 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.559      ;
-; -0.614 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.559      ;
-; -0.580 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.526      ;
-; -0.580 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.526      ;
-; -0.580 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.526      ;
-; -0.580 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.526      ;
-; -0.580 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.526      ;
-; -0.580 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.526      ;
-; -0.580 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.526      ;
-; -0.574 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.519      ;
-; -0.574 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.519      ;
-; -0.574 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.519      ;
-; -0.574 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.519      ;
-; -0.574 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.519      ;
-; -0.574 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.519      ;
-; -0.574 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.519      ;
-; -0.566 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 1.000        ; -0.042     ; 1.511      ;
-; -0.562 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 1.000        ; -0.042     ; 1.507      ;
-; -0.556 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.502      ;
-; -0.556 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.502      ;
-; -0.556 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.502      ;
-; -0.556 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.502      ;
-; -0.556 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.502      ;
-; -0.556 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.502      ;
-; -0.556 ; n_counter:counter_leds|count[20] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.502      ;
-; -0.554 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 1.000        ; -0.042     ; 1.499      ;
-; -0.554 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.500      ;
-; -0.554 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.500      ;
-; -0.554 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.500      ;
-; -0.554 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.500      ;
-; -0.554 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.500      ;
-; -0.554 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.500      ;
-; -0.554 ; n_counter:counter_leds|count[23] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.500      ;
-; -0.546 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.491      ;
-; -0.546 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.491      ;
-; -0.546 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.491      ;
-; -0.546 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.491      ;
-; -0.546 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.491      ;
-; -0.546 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.491      ;
-; -0.546 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.491      ;
-; -0.540 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.485      ;
-; -0.540 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.485      ;
-; -0.540 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.485      ;
-; -0.540 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.485      ;
-; -0.540 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.485      ;
-; -0.540 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.485      ;
-; -0.540 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.485      ;
-; -0.536 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.481      ;
-; -0.536 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.481      ;
-; -0.536 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.481      ;
-; -0.536 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.481      ;
-; -0.536 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.481      ;
-; -0.536 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.481      ;
-; -0.536 ; n_counter:counter_leds|count[3]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.481      ;
-; -0.526 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.472      ;
-; -0.526 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.472      ;
-; -0.526 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.472      ;
-; -0.526 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.472      ;
-; -0.526 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.472      ;
-; -0.526 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.472      ;
-; -0.526 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.472      ;
-; -0.524 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.470      ;
-; -0.524 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.470      ;
-; -0.524 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.470      ;
-; -0.524 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.470      ;
-; -0.524 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.470      ;
-; -0.524 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.041     ; 1.470      ;
+; -0.680 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.625      ;
+; -0.680 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.625      ;
+; -0.680 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.625      ;
+; -0.680 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.625      ;
+; -0.680 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.625      ;
+; -0.680 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.625      ;
+; -0.680 ; n_counter:counter_leds|count[6]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.625      ;
+; -0.652 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.597      ;
+; -0.652 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.597      ;
+; -0.652 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.597      ;
+; -0.652 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.597      ;
+; -0.652 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.597      ;
+; -0.652 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.597      ;
+; -0.652 ; n_counter:counter_leds|count[7]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.597      ;
+; -0.646 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.591      ;
+; -0.646 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.591      ;
+; -0.646 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.591      ;
+; -0.646 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.591      ;
+; -0.646 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.591      ;
+; -0.646 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.591      ;
+; -0.646 ; n_counter:counter_leds|count[5]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.591      ;
+; -0.635 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.577      ;
+; -0.635 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.577      ;
+; -0.635 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.577      ;
+; -0.635 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.577      ;
+; -0.635 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.577      ;
+; -0.635 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.577      ;
+; -0.635 ; n_counter:counter_leds|count[12] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.577      ;
+; -0.632 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.574      ;
+; -0.632 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.574      ;
+; -0.632 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.574      ;
+; -0.632 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.574      ;
+; -0.632 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.574      ;
+; -0.632 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.574      ;
+; -0.632 ; n_counter:counter_leds|count[15] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.574      ;
+; -0.616 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.558      ;
+; -0.616 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.558      ;
+; -0.616 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.558      ;
+; -0.616 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.558      ;
+; -0.616 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.558      ;
+; -0.616 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.558      ;
+; -0.616 ; n_counter:counter_leds|count[14] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.558      ;
+; -0.562 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.511      ;
+; -0.558 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.507      ;
+; -0.550 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.499      ;
+; -0.538 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.480      ;
+; -0.538 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.483      ;
+; -0.538 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.480      ;
+; -0.538 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.483      ;
+; -0.538 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.480      ;
+; -0.538 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.483      ;
+; -0.538 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.480      ;
+; -0.538 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.483      ;
+; -0.538 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.480      ;
+; -0.538 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.483      ;
+; -0.538 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.480      ;
+; -0.538 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.483      ;
+; -0.538 ; n_counter:counter_leds|count[19] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.480      ;
+; -0.538 ; n_counter:counter_leds|count[0]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.483      ;
+; -0.537 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.479      ;
+; -0.537 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.482      ;
+; -0.537 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.479      ;
+; -0.537 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.482      ;
+; -0.537 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.479      ;
+; -0.537 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.482      ;
+; -0.537 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.479      ;
+; -0.537 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.482      ;
+; -0.537 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.479      ;
+; -0.537 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.482      ;
+; -0.537 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.479      ;
+; -0.537 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.482      ;
+; -0.537 ; n_counter:counter_leds|count[17] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.479      ;
+; -0.537 ; n_counter:counter_leds|count[1]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.482      ;
+; -0.520 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.462      ;
+; -0.520 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.462      ;
+; -0.520 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.462      ;
+; -0.520 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.462      ;
+; -0.520 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.462      ;
+; -0.520 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.462      ;
+; -0.520 ; n_counter:counter_leds|count[16] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.462      ;
+; -0.513 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.462      ;
+; -0.507 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.449      ;
+; -0.507 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.449      ;
+; -0.507 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.449      ;
+; -0.507 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.449      ;
+; -0.507 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.449      ;
+; -0.507 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.449      ;
+; -0.507 ; n_counter:counter_leds|count[13] ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.045     ; 1.449      ;
+; -0.497 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.446      ;
+; -0.494 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.443      ;
+; -0.493 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.442      ;
+; -0.490 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.439      ;
+; -0.490 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.435      ;
+; -0.490 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.435      ;
+; -0.490 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.435      ;
+; -0.490 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.435      ;
+; -0.490 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.435      ;
+; -0.490 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.435      ;
+; -0.490 ; n_counter:counter_leds|count[4]  ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 1.000        ; -0.042     ; 1.435      ;
+; -0.482 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.431      ;
 +--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -816,11 +817,10 @@ No paths to report.
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.199 ; n_shift_reg:reg_7|PR_aux[5]      ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 0.000        ; 0.041      ; 0.324      ;
-; 0.200 ; n_shift_reg:reg_7|PR_aux[3]      ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 0.000        ; 0.041      ; 0.325      ;
-; 0.200 ; n_shift_reg:reg_7|PR_aux[6]      ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 0.000        ; 0.041      ; 0.325      ;
-; 0.201 ; n_shift_reg:reg_7|PR_aux[2]      ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 0.000        ; 0.041      ; 0.326      ;
-; 0.206 ; n_shift_reg:reg_7|PR_aux[0]      ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 0.000        ; 0.041      ; 0.331      ;
+; 0.202 ; n_shift_reg:reg_7|PR_aux[6]      ; n_shift_reg:reg_7|PR_aux[5]      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.326      ;
+; 0.208 ; n_shift_reg:reg_7|PR_aux[5]      ; n_shift_reg:reg_7|PR_aux[4]      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.332      ;
+; 0.208 ; n_shift_reg:reg_7|PR_aux[1]      ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.332      ;
+; 0.209 ; n_shift_reg:reg_7|PR_aux[4]      ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.333      ;
 ; 0.291 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.416      ;
 ; 0.292 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.417      ;
 ; 0.292 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.417      ;
@@ -830,39 +830,25 @@ No paths to report.
 ; 0.293 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.418      ;
 ; 0.293 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[2]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.418      ;
 ; 0.294 ; n_counter:counter_leds|count[23] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
+; 0.294 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
 ; 0.294 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
 ; 0.294 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
 ; 0.294 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
-; 0.294 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
 ; 0.294 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
 ; 0.294 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
 ; 0.294 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
 ; 0.294 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[1]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
-; 0.295 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.420      ;
 ; 0.295 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.420      ;
+; 0.295 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.420      ;
 ; 0.295 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.420      ;
-; 0.296 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.421      ;
-; 0.299 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.423      ;
-; 0.301 ; n_shift_reg:reg_7|PR_aux[1]      ; n_shift_reg:reg_7|PR_aux[0]      ; clk          ; clk         ; 0.000        ; 0.041      ; 0.426      ;
+; 0.296 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.421      ;
 ; 0.302 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.427      ;
-; 0.303 ; n_shift_reg:reg_7|PR_aux[4]      ; n_shift_reg:reg_7|PR_aux[3]      ; clk          ; clk         ; 0.000        ; 0.041      ; 0.428      ;
 ; 0.306 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[0]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.431      ;
-; 0.311 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.435      ;
-; 0.358 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[3]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.482      ;
-; 0.358 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[4]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.482      ;
-; 0.359 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.483      ;
-; 0.361 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.485      ;
-; 0.361 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.486      ;
-; 0.365 ; n_shift_reg:reg_7|PR_aux[5]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.489      ;
-; 0.368 ; n_shift_reg:reg_7|PR_aux[2]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.492      ;
-; 0.392 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[2]                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.515      ;
-; 0.395 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[5]                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.518      ;
-; 0.403 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.527      ;
-; 0.412 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.536      ;
-; 0.414 ; n_shift_reg:reg_7|PR_aux[1]      ; leds_aux[0]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.538      ;
-; 0.428 ; n_shift_reg:reg_7|PR_aux[2]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.552      ;
-; 0.431 ; n_shift_reg:reg_7|PR_aux[4]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.555      ;
-; 0.441 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.565      ;
+; 0.310 ; n_shift_reg:reg_7|PR_aux[2]      ; n_shift_reg:reg_7|PR_aux[1]      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.434      ;
+; 0.315 ; n_shift_reg:reg_7|PR_aux[0]      ; n_shift_reg:reg_7|PR_aux[6]      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.439      ;
+; 0.363 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.488      ;
+; 0.374 ; n_shift_reg:reg_7|PR_aux[3]      ; n_shift_reg:reg_7|PR_aux[2]      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.498      ;
+; 0.437 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.565      ;
 ; 0.441 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.566      ;
 ; 0.441 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.566      ;
 ; 0.442 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.567      ;
@@ -872,50 +858,65 @@ No paths to report.
 ; 0.443 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.568      ;
 ; 0.443 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.568      ;
 ; 0.443 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.568      ;
+; 0.443 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.568      ;
 ; 0.451 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.576      ;
 ; 0.451 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.576      ;
 ; 0.451 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.576      ;
-; 0.452 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.577      ;
+; 0.451 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.579      ;
 ; 0.452 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.577      ;
 ; 0.452 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.577      ;
 ; 0.453 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.578      ;
+; 0.453 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.578      ;
 ; 0.453 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.578      ;
 ; 0.453 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[1]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.578      ;
-; 0.453 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.578      ;
-; 0.454 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.579      ;
+; 0.454 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.579      ;
 ; 0.454 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.579      ;
 ; 0.454 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.579      ;
-; 0.455 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[1]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.579      ;
-; 0.455 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.579      ;
-; 0.455 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.580      ;
 ; 0.455 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.580      ;
 ; 0.455 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.580      ;
-; 0.456 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.581      ;
-; 0.456 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[4]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.580      ;
 ; 0.456 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.581      ;
+; 0.456 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.581      ;
 ; 0.456 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[2]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.581      ;
 ; 0.456 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.581      ;
-; 0.457 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[3]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.581      ;
+; 0.457 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.582      ;
 ; 0.460 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.585      ;
 ; 0.463 ; n_counter:counter_leds|count[6]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.588      ;
-; 0.469 ; n_shift_reg:reg_7|PR_aux[0]      ; leds_aux[7]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.593      ;
-; 0.472 ; n_shift_reg:reg_7|PR_aux[5]      ; leds_aux[6]                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.596      ;
-; 0.485 ; n_shift_reg:reg_7|PR_aux[3]      ; leds_aux[2]                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.608      ;
-; 0.489 ; n_shift_reg:reg_7|PR_aux[2]      ; leds_aux[2]                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.612      ;
+; 0.500 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.628      ;
+; 0.503 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.631      ;
 ; 0.504 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.629      ;
-; 0.504 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.628      ;
+; 0.504 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.632      ;
 ; 0.504 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.629      ;
 ; 0.505 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[9]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.630      ;
 ; 0.505 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.630      ;
+; 0.506 ; n_counter:counter_leds|count[21] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.631      ;
 ; 0.506 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.631      ;
 ; 0.506 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.631      ;
 ; 0.506 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.631      ;
 ; 0.506 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.631      ;
 ; 0.506 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.631      ;
-; 0.507 ; n_counter:counter_leds|count[11] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.631      ;
 ; 0.507 ; n_counter:counter_leds|count[13] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.632      ;
-; 0.508 ; n_counter:counter_leds|count[9]  ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.632      ;
 ; 0.508 ; n_counter:counter_leds|count[7]  ; n_counter:counter_leds|count[10] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.633      ;
+; 0.508 ; n_counter:counter_leds|count[15] ; n_counter:counter_leds|count[18] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.633      ;
+; 0.509 ; n_counter:counter_leds|count[1]  ; n_counter:counter_leds|count[4]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.634      ;
+; 0.509 ; n_counter:counter_leds|count[17] ; n_counter:counter_leds|count[20] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.634      ;
+; 0.509 ; n_counter:counter_leds|count[3]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.634      ;
+; 0.509 ; n_counter:counter_leds|count[19] ; n_counter:counter_leds|count[22] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.634      ;
+; 0.509 ; n_counter:counter_leds|count[5]  ; n_counter:counter_leds|count[8]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.634      ;
+; 0.514 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[13] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.642      ;
+; 0.517 ; n_counter:counter_leds|count[10] ; n_counter:counter_leds|count[14] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.645      ;
+; 0.517 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[15] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.642      ;
+; 0.517 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[5]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.642      ;
+; 0.518 ; n_counter:counter_leds|count[18] ; n_counter:counter_leds|count[21] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.643      ;
+; 0.518 ; n_counter:counter_leds|count[4]  ; n_counter:counter_leds|count[7]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.643      ;
+; 0.519 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[11] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.644      ;
+; 0.519 ; n_counter:counter_leds|count[8]  ; n_counter:counter_leds|count[12] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.647      ;
+; 0.519 ; n_counter:counter_leds|count[14] ; n_counter:counter_leds|count[17] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.644      ;
+; 0.519 ; n_counter:counter_leds|count[0]  ; n_counter:counter_leds|count[3]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.644      ;
+; 0.519 ; n_counter:counter_leds|count[16] ; n_counter:counter_leds|count[19] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.644      ;
+; 0.520 ; n_counter:counter_leds|count[20] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.645      ;
+; 0.520 ; n_counter:counter_leds|count[12] ; n_counter:counter_leds|count[16] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.645      ;
+; 0.520 ; n_counter:counter_leds|count[2]  ; n_counter:counter_leds|count[6]  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.645      ;
+; 0.521 ; n_counter:counter_leds|count[22] ; n_counter:counter_leds|count[23] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.646      ;
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -930,10 +931,10 @@ No synchronizer chains to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -2.493  ; 0.199 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -2.493  ; 0.199 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -60.021 ; 0.0   ; 0.0      ; 0.0     ; -53.115             ;
-;  clk             ; -60.021 ; 0.000 ; N/A      ; N/A     ; -53.115             ;
+; Worst-case Slack ; -2.459  ; 0.202 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -2.459  ; 0.202 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -50.848 ; 0.0   ; 0.0      ; 0.0     ; -42.835             ;
+;  clk             ; -50.848 ; 0.000 ; N/A      ; N/A     ; -42.835             ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -960,8 +961,8 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; enable                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1028,7 +1029,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 533      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 475      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1038,7 +1039,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 533      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 475      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1065,7 +1066,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 2     ; 2    ;
 ; Unconstrained Input Port Paths  ; 63    ; 63   ;
 ; Unconstrained Output Ports      ; 8     ; 8    ;
-; Unconstrained Output Port Paths ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 64    ; 64   ;
 +---------------------------------+-------+------+
 
 
@@ -1136,7 +1137,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 26 19:01:09 2021
+    Info: Processing started: Thu Oct 28 11:33:06 2021
 Info: Command: quartus_sta lights_game -c lights_game
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1153,64 +1154,64 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.493
+Info (332146): Worst-case setup slack is -2.459
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.493             -60.021 clk 
-Info (332146): Worst-case hold slack is 0.444
+    Info (332119):    -2.459             -50.848 clk 
+Info (332146): Worst-case hold slack is 0.453
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.444               0.000 clk 
+    Info (332119):     0.453               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -53.115 clk 
+    Info (332119):    -3.000             -42.835 clk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.209
+Info (332146): Worst-case setup slack is -2.169
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.209             -50.224 clk 
-Info (332146): Worst-case hold slack is 0.402
+    Info (332119):    -2.169             -42.685 clk 
+Info (332146): Worst-case hold slack is 0.417
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.402               0.000 clk 
+    Info (332119):     0.417               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -53.115 clk 
+    Info (332119):    -3.000             -42.835 clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.649
+Info (332146): Worst-case setup slack is -0.680
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.649             -10.267 clk 
-Info (332146): Worst-case hold slack is 0.199
+    Info (332119):    -0.680              -9.962 clk 
+Info (332146): Worst-case hold slack is 0.202
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.199               0.000 clk 
+    Info (332119):     0.202               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -44.469 clk 
+    Info (332119):    -3.000             -35.910 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Tue Oct 26 19:01:11 2021
+    Info: Processing ended: Thu Oct 28 11:33:08 2021
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 

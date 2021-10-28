@@ -1,7 +1,24 @@
+// Curso 2021 - 2022
+// --------------------------------------------------------------------
+// Nombre del archivo: tb_count.v
+//
+// Descripción: Este es in fichero de test para comprobar el funcionamiento
+// del contador de N bits implementado en el archivo n_counter.v:
+// 1. CLK -> reloj del contador  (Entrada)
+// 2. RST_n -> reset del contador  (Entrada)
+// 3. ENABLE -> Habilitador del contador (Entrada)
+// 4. UP_DOWN -> Bit de cuenta hacia arriba o abajo (Entrada)
+// 5. COUNT -> 5 bits de cuenta del contador (Salida)
+// 6. TC -> Terminal count. Indica cuando llega al final de la cuenta (Salida)
 
-
-// Autor: Ricardo José Colom Palero
-// Fecha: 10 de diciembre de 2018
+//
+// --------------------------------------------------------------------
+// Versión: V1.0| Fecha Modificación: 21/10/2021
+//
+// Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
+// Ordenador de trabajo: Portátil
+//
+// --------------------------------------------------------------
 
 `timescale 1ns/1ps
 

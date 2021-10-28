@@ -26,8 +26,6 @@
 
 module lights_game(clk, reset, enable, leds);
 
-`include "MathFun.vh"
-
 input clk, reset, enable;
 output [7:0] leds;
 
@@ -35,7 +33,7 @@ reg [7:0] leds_aux;
 wire TC, shift_out;
 wire [6:0] PR;
 
-//n_counter #(.fin_cuenta(4)) counter_leds 
+//n_counter #(.fin_cuenta(4)) counter_leds // Descomentar esta línea para simulación con Waveforms
 n_counter #(.fin_cuenta(12500000)) counter_leds 
 (
 	.clk(clk), 
@@ -56,9 +54,12 @@ n_shift_reg #(.N(7)) reg_7
 	.SR_out(shift_out)
 );
 
-// Lógica de salida de los leds en función de los estados 
+// Lógica de salida de los leds en función de los estados (lógica combinacional)
 always @(PR)
 
+	// Aunque parezca un reset asíncrono, la salida de PR sólo varía con el reloj. 
+	// Por tanto, es un reset síncrono. Si no colocamos esta condición, al pulsar el Reset
+	// se encendería el LED7G, lo cual queremos evitar.
 	if (!reset)
 		leds_aux = 0; //De esta forma evitamos que se solape con el led 7
 	else
