@@ -33,14 +33,14 @@ always @(Estado_Actual, ENABLE, UP_DOWN, HALF_FULL) begin
         S2: if (ENABLE)
                 if (HALF_FULL)
                     if (UP_DOWN)
-                        Estado_Siguiente = S4;
-                    else
-                        Estado_Siguiente = S8;
-                else 
-                    if (UP_DOWN)
                         Estado_Siguiente = S3;
                     else
-                        Estado_Siguiente = S1;  
+                        Estado_Siguiente = S1;
+                else 
+                    if (UP_DOWN)
+                        Estado_Siguiente = S4;
+                    else
+                        Estado_Siguiente = S8;  
             else 
                 Estado_Siguiente = S2;  
 
@@ -63,14 +63,14 @@ always @(Estado_Actual, ENABLE, UP_DOWN, HALF_FULL) begin
         S4: if (ENABLE)
                 if (HALF_FULL)
                     if (UP_DOWN)
-                        Estado_Siguiente = S6;
-                    else
-                        Estado_Siguiente = S2;
-                else 
-                    if (UP_DOWN)
                         Estado_Siguiente = S5;
                     else
-                        Estado_Siguiente = S3;  
+                        Estado_Siguiente = S3;
+                else 
+                    if (UP_DOWN)
+                        Estado_Siguiente = S6;
+                    else
+                        Estado_Siguiente = S2;  
             else 
                 Estado_Siguiente = S4;  
 
@@ -93,14 +93,14 @@ always @(Estado_Actual, ENABLE, UP_DOWN, HALF_FULL) begin
         S6: if (ENABLE)
                 if (HALF_FULL)
                     if (UP_DOWN)
-                        Estado_Siguiente = S8;
-                    else
-                        Estado_Siguiente = S4;
-                else 
-                    if (UP_DOWN)
                         Estado_Siguiente = S7;
                     else
-                        Estado_Siguiente = S5;  
+                        Estado_Siguiente = S5;
+                else 
+                    if (UP_DOWN)
+                        Estado_Siguiente = S8;
+                    else
+                        Estado_Siguiente = S4;  
             else 
                 Estado_Siguiente = S6;  
 
@@ -123,14 +123,14 @@ always @(Estado_Actual, ENABLE, UP_DOWN, HALF_FULL) begin
         S8: if (ENABLE)
                 if (HALF_FULL)
                     if (UP_DOWN)
-                        Estado_Siguiente = S2;
+                        Estado_Siguiente = S9;
                     else
-                        Estado_Siguiente = S6;
+                        Estado_Siguiente = S7;
                 else 
                     if (UP_DOWN)
-                        Estado_Siguiente = S1;
+                        Estado_Siguiente = S2;
                     else
-                        Estado_Siguiente = S7;  
+                        Estado_Siguiente = S6;  
             else 
                 Estado_Siguiente = S8; 
         S9:  
