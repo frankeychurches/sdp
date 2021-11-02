@@ -7,9 +7,9 @@ module control_motor (
     output A, B, C, D, INH1, INH2
 );
 
-parameter [2:0] S1 = 3'b000, S2 = 3'b001, S3 = 3'b010, S4 = 3'b011, S5 = 3'b100, S6 = 3'b101, S7 = 3'b110, S8 = 3'b111;
+parameter [3:0] S1 = 3'b0000, S2 = 3'b0001, S3 = 3'b0010, S4 = 3'b0011, S5 = 3'b0100, S6 = 3'b0101, S7 = 3'b0110, S8 = 3'b0111, S9 = 3'b1000; //S9 es el reset
 
-reg [2:0] Estado_Siguiente, Estado_Actual;
+reg [3:0] Estado_Siguiente, Estado_Actual;
 
 
 // Lógica del estado siguiente
@@ -132,8 +132,9 @@ always @(Estado_Actual, ENABLE, UP_DOWN, HALF_FULL) begin
                     else
                         Estado_Siguiente = S7;  
             else 
-                Estado_Siguiente = S8;  
-
+                Estado_Siguiente = S8; 
+        S9:  
+            Estado_Siguiente = S1;
         default: Estado_Siguiente = S1;
     endcase  
 end
@@ -142,7 +143,7 @@ end
 // Registro de estado actual con reset asíncrono
 always @(posedge CLK or negedge RESET) begin
     if (!RESET)
-        Estado_Actual <= S1;
+        Estado_Actual <= S9;
     else
         Estado_Actual <= Estado_Siguiente;
 end
