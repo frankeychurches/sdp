@@ -9,7 +9,7 @@ module control_motor (
 
 parameter [2:0] S1 = 3'b000, S2 = 3'b001, S3 = 3'b010, S4 = 3'b011, S5 = 3'b100, S6 = 3'b101, S7 = 3'b110, S8 = 3'b111;
 
-reg Estado_Siguiente, Estado_Actual;
+reg [2:0] Estado_Siguiente, Estado_Actual;
 
 
 // Lógica del estado siguiente

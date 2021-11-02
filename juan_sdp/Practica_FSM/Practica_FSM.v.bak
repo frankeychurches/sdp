@@ -1,0 +1,21 @@
+module fsm_generator (
+    input clk, rst, up_down, enable, 
+    output reg [3:0] sequence
+);
+
+
+always @() begin
+    
+end
+
+
+always @() begin
+    
+end
+
+
+always @() begin
+    
+end
+    
+endmodule

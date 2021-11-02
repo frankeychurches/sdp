@@ -1,0 +1,25 @@
+|Practica_FSM
+clk => estado_actual~1.DATAIN
+rst => estado_actual~3.DATAIN
+up_down => Selector1.IN3
+up_down => Selector2.IN3
+up_down => Selector3.IN3
+up_down => Selector4.IN3
+up_down => Selector0.IN4
+up_down => Selector0.IN2
+up_down => Selector1.IN1
+up_down => Selector2.IN1
+up_down => Selector3.IN1
+up_down => Selector4.IN1
+enable => estado_actual.OUTPUTSELECT
+enable => estado_actual.OUTPUTSELECT
+enable => estado_actual.OUTPUTSELECT
+enable => estado_actual.OUTPUTSELECT
+enable => estado_actual.OUTPUTSELECT
+enable => estado_actual.OUTPUTSELECT
+seq[0] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seq[1] << seq.DB_MAX_OUTPUT_PORT_TYPE
+seq[2] << seq.DB_MAX_OUTPUT_PORT_TYPE
+seq[3] << seq[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

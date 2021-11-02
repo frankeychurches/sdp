@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "seq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "up_down",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
