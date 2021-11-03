@@ -44,13 +44,13 @@ begin
 		count <= 0;
 		
 	else
-    if (enable && clk)
+        if (enable)
             if (up_down)
                 count <= count + 1;
             else
                 count <= count - 1;
-    else
-        count <= count;  
+        else
+            count <= count;  
 end
 
 assign TC = (up_down && count == fin_cuenta - 1)? 1 : (!up_down && !count)? 1 : 0; 
