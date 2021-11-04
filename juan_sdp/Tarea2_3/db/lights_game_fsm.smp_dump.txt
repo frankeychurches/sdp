@@ -1,0 +1,18 @@
+
+State Machine - |lights_game_fsm|luces_fsm:luces|state
+Name state~11 state~10 state~9 state~8 state~7 state~6 state~5 state~4 
+state.S9 0 0 0 0 0 0 0 0 
+state.S8 0 0 0 0 0 0 0 1 
+state.S7 0 0 0 0 0 0 1 0 
+state.S6 0 0 0 0 0 1 0 0 
+state.S5 0 0 0 0 1 0 0 0 
+state.S4 0 0 0 1 0 0 0 0 
+state.S3 0 0 1 0 0 0 0 0 
+state.S2 0 1 0 0 0 0 0 0 
+state.S1 1 0 0 0 0 0 0 0 
+
+State Machine - |lights_game_fsm|mealy_button:buttons|state
+Name state~5 state~4 
+state.S1 0 0 
+state.S2 0 1 
+state.S3 1 0 

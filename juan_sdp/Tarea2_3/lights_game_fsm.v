@@ -3,14 +3,16 @@ module lights_game_fsm (
 );
     
 
-input clk, reset, up_down, enable, button1, button2;
-output [7:0] leds;
+input clk, reset, modo, enable, button1, button2;
+output [7:0] leds_green;
+output [7:0] leds_red;
 
-wire TC_sig, enable_mealy, up_down_mealy;
+wire TC_sig, enable_mealy, up_down_mealy, TC_fsm;
 
 wire [3:0] cuenta;
 
-defparam counter2.fin_cuenta = 12500000;
+// defparam counter2.fin_cuenta = 12500000;
+defparam counter2.fin_cuenta = 1; //Only simulation
 defparam counter_up_down.fin_cuenta = 16;
 defparam variable_counter.width_count = 4;
 
@@ -45,16 +47,25 @@ mealy_button buttons (
 );
 
 
-counter_var variable_counter(
+counter_var variable_counter (
 	.clk(clk) ,
 	.reset(reset) ,
-	.entrada() ,
-	.enable() ,
-	.modo() ,
-	.cuenta() ,
-	.TC()
+	.entrada(cuenta) ,
+	.enable(TC_sig) ,
+	.modo(modo) ,
+	.cuenta(leds_red[7:4]) ,
+	.TC(TC_fsm)
 );
 
+luces_fsm luces (
+	.clk(clk) ,
+	.reset(reset) ,
+	.enable(TC_fsm) ,
+	.leds(leds_green) 
+);
+
+
+assign leds_red[3:0] = cuenta;
 
 
 endmodule

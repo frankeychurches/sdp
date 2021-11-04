@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "leds_red[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_red[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_red[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_red[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_red[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_red[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_red[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_red[7]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_green[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_green[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_green[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_green[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_green[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_green[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_green[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leds_green[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "button1",
+					"strict" : false
+				},
+				{
+					"name" : "button2",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "modo",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

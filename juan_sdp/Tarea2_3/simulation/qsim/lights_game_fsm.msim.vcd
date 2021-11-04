@@ -1,0 +1,938 @@
+$comment
+	File created using the following command:
+		vcd file lights_game_fsm.msim.vcd -direction
+$end
+$date
+	Thu Nov 04 13:42:14 2021
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module lights_game_fsm_vlg_vec_tst $end
+$var reg 1 ! button1 $end
+$var reg 1 " button2 $end
+$var reg 1 # clk $end
+$var reg 1 $ enable $end
+$var reg 1 % modo $end
+$var reg 1 & reset $end
+$var wire 1 ' leds_green [7] $end
+$var wire 1 ( leds_green [6] $end
+$var wire 1 ) leds_green [5] $end
+$var wire 1 * leds_green [4] $end
+$var wire 1 + leds_green [3] $end
+$var wire 1 , leds_green [2] $end
+$var wire 1 - leds_green [1] $end
+$var wire 1 . leds_green [0] $end
+$var wire 1 / leds_red [7] $end
+$var wire 1 0 leds_red [6] $end
+$var wire 1 1 leds_red [5] $end
+$var wire 1 2 leds_red [4] $end
+$var wire 1 3 leds_red [3] $end
+$var wire 1 4 leds_red [2] $end
+$var wire 1 5 leds_red [1] $end
+$var wire 1 6 leds_red [0] $end
+
+$scope module i1 $end
+$var wire 1 7 gnd $end
+$var wire 1 8 vcc $end
+$var wire 1 9 unknown $end
+$var tri1 1 : devclrn $end
+$var tri1 1 ; devpor $end
+$var tri1 1 < devoe $end
+$var wire 1 = leds_red[0]~output_o $end
+$var wire 1 > leds_red[1]~output_o $end
+$var wire 1 ? leds_red[2]~output_o $end
+$var wire 1 @ leds_red[3]~output_o $end
+$var wire 1 A leds_red[4]~output_o $end
+$var wire 1 B leds_red[5]~output_o $end
+$var wire 1 C leds_red[6]~output_o $end
+$var wire 1 D leds_red[7]~output_o $end
+$var wire 1 E leds_green[0]~output_o $end
+$var wire 1 F leds_green[1]~output_o $end
+$var wire 1 G leds_green[2]~output_o $end
+$var wire 1 H leds_green[3]~output_o $end
+$var wire 1 I leds_green[4]~output_o $end
+$var wire 1 J leds_green[5]~output_o $end
+$var wire 1 K leds_green[6]~output_o $end
+$var wire 1 L leds_green[7]~output_o $end
+$var wire 1 M clk~input_o $end
+$var wire 1 N clk~inputclkctrl_outclk $end
+$var wire 1 O reset~input_o $end
+$var wire 1 P button1~input_o $end
+$var wire 1 Q button2~input_o $end
+$var wire 1 R counter_up_down|count[0]~3_combout $end
+$var wire 1 S buttons|next_state.S3~0_combout $end
+$var wire 1 T counter_up_down|count[1]~5_cout $end
+$var wire 1 U counter_up_down|count[1]~6_combout $end
+$var wire 1 V counter_up_down|count[0]~8_combout $end
+$var wire 1 W counter_up_down|count[1]~7 $end
+$var wire 1 X counter_up_down|count[2]~9_combout $end
+$var wire 1 Y counter_up_down|count[2]~10 $end
+$var wire 1 Z counter_up_down|count[3]~11_combout $end
+$var wire 1 [ modo~input_o $end
+$var wire 1 \ variable_counter|cuenta~3_combout $end
+$var wire 1 ] reset~inputclkctrl_outclk $end
+$var wire 1 ^ enable~input_o $end
+$var wire 1 _ counter2|count~0_combout $end
+$var wire 1 ` counter2|count[1]~1_combout $end
+$var wire 1 a counter2|Add0~0_combout $end
+$var wire 1 b counter2|TC~0_combout $end
+$var wire 1 c variable_counter|cuenta~5_combout $end
+$var wire 1 d variable_counter|Add0~0_combout $end
+$var wire 1 e variable_counter|cuenta~4_combout $end
+$var wire 1 f variable_counter|Equal0~0_combout $end
+$var wire 1 g variable_counter|Equal0~1_combout $end
+$var wire 1 h variable_counter|Equal0~2_combout $end
+$var wire 1 i variable_counter|Equal0~3_combout $end
+$var wire 1 j variable_counter|cuenta~2_combout $end
+$var wire 1 k luces|Selector0~0_combout $end
+$var wire 1 l variable_counter|TC~combout $end
+$var wire 1 m luces|state~5_q $end
+$var wire 1 n luces|state~13_combout $end
+$var wire 1 o luces|state~6_q $end
+$var wire 1 p luces|state.S9~1_combout $end
+$var wire 1 q luces|Selector6~0_combout $end
+$var wire 1 r luces|state~11_q $end
+$var wire 1 s luces|Selector5~0_combout $end
+$var wire 1 t luces|state~10_q $end
+$var wire 1 u luces|state~16_combout $end
+$var wire 1 v luces|state~9_q $end
+$var wire 1 w luces|state~15_combout $end
+$var wire 1 x luces|state~8_q $end
+$var wire 1 y luces|state~14_combout $end
+$var wire 1 z luces|state~7_q $end
+$var wire 1 { luces|state.S9~0_combout $end
+$var wire 1 | luces|Selector7~0_combout $end
+$var wire 1 } luces|Selector7~1_combout $end
+$var wire 1 ~ luces|state_up_down~q $end
+$var wire 1 !! luces|state~12_combout $end
+$var wire 1 "! luces|state~4_q $end
+$var wire 1 #! counter_up_down|count [3] $end
+$var wire 1 $! counter_up_down|count [2] $end
+$var wire 1 %! counter_up_down|count [1] $end
+$var wire 1 &! counter_up_down|count [0] $end
+$var wire 1 '! counter2|count [1] $end
+$var wire 1 (! counter2|count [0] $end
+$var wire 1 )! variable_counter|cuenta [3] $end
+$var wire 1 *! variable_counter|cuenta [2] $end
+$var wire 1 +! variable_counter|cuenta [1] $end
+$var wire 1 ,! variable_counter|cuenta [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+1"
+0#
+1$
+1%
+1&
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+06
+05
+04
+03
+02
+01
+00
+0/
+07
+18
+x9
+1:
+1;
+1<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+1O
+1P
+1Q
+0R
+1S
+0T
+1U
+0V
+1W
+1X
+0Y
+1Z
+1[
+0\
+1]
+1^
+1_
+1`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+1i
+0j
+0k
+0l
+0m
+0n
+0o
+1p
+1q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+1{
+0|
+0}
+0~
+0!!
+0"!
+0&!
+0%!
+0$!
+0#!
+0(!
+0'!
+0,!
+0+!
+0*!
+0)!
+$end
+#10000
+1#
+1M
+1N
+1(!
+1a
+0_
+#20000
+0#
+0M
+0N
+#30000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#40000
+0#
+0M
+0N
+#50000
+1#
+1M
+1N
+1(!
+1r
+1L
+0l
+0b
+0p
+1'
+0a
+0_
+1}
+1s
+0q
+#60000
+0#
+0M
+0N
+#70000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#80000
+0#
+0M
+0N
+#90000
+1#
+1M
+1N
+1(!
+1a
+0_
+#100000
+0#
+0M
+0N
+#110000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#120000
+0#
+0M
+0N
+#130000
+1#
+1M
+1N
+1~
+1(!
+1t
+0r
+0L
+1K
+1|
+0l
+0b
+1(
+0'
+1u
+0s
+0a
+0_
+0}
+1}
+#140000
+0#
+0M
+0N
+#150000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#160000
+0#
+0M
+0N
+#170000
+1#
+1M
+1N
+1(!
+1a
+0_
+#180000
+0#
+0M
+0N
+#190000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#200000
+0#
+0M
+0N
+#210000
+1#
+1M
+1N
+1(!
+1v
+0t
+0K
+1J
+0l
+0b
+1)
+0(
+0a
+0_
+1w
+0u
+#220000
+0#
+0M
+0N
+#230000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#240000
+0#
+0M
+0N
+#250000
+1#
+1M
+1N
+1(!
+1a
+0_
+#260000
+0#
+0M
+0N
+#270000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#280000
+0#
+0M
+0N
+#290000
+1#
+1M
+1N
+1(!
+1x
+0v
+0J
+1I
+0l
+0b
+1*
+0)
+0a
+0_
+1y
+0w
+#300000
+0#
+0M
+0N
+#310000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#320000
+0#
+0M
+0N
+#330000
+1#
+1M
+1N
+1(!
+1a
+0_
+#340000
+0#
+0M
+0N
+#350000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#360000
+0#
+0M
+0N
+#370000
+1#
+1M
+1N
+1(!
+1z
+0x
+0I
+1H
+0l
+0b
+0{
+1p
+1+
+0*
+0a
+0_
+1n
+0y
+#380000
+0#
+0M
+0N
+#390000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#400000
+0#
+0M
+0N
+#410000
+1#
+1M
+1N
+1(!
+1a
+0_
+#420000
+0#
+0M
+0N
+#430000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#440000
+0#
+0M
+0N
+#450000
+1#
+1M
+1N
+1(!
+0z
+1o
+1G
+0H
+0l
+0b
+0+
+1,
+0a
+0_
+0n
+1k
+#460000
+0#
+0M
+0N
+#470000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#480000
+0#
+0M
+0N
+#490000
+1#
+1M
+1N
+1(!
+1a
+0_
+#500000
+0#
+0M
+0N
+#510000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#520000
+0#
+0M
+0N
+#530000
+1#
+1M
+1N
+1(!
+0o
+1m
+1F
+0G
+0l
+0b
+0,
+1-
+0a
+0_
+0k
+1!!
+#540000
+0#
+0M
+0N
+#550000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#560000
+0#
+0M
+0N
+#570000
+1#
+1M
+1N
+1(!
+1a
+0_
+#580000
+0#
+0M
+0N
+#590000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#600000
+0#
+0M
+0N
+#610000
+1#
+1M
+1N
+1(!
+1"!
+0m
+0F
+1E
+0l
+0b
+0|
+1.
+0-
+0a
+0_
+1k
+0!!
+0}
+#620000
+0#
+0M
+0N
+#630000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#640000
+0#
+0M
+0N
+#650000
+1#
+1M
+1N
+1(!
+1a
+0_
+#660000
+0#
+0M
+0N
+#670000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#680000
+0#
+0M
+0N
+#690000
+1#
+1M
+1N
+0~
+1(!
+0"!
+1m
+1F
+0E
+0l
+0b
+0.
+1-
+1n
+0k
+0a
+0_
+#700000
+0#
+0M
+0N
+#710000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#720000
+0#
+0M
+0N
+#730000
+1#
+1M
+1N
+1(!
+1a
+0_
+#740000
+0#
+0M
+0N
+#750000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#760000
+0#
+0M
+0N
+#770000
+1#
+1M
+1N
+1(!
+1o
+0m
+0F
+1G
+0l
+0b
+1,
+0-
+0a
+0_
+1y
+0n
+#780000
+0#
+0M
+0N
+#790000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#800000
+0#
+0M
+0N
+#810000
+1#
+1M
+1N
+1(!
+1a
+0_
+#820000
+0#
+0M
+0N
+#830000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#840000
+0#
+0M
+0N
+#850000
+1#
+1M
+1N
+1(!
+1z
+0o
+0G
+1H
+0l
+0b
+1+
+0,
+0a
+0_
+1w
+0y
+#860000
+0#
+0M
+0N
+#870000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#880000
+0#
+0M
+0N
+#890000
+1#
+1M
+1N
+1(!
+1a
+0_
+#900000
+0#
+0M
+0N
+#910000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#920000
+0#
+0M
+0N
+#930000
+1#
+1M
+1N
+1(!
+0z
+1x
+1I
+0H
+0l
+0b
+1{
+0p
+0+
+1*
+0a
+0_
+0w
+1u
+#940000
+0#
+0M
+0N
+#950000
+1#
+1M
+1N
+0'!
+0(!
+1_
+#960000
+0#
+0M
+0N
+#970000
+1#
+1M
+1N
+1(!
+1a
+0_
+#980000
+0#
+0M
+0N
+#990000
+1#
+1M
+1N
+1'!
+0(!
+1l
+1b
+1_
+#1000000

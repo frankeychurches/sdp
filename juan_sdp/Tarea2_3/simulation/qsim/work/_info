@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/simulation/qsim
+vcounter_var
+Z1 !s110 1636028486
+!i10b 1
+!s100 Zi55<L5QJZQ:FN`VlWV2K3
+I9TE86an149Qn=ObVM8KaQ1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1636028485
+Z3 8lights_game_fsm.vo
+Z4 Flights_game_fsm.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1636028486.000000
+Z8 !s107 lights_game_fsm.vo|
+Z9 !s90 -work|work|lights_game_fsm.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vcounter_var_vlg_vec_tst
+R1
+!i10b 1
+!s100 0mGQnUlcGCk@F;;^ZzPZW2
+I_IX`b:jcM]cY2BEIR=34h2
+R2
+R0
+w1636028483
+8counter_var.vwf.vt
+Fcounter_var.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 counter_var.vwf.vt|
+!s90 -work|work|counter_var.vwf.vt|
+!i113 1
+R10
+R11
+vhard_block
+Z13 !s110 1636029733
+!i10b 1
+!s100 iM7ROmDB=HJKiUDWV[XP72
+Im1dhVcOfnQmiLP3GB_28A1
+R2
+R0
+Z14 w1636029732
+R3
+R4
+L0 1416
+R6
+r1
+!s85 0
+31
+Z15 !s108 1636029733.000000
+R8
+R9
+!i113 1
+R10
+R11
+vlights_game_fsm
+R13
+!i10b 1
+!s100 8_V[;jzIDTlP=;f=7NGZa2
+IW>3B]CzQ4Ihb9g9ocLVk[3
+R2
+R0
+R14
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+R15
+R8
+R9
+!i113 1
+R10
+R11
+vlights_game_fsm_vlg_vec_tst
+R13
+!i10b 1
+!s100 CSAWf4SPU1_=I0QFZk<Y@2
+ImHo=@83LOVRgWgG;M:D>@0
+R2
+R0
+w1636029731
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R15
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+vluces_fsm
+Z16 !s110 1636027728
+!i10b 1
+!s100 GIm7N^>:DLi6ZjdG5N]Ll1
+IdMgm@]WU9SH;:o<mWoAbW3
+R2
+R0
+w1636027727
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1636027728.000000
+R8
+R9
+!i113 1
+R10
+R11
+vluces_fsm_vlg_vec_tst
+R16
+!i10b 1
+!s100 FeG30ingG2]a:N7c`91g81
+Icim2AQzB8V:RI1TDaWl7k3
+R2
+R0
+w1636027725
+8luces_fsm.vwf.vt
+Fluces_fsm.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R17
+!s107 luces_fsm.vwf.vt|
+!s90 -work|work|luces_fsm.vwf.vt|
+!i113 1
+R10
+R11
+vmealy_button
+Z18 !s110 1636028204
+!i10b 1
+!s100 6GVH^T8<D:gnXgWn3Q9Re1
+IeYPP`VDM45ORnN8N8Oh`51
+R2
+R0
+w1636028203
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1636028203.000000
+R8
+R9
+!i113 1
+R10
+R11
+vmealy_button_vlg_vec_tst
+R18
+!i10b 1
+!s100 :kNWS?9Q`ZHdj>36moO;]2
+I5XF3;lL6`fEUi6[?4Vj5W0
+R2
+R0
+w1636028201
+8mealy_fsm.vwf.vt
+Fmealy_fsm.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1636028204.000000
+!s107 mealy_fsm.vwf.vt|
+!s90 -work|work|mealy_fsm.vwf.vt|
+!i113 1
+R10
+R11

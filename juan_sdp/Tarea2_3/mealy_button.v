@@ -3,7 +3,7 @@ module mealy_button (
 );
 
 input clk, reset, button1, button2;
-output enable, up_down;
+output reg enable, up_down;
 
 reg [1:0] state, next_state;
 
@@ -34,9 +34,11 @@ always @(state or button1 or button2)
                     up_down = 1;
                 end
                 else
+						begin
                     next_state = S1;
                     enable = 0;
                     up_down = 0;
+						 end
 
         default: begin
             next_state = S1;
