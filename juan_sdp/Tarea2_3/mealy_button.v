@@ -5,9 +5,9 @@ module mealy_button (
 input clk, reset, button1, button2;
 output reg enable, up_down;
 
-reg [1:0] state, next_state;
+reg state, next_state;
 
-parameter [1:0] S1 = 2'b00, S2 = 2'b01; //Podramos usar solo un bit ya que solo tenemos dos estados
+parameter S1 = 1'b0, S2 = 1'b1; //Solo dos estados
 
 
 // Maquina de estados Mealy (2 bloques)

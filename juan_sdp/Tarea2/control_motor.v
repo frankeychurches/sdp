@@ -141,7 +141,7 @@ end
 // Registro de estado actual con reset asíncrono
 always @(posedge CLK or negedge RESET) begin
     if (!RESET)
-        Estado_Actual <= S9;
+        Estado_Actual <= S1;
     else
         Estado_Actual <= Estado_Siguiente;
 end

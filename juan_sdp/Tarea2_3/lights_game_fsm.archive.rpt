@@ -1,5 +1,5 @@
 Archive Project report for lights_game_fsm
-Tue Nov 09 18:02:03 2021
+Tue Nov 09 18:17:48 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Tue Nov 09 18:02:03 2021 ;
+; Archive Project Status ; Successful - Tue Nov 09 18:17:48 2021 ;
 ; Revision Name          ; lights_game_fsm                       ;
 ; Top-level Entity Name  ; lights_game_fsm                       ;
 ; Family                 ; Cyclone IV E                          ;
@@ -59,8 +59,8 @@ Info: ----------------------------------------------------------
 Info: Generated report 'lights_game_fsm.archive.rpt'
 Info (23030): Evaluation of Tcl script d:/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Tue Nov 09 18:02:03 2021
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Tue Nov 09 18:17:48 2021
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
