@@ -7,7 +7,7 @@ output reg enable, up_down;
 
 reg [1:0] state, next_state;
 
-parameter [1:0] S1 = 2'b00, S2 = 2'b01, S3 = 2'b10;
+parameter [1:0] S1 = 2'b00, S2 = 2'b01; //Podramos usar solo un bit ya que solo tenemos dos estados
 
 
 // Maquina de estados Mealy (2 bloques)
@@ -21,7 +21,7 @@ always @(posedge clk or negedge reset)
 always @(state or button1 or button2) 
     
     case (state)
-        S1, S2, S3: if(!button1)
+        S1: if(!button1)
                 begin
                 next_state = S2; 
                 enable = 1;
@@ -29,16 +29,29 @@ always @(state or button1 or button2)
                 end
             else
                 if (!button2) begin
-                    next_state = S3;
+                    next_state = S2;
                     enable = 1;
                     up_down = 1;
                 end
                 else
-						begin
+                    begin
                     next_state = S1;
                     enable = 0;
                     up_down = 0;
-						 end
+                    end
+        S2:
+            if(!button1 || !button2)
+				begin
+                next_state = S2;
+                enable = 0;
+                up_down = 0;
+                end
+            else
+                begin
+                next_state = S1;
+                enable = 0;
+                up_down = 0;
+                end
 
         default: begin
             next_state = S1;

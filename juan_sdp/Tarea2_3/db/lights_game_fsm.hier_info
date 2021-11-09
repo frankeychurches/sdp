@@ -5,27 +5,27 @@ enable => enable.IN2
 button1 => button1.IN1
 button2 => button2.IN1
 modo => modo.IN1
-leds_red[0] <= cuenta[0].DB_MAX_OUTPUT_PORT_TYPE
-leds_red[1] <= cuenta[1].DB_MAX_OUTPUT_PORT_TYPE
-leds_red[2] <= cuenta[2].DB_MAX_OUTPUT_PORT_TYPE
-leds_red[3] <= cuenta[3].DB_MAX_OUTPUT_PORT_TYPE
-leds_red[4] <= counter_var:variable_counter.cuenta
-leds_red[5] <= counter_var:variable_counter.cuenta
-leds_red[6] <= counter_var:variable_counter.cuenta
-leds_red[7] <= counter_var:variable_counter.cuenta
-leds_green[0] <= luces_fsm:luces.leds
-leds_green[1] <= luces_fsm:luces.leds
-leds_green[2] <= luces_fsm:luces.leds
-leds_green[3] <= luces_fsm:luces.leds
-leds_green[4] <= luces_fsm:luces.leds
-leds_green[5] <= luces_fsm:luces.leds
-leds_green[6] <= luces_fsm:luces.leds
-leds_green[7] <= luces_fsm:luces.leds
+leds_red[0] << cuenta[0].DB_MAX_OUTPUT_PORT_TYPE
+leds_red[1] << cuenta[1].DB_MAX_OUTPUT_PORT_TYPE
+leds_red[2] << cuenta[2].DB_MAX_OUTPUT_PORT_TYPE
+leds_red[3] << cuenta[3].DB_MAX_OUTPUT_PORT_TYPE
+leds_red[4] << counter_var:variable_counter.cuenta
+leds_red[5] << counter_var:variable_counter.cuenta
+leds_red[6] << counter_var:variable_counter.cuenta
+leds_red[7] << counter_var:variable_counter.cuenta
+leds_green[0] << luces_fsm:luces.leds
+leds_green[1] << luces_fsm:luces.leds
+leds_green[2] << luces_fsm:luces.leds
+leds_green[3] << luces_fsm:luces.leds
+leds_green[4] << luces_fsm:luces.leds
+leds_green[5] << luces_fsm:luces.leds
+leds_green[6] << luces_fsm:luces.leds
+leds_green[7] << luces_fsm:luces.leds
 
 
 |lights_game_fsm|n_counter:counter2
 clk => count[0]~reg0.CLK
-clk => count[1]~reg0.CLK
+clk => count[-1]~reg0.CLK
 reset => count.OUTPUTSELECT
 reset => count.OUTPUTSELECT
 enable => count.OUTPUTSELECT
@@ -35,7 +35,7 @@ up_down => count.OUTPUTSELECT
 up_down => TC.IN1
 up_down => TC.IN1
 count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[-1] <= count[-1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 TC <= TC.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -68,15 +68,14 @@ TC <= TC.DB_MAX_OUTPUT_PORT_TYPE
 |lights_game_fsm|mealy_button:buttons
 clk => state~1.DATAIN
 reset => state~3.DATAIN
-button1 => next_state.S1.OUTPUTSELECT
-button1 => next_state.S3.OUTPUTSELECT
+button1 => next_state.OUTPUTSELECT
 button1 => enable.OUTPUTSELECT
 button1 => up_down.OUTPUTSELECT
-button1 => state.S2.DATAIN
-button2 => next_state.S1.DATAA
-button2 => next_state.S3.DATAA
+button1 => always1.IN0
+button2 => next_state.DATAA
 button2 => enable.DATAA
 button2 => up_down.DATAA
+button2 => always1.IN1
 enable <= enable.DB_MAX_OUTPUT_PORT_TYPE
 up_down <= up_down.DB_MAX_OUTPUT_PORT_TYPE
 
