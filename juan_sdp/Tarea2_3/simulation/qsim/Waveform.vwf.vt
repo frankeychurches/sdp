@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/04/2021 13:42:10"
+// Generated on "11/14/2021 00:01:27"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          lights_game_fsm
 // 
@@ -68,12 +68,17 @@ end
 initial
 begin
 	reset = 1'b1;
+	reset = #40000 1'b0;
+	reset = #920000 1'b1;
 end 
 
 // enable
 initial
 begin
-	enable = 1'b1;
+	enable = 1'b0;
+	enable = #40000 1'b1;
+	enable = #870000 1'b0;
+	enable = #70000 1'b1;
 end 
 
 // modo
@@ -85,13 +90,20 @@ end
 // button1
 initial
 begin
-	button1 = 1'b1;
+	button1 = 1'b0;
+	button1 = #100000 1'b1;
+	button1 = #50000 1'b0;
+	button1 = #250000 1'b1;
+	button1 = #50000 1'b0;
+	button1 = #260000 1'b1;
+	button1 = #40000 1'b0;
+	button1 = #240000 1'b1;
 end 
 
 // button2
 initial
 begin
-	button2 = 1'b1;
+	button2 = 1'b0;
 end 
 endmodule
 

@@ -280,7 +280,14 @@ TRANSITION_LIST("button1")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 100.0;
+			LEVEL 1 FOR 50.0;
+			LEVEL 0 FOR 250.0;
+			LEVEL 1 FOR 50.0;
+			LEVEL 0 FOR 260.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 240.0;
+			LEVEL 1 FOR 10.0;
 		}
 	}
 }
@@ -293,9 +300,7 @@ TRANSITION_LIST("button2")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 290.0;
-			LEVEL 0 FOR 130.0;
-			LEVEL 1 FOR 580.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -420,7 +425,10 @@ TRANSITION_LIST("enable")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 870.0;
+			LEVEL 0 FOR 70.0;
+			LEVEL 1 FOR 20.0;
 		}
 	}
 }
@@ -433,7 +441,10 @@ TRANSITION_LIST("leds_green[7]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 930.0;
+			LEVEL 1 FOR 30.0;
 		}
 	}
 }
@@ -576,7 +587,9 @@ TRANSITION_LIST("leds_red[4]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 960.0;
 		}
 	}
 }
@@ -589,7 +602,10 @@ TRANSITION_LIST("leds_red[3]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 920.0;
+			LEVEL 1 FOR 30.0;
 		}
 	}
 }
@@ -602,8 +618,10 @@ TRANSITION_LIST("leds_red[2]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 370.0;
-			LEVEL 1 FOR 630.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 920.0;
+			LEVEL 1 FOR 30.0;
 		}
 	}
 }
@@ -616,10 +634,10 @@ TRANSITION_LIST("leds_red[1]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 330.0;
+			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 590.0;
+			LEVEL 0 FOR 920.0;
+			LEVEL 1 FOR 30.0;
 		}
 	}
 }
@@ -632,13 +650,10 @@ TRANSITION_LIST("leds_red[0]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 310.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 590.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 920.0;
+			LEVEL 1 FOR 30.0;
 		}
 	}
 }
@@ -664,7 +679,9 @@ TRANSITION_LIST("reset")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 920.0;
+			LEVEL 1 FOR 40.0;
 		}
 	}
 }

@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lights_game_fsm -c lights_game_fsm --vector_source="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/Waveform.vwf" --testbench_file="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lights_game_fsm -c lights_game_fsm --vector_source="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/Waveform.vwf" --testbench_file="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/simulation/qsim/" lights_game_fsm -c lights_game_fsm</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/simulation/qsim/" lights_game_fsm -c lights_game_fsm</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lights_game_fsm -c lights_game_fsm --vector_source="D:/git/sdp/fran_sdp/tarea2_juan/Tarea2_3/lights_game_fsm_restored/Waveform.vwf" --testbench_file="D:/git/sdp/fran_sdp/tarea2_juan/Tarea2_3/lights_game_fsm_restored/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lights_game_fsm -c lights_game_fsm --vector_source="D:/git/sdp/fran_sdp/tarea2_juan/Tarea2_3/lights_game_fsm_restored/Waveform.vwf" --testbench_file="D:/git/sdp/fran_sdp/tarea2_juan/Tarea2_3/lights_game_fsm_restored/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/git/sdp/fran_sdp/tarea2_juan/Tarea2_3/lights_game_fsm_restored/simulation/qsim/" lights_game_fsm -c lights_game_fsm</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/git/sdp/fran_sdp/tarea2_juan/Tarea2_3/lights_game_fsm_restored/simulation/qsim/" lights_game_fsm -c lights_game_fsm</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work lights_game_fsm.vo
@@ -20,9 +20,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -41,9 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -326,7 +320,14 @@ TRANSITION_LIST("button1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 250.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 260.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 10.0;
 	}
 }
 
@@ -335,7 +336,7 @@ TRANSITION_LIST("button2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -358,7 +359,10 @@ TRANSITION_LIST("enable")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 870.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
 
@@ -520,7 +524,9 @@ TRANSITION_LIST("reset")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 920.0;
+		LEVEL 1 FOR 40.0;
 	}
 }
 

@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at luces_fsm.v(14): always construct contains both blocking and non-blocking assignments File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/luces_fsm.v Line: 14
+Warning (10268): Verilog HDL information at luces_fsm.v(42): always construct contains both blocking and non-blocking assignments File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/luces_fsm.v Line: 42

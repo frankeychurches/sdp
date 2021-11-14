@@ -1,3 +1,31 @@
+
+// --------------------------------------------------------------------
+// Universitat Politècnica de València
+// Departamento de Ingeniería Electrónica
+// --------------------------------------------------------------------
+// Sistemas Digitales Programables MUISE
+// Curso 2021 - 2022
+// --------------------------------------------------------------------
+// Nombre del archivo: luces_fsm.v
+//
+// Descripción: Este código de verilog implementa una máquina de estados
+// Medvedev, donde se ha incluido un estado S9 por problemas de 
+// compilación. Los estados se corresponden con la implementación 
+// del contador Johnson. Las entradas y salidas de este programa son:
+// 1. clk -> Reloj activo por flanco de subida  (Entrada)
+// 2. reset -> Reset asíncrono activo a nivel bajo (Entrada)
+// 3. enable -> Habilitador de cuenta y funcionamiento (Entrada)
+// 4. leds -> Vector de 8 bits que activa el bit correspondiente al led 
+//            que queremos encender por desplazamiento (Salida)
+//
+// --------------------------------------------------------------------
+// Versión: V1.0| Fecha Modificación: 11/11/2021
+//
+// Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
+// Ordenador de trabajo: Portátil
+//
+// --------------------------------------------------------------------
+
 module luces_fsm (
     clk, reset, enable, leds
 );
@@ -20,7 +48,10 @@ always @(posedge clk or negedge reset)
     else
         if(enable)
             case (state)
-                S1: begin state <= S2; state_up_down = 1; end
+                S1: begin 
+							state <= S2; 
+							state_up_down = 1; 
+						  end
                 S2: if(state_up_down == 1)  
                             state <= S3;
                         else 

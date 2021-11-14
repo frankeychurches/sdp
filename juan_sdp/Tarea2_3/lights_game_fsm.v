@@ -1,8 +1,38 @@
+
+// --------------------------------------------------------------------
+// Universitat Politècnica de València
+// Departamento de Ingeniería Electrónica
+// --------------------------------------------------------------------
+// Sistemas Digitales Programables MUISE
+// Curso 2021 - 2022
+// --------------------------------------------------------------------
+// Nombre del archivo: lights_game_fsm.v
+//
+// Descripción: Este código de verilog implementa del juego de luces del
+// coche fantástico con velocidad de paso de un led a otro variable. 
+// Las entradas y salidas de este programa son:
+// 1. clk -> Reloj activo por flanco de subida  (Entrada)
+// 2. reset -> Reset activo a nivel bajo (Entrada)
+// 3. enable -> Habilitador de cuenta y funcionamiento (Entrada)
+// 4. button1 -> KEY[1] de la placa activo a nivel bajo (Entrada)
+// 5. button2 -> KEY[2] de la placa activo a nivel bajo (Entrada)
+// 6. leds_red -> Vector de salida de los LEDs rojos que informan
+//                de la cuenta (Salida)
+// 7. leds_green -> Vector de salida de los LEDs verdes que hacen el 
+//						  juego de luces (Salida)
+//
+// --------------------------------------------------------------------
+// Versión: V1.0| Fecha Modificación: 11/11/2021
+//
+// Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
+// Ordenador de trabajo: Portátil
+//
+// --------------------------------------------------------------------
+
 module lights_game_fsm (
     clk, reset, enable, button1, button2, modo, leds_red, leds_green
 );
     
-
 
 input clk, reset, modo, enable, button1, button2;
 output [7:0] leds_green;

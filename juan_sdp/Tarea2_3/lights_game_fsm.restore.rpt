@@ -1,0 +1,87 @@
+Restore Archived Project report for lights_game_fsm
+Sat Nov 13 20:05:23 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Sat Nov 13 20:05:23 2021 ;
+; Revision Name                   ; lights_game_fsm                       ;
+; Top-level Entity Name           ; lights_game_fsm                       ;
+; Family                          ; Cyclone IV E                          ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'D:/git/sdp/fran_sdp/tarea2_juan/Tarea2_3/lights_game_fsm.qar' into the 'D:/git/sdp/fran_sdp/tarea2_juan/Tarea2_3/lights_game_fsm_restored/' directory
+Info: Generated report 'lights_game_fsm.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4820 megabytes
+    Info: Processing ended: Sat Nov 13 20:05:23 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
+
+
++-------------------------+
+; Files Not Restored      ;
++-------------------------+
+; File Name               ;
++-------------------------+
+; qar_info.json           ;
+; MathFun.vh              ;
+; Waveform.vwf            ;
+; counter_var.v           ;
+; counter_var.vwf         ;
+; lights_game_fsm.qpf     ;
+; lights_game_fsm.qsf     ;
+; lights_game_fsm.v       ;
+; luces_fsm.v             ;
+; luces_fsm.vwf           ;
+; mealy_button.v          ;
+; mealy_fsm.vwf           ;
+; n_counter.v             ;
+; assignment_defaults.qdf ;
++-------------------------+
+
+

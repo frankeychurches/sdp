@@ -10,8 +10,3 @@ state.S4 0 0 0 1 0 0 0 0
 state.S3 0 0 1 0 0 0 0 0 
 state.S2 0 1 0 0 0 0 0 0 
 state.S1 1 0 0 0 0 0 0 0 
-
-State Machine - |lights_game_fsm|mealy_button:buttons|state
-Name state~4 
-state.S1 0 
-state.S2 1 

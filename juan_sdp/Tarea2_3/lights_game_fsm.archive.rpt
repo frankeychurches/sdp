@@ -1,5 +1,5 @@
 Archive Project report for lights_game_fsm
-Tue Nov 09 18:17:48 2021
+Sun Nov 14 19:47:18 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Tue Nov 09 18:17:48 2021 ;
+; Archive Project Status ; Successful - Sun Nov 14 19:47:18 2021 ;
 ; Revision Name          ; lights_game_fsm                       ;
 ; Top-level Entity Name  ; lights_game_fsm                       ;
 ; Family                 ; Cyclone IV E                          ;
@@ -59,30 +59,30 @@ Info: ----------------------------------------------------------
 Info: Generated report 'lights_game_fsm.archive.rpt'
 Info (23030): Evaluation of Tcl script d:/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Tue Nov 09 18:17:48 2021
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Sun Nov 14 19:47:18 2021
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
-+--------------------------------------------------+
-; Files Archived                                   ;
-+--------------------------------------------------+
-; File Name                                        ;
-+--------------------------------------------------+
-; counter_var.v                                    ;
-; counter_var.vwf                                  ;
-; d:/quartus/quartus/bin64/assignment_defaults.qdf ;
-; lights_game_fsm.qpf                              ;
-; lights_game_fsm.qsf                              ;
-; lights_game_fsm.v                                ;
-; luces_fsm.v                                      ;
-; luces_fsm.vwf                                    ;
-; MathFun.vh                                       ;
-; mealy_button.v                                   ;
-; mealy_fsm.vwf                                    ;
-; n_counter.v                                      ;
-; Waveform.vwf                                     ;
-+--------------------------------------------------+
++-------------------------+
+; Files Archived          ;
++-------------------------+
+; File Name               ;
++-------------------------+
+; assignment_defaults.qdf ;
+; counter_var.v           ;
+; counter_var.vwf         ;
+; lights_game_fsm.qpf     ;
+; lights_game_fsm.qsf     ;
+; lights_game_fsm.v       ;
+; luces_fsm.v             ;
+; luces_fsm.vwf           ;
+; MathFun.vh              ;
+; mealy_button.v          ;
+; mealy_fsm.vwf           ;
+; n_counter.v             ;
+; Waveform.vwf            ;
++-------------------------+
 
 

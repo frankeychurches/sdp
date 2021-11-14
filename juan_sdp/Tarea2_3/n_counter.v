@@ -10,7 +10,7 @@
 // Descripción: Este código de verilog implementa un contador bidireccional 
 // parametrizable de N bits. Las entradas y salidas de este programa son:
 // 1. clk -> Reloj activo por flanco de subida  (Entrada)
-// 2. reset -> Reset activo a nivel bajo (Entrada)
+// 2. reset -> Reset síncrono activo a nivel bajo (Entrada)
 // 3. enable -> Habilitador de cuenta y funcionamiento (Entrada)
 // 4. up_down -> Dirección de la cuenta. 1 - arriba, 2 - abajo (Entrada)
 // 5. count -> Valor actual de la cuenta (Salida)
@@ -18,7 +18,7 @@
 
 //
 // --------------------------------------------------------------------
-// Versión: V1.0| Fecha Modificación: 21/10/2021
+// Versión: V1.0| Fecha Modificación: 11/11/2021
 //
 // Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
 // Ordenador de trabajo: Portátil

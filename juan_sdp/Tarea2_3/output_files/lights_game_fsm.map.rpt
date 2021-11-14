@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lights_game_fsm
-Tue Nov 09 18:01:12 2021
+Sun Nov 14 19:45:13 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,21 +14,19 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |lights_game_fsm|luces_fsm:luces|state
-  9. State Machine - |lights_game_fsm|mealy_button:buttons|state
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: n_counter:counter2
- 14. Parameter Settings for User Entity Instance: n_counter:counter_up_down
- 15. Parameter Settings for User Entity Instance: mealy_button:buttons
- 16. Parameter Settings for User Entity Instance: counter_var:variable_counter
- 17. Parameter Settings for User Entity Instance: luces_fsm:luces
- 18. Port Connectivity Checks: "n_counter:counter_up_down"
- 19. Port Connectivity Checks: "n_counter:counter2"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: n_counter:counter2
+ 12. Parameter Settings for User Entity Instance: n_counter:counter_up_down
+ 13. Parameter Settings for User Entity Instance: mealy_button:buttons
+ 14. Parameter Settings for User Entity Instance: counter_var:variable_counter
+ 15. Parameter Settings for User Entity Instance: luces_fsm:luces
+ 16. Port Connectivity Checks: "n_counter:counter_up_down"
+ 17. Port Connectivity Checks: "n_counter:counter2"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,15 +52,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 09 18:01:12 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 14 19:45:13 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; lights_game_fsm                             ;
 ; Top-level Entity Name              ; lights_game_fsm                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 36                                          ;
-;     Total combinational functions  ; 36                                          ;
-;     Dedicated logic registers      ; 20                                          ;
-; Total registers                    ; 20                                          ;
+; Total logic elements               ; 70                                          ;
+;     Total combinational functions  ; 70                                          ;
+;     Dedicated logic registers      ; 42                                          ;
+; Total registers                    ; 42                                          ;
 ; Total pins                         ; 22                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -193,20 +191,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 36          ;
+; Estimated Total logic elements              ; 70          ;
 ;                                             ;             ;
-; Total combinational functions               ; 36          ;
+; Total combinational functions               ; 70          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 9           ;
-;     -- 3 input functions                    ; 16          ;
-;     -- <=2 input functions                  ; 11          ;
+;     -- 4 input functions                    ; 23          ;
+;     -- 3 input functions                    ; 14          ;
+;     -- <=2 input functions                  ; 33          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 33          ;
-;     -- arithmetic mode                      ; 3           ;
+;     -- normal mode                          ; 44          ;
+;     -- arithmetic mode                      ; 26          ;
 ;                                             ;             ;
-; Total registers                             ; 20          ;
-;     -- Dedicated logic registers            ; 20          ;
+; Total registers                             ; 42          ;
+;     -- Dedicated logic registers            ; 42          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 22          ;
@@ -214,9 +212,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 22          ;
-; Total fan-out                               ; 220         ;
-; Average fan-out                             ; 2.20        ;
+; Maximum fan-out                             ; 44          ;
+; Total fan-out                               ; 402         ;
+; Average fan-out                             ; 2.58        ;
 +---------------------------------------------+-------------+
 
 
@@ -225,11 +223,11 @@ refer to the applicable agreement for further details.
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name     ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-----------------+--------------+
-; |lights_game_fsm                  ; 36 (0)              ; 20 (0)                    ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |lights_game_fsm                              ; lights_game_fsm ; work         ;
-;    |counter_var:variable_counter| ; 12 (12)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game_fsm|counter_var:variable_counter ; counter_var     ; work         ;
+; |lights_game_fsm                  ; 70 (0)              ; 42 (0)                    ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |lights_game_fsm                              ; lights_game_fsm ; work         ;
+;    |counter_var:variable_counter| ; 10 (10)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game_fsm|counter_var:variable_counter ; counter_var     ; work         ;
 ;    |luces_fsm:luces|              ; 12 (12)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game_fsm|luces_fsm:luces              ; luces_fsm       ; work         ;
 ;    |mealy_button:buttons|         ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game_fsm|mealy_button:buttons         ; mealy_button    ; work         ;
-;    |n_counter:counter2|           ; 4 (4)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game_fsm|n_counter:counter2           ; n_counter       ; work         ;
+;    |n_counter:counter2|           ; 40 (40)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game_fsm|n_counter:counter2           ; n_counter       ; work         ;
 ;    |n_counter:counter_up_down|    ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_game_fsm|n_counter:counter_up_down    ; n_counter       ; work         ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -253,38 +251,17 @@ Encoding Type:  User-Encoded
 +----------+----------+----------+---------+---------+---------+---------+---------+---------+
 
 
-Encoding Type:  User-Encoded
-+-------------------------------------------------------------+
-; State Machine - |lights_game_fsm|mealy_button:buttons|state ;
-+----------+--------------------------------------------------+
-; Name     ; state~4                                          ;
-+----------+--------------------------------------------------+
-; state.S1 ; 0                                                ;
-; state.S2 ; 1                                                ;
-+----------+--------------------------------------------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; mealy_button:buttons|state~5          ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 20    ;
-; Number of registers using Synchronous Clear  ; 4     ;
+; Total registers                              ; 42    ;
+; Number of registers using Synchronous Clear  ; 27    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 14    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Clock Enable       ; 40    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -294,7 +271,7 @@ Encoding Type:  User-Encoded
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |lights_game_fsm|n_counter:counter2|count[-1]       ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |lights_game_fsm|n_counter:counter2|count[6]        ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lights_game_fsm|n_counter:counter_up_down|count[0] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lights_game_fsm|luces_fsm:luces|state              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
@@ -302,12 +279,12 @@ Encoding Type:  User-Encoded
 
 +-----------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: n_counter:counter2 ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; fin_cuenta     ; 1     ; Signed Integer                         ;
-; N              ; 0     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; fin_cuenta     ; 12500000 ; Signed Integer                      ;
+; N              ; 24       ; Signed Integer                      ;
++----------------+----------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -327,8 +304,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------+
 ; Parameter Name ; Value ; Type                                     ;
 +----------------+-------+------------------------------------------+
-; S1             ; 00    ; Unsigned Binary                          ;
-; S2             ; 01    ; Unsigned Binary                          ;
+; S1             ; 0     ; Unsigned Binary                          ;
+; S2             ; 1     ; Unsigned Binary                          ;
 +----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -385,23 +362,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 20                          ;
+; cycloneiii_ff         ; 42                          ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 1                           ;
 ;     ENA CLR           ; 13                          ;
-;     ENA SCLR          ; 4                           ;
+;     ENA SCLR          ; 27                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 36                          ;
-;     arith             ; 3                           ;
-;         2 data inputs ; 1                           ;
+; cycloneiii_lcell_comb ; 70                          ;
+;     arith             ; 26                          ;
+;         2 data inputs ; 24                          ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 33                          ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 9                           ;
+;     normal            ; 44                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 23                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.09                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.01                        ;
 +-----------------------+-----------------------------+
 
 
@@ -420,50 +397,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Nov 09 18:00:59 2021
+    Info: Processing started: Sun Nov 14 19:45:01 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lights_game_fsm -c lights_game_fsm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file n_counter.v
     Info (12023): Found entity 1: n_counter File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file lights_game_fsm.v
-    Info (12023): Found entity 1: lights_game_fsm File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 1
+    Info (12023): Found entity 1: lights_game_fsm File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file mealy_button.v
-    Info (12023): Found entity 1: mealy_button File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/mealy_button.v Line: 1
+    Info (12023): Found entity 1: mealy_button File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/mealy_button.v Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file counter_var.v
-    Info (12023): Found entity 1: counter_var File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/counter_var.v Line: 1
+    Info (12023): Found entity 1: counter_var File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/counter_var.v Line: 37
 Info (12021): Found 1 design units, including 1 entities, in source file luces_fsm.v
-    Info (12023): Found entity 1: luces_fsm File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/luces_fsm.v Line: 1
+    Info (12023): Found entity 1: luces_fsm File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/luces_fsm.v Line: 29
 Info (12127): Elaborating entity "lights_game_fsm" for the top level hierarchy
-Info (12128): Elaborating entity "n_counter" for hierarchy "n_counter:counter2" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 36
-Warning (10230): Verilog HDL assignment warning at n_counter.v(49): truncated value with size 32 to match size of target (2) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 49
-Warning (10230): Verilog HDL assignment warning at n_counter.v(51): truncated value with size 32 to match size of target (2) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 51
+Info (12128): Elaborating entity "n_counter" for hierarchy "n_counter:counter2" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 58
+Warning (10230): Verilog HDL assignment warning at n_counter.v(49): truncated value with size 32 to match size of target (24) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 49
+Warning (10230): Verilog HDL assignment warning at n_counter.v(51): truncated value with size 32 to match size of target (24) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 51
 Warning (10230): Verilog HDL assignment warning at n_counter.v(56): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 56
-Info (12128): Elaborating entity "n_counter" for hierarchy "n_counter:counter_up_down" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 46
+Info (12128): Elaborating entity "n_counter" for hierarchy "n_counter:counter_up_down" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 68
 Warning (10230): Verilog HDL assignment warning at n_counter.v(49): truncated value with size 32 to match size of target (4) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 49
 Warning (10230): Verilog HDL assignment warning at n_counter.v(51): truncated value with size 32 to match size of target (4) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 51
 Warning (10230): Verilog HDL assignment warning at n_counter.v(56): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/n_counter.v Line: 56
-Info (12128): Elaborating entity "mealy_button" for hierarchy "mealy_button:buttons" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 56
-Info (12128): Elaborating entity "counter_var" for hierarchy "counter_var:variable_counter" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 67
-Warning (10230): Verilog HDL assignment warning at counter_var.v(6): truncated value with size 32 to match size of target (4) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/counter_var.v Line: 6
-Warning (10230): Verilog HDL assignment warning at counter_var.v(17): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/counter_var.v Line: 17
-Warning (10230): Verilog HDL assignment warning at counter_var.v(27): truncated value with size 32 to match size of target (4) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/counter_var.v Line: 27
-Info (12128): Elaborating entity "luces_fsm" for hierarchy "luces_fsm:luces" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 74
-Warning (10230): Verilog HDL assignment warning at luces_fsm.v(12): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/luces_fsm.v Line: 12
+Info (12128): Elaborating entity "mealy_button" for hierarchy "mealy_button:buttons" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 78
+Info (12128): Elaborating entity "counter_var" for hierarchy "counter_var:variable_counter" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 89
+Warning (10230): Verilog HDL assignment warning at counter_var.v(42): truncated value with size 32 to match size of target (4) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/counter_var.v Line: 42
+Warning (10230): Verilog HDL assignment warning at counter_var.v(53): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/counter_var.v Line: 53
+Warning (10230): Verilog HDL assignment warning at counter_var.v(63): truncated value with size 32 to match size of target (4) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/counter_var.v Line: 63
+Info (12128): Elaborating entity "luces_fsm" for hierarchy "luces_fsm:luces" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/lights_game_fsm.v Line: 96
+Warning (10230): Verilog HDL assignment warning at luces_fsm.v(40): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/luces_fsm.v Line: 40
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea2_3/output_files/lights_game_fsm.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 58 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 36 logic cells
+    Info (21061): Implemented 70 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4761 megabytes
-    Info: Processing ended: Tue Nov 09 18:01:12 2021
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Sun Nov 14 19:45:13 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+
