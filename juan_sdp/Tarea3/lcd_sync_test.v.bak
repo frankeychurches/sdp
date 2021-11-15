@@ -1,0 +1,7 @@
+`timescale 1 ns/ 100 ps
+
+module lcd_sync_test();
+
+localparam T = 20;
+
+lcd_sync DUV ();

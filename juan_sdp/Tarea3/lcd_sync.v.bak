@@ -1,0 +1,11 @@
+module lcd_sync (
+    CLK, RST_N, NCLK, GREST, HD, VD, DEN, fila, columna
+);
+
+input CLK, RST_N;
+output NCLK, GREST, HD, VD, DEN, fila, columna;
+
+
+
+    
+endmodule

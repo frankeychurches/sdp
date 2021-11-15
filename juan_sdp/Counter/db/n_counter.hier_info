@@ -1,16 +1,26 @@
 |n_counter
 clk => count[0]~reg0.CLK
 clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
 reset => count.OUTPUTSELECT
 reset => count.OUTPUTSELECT
-enable => count[1]~reg0.ENA
-enable => count[0]~reg0.ENA
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
 up_down => count.OUTPUTSELECT
 up_down => count.OUTPUTSELECT
 up_down => TC.IN1
 up_down => TC.IN1
 count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 TC <= TC.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "GREST",
+					"strict" : false
+				},
+				{
+					"name" : "HD",
+					"strict" : false
+				},
+				{
+					"name" : "VD",
+					"strict" : false
+				},
+				{
+					"name" : "DEN",
+					"strict" : false
+				},
+				{
+					"name" : "fila[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[8]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[9]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[0]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[1]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[2]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[3]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[4]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[5]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[6]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[7]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[8]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_N",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
