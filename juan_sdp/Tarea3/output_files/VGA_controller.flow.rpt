@@ -1,5 +1,5 @@
 Flow report for VGA_controller
-Tue Nov 16 10:04:24 2021
+Tue Nov 16 18:16:14 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 16 10:04:24 2021       ;
+; Flow Status                        ; Successful - Tue Nov 16 18:16:14 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; VGA_controller                              ;
-; Top-level Entity Name              ; lcd_sync                                    ;
+; Top-level Entity Name              ; barras_lcd                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 39 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 39 / 114,480 ( < 1 % )                      ;
+; Total logic elements               ; 78 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 78 / 114,480 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 21 / 114,480 ( < 1 % )                      ;
 ; Total registers                    ; 21                                          ;
-; Total pins                         ; 28 / 529 ( 5 % )                            ;
+; Total pins                         ; 31 / 529 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -64,40 +64,44 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/16/2021 10:03:48 ;
+; Start date & time ; 11/16/2021 18:15:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VGA_controller      ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                              ;
-+--------------------------------------+----------------------------------------+----------------+-------------+----------------+
-; Assignment Name                      ; Value                                  ; Default Value  ; Entity Name ; Section Id     ;
-+--------------------------------------+----------------------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 260097671512790.163705342814748        ; --             ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --             ; --          ; lcd_sync_test  ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; lcd_sync_test                          ; --             ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --             ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>         ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --             ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; lcd_sync_test.v                        ; --             ; --          ; lcd_sync_test  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; lcd_sync_test                          ; --             ; --          ; lcd_sync_test  ;
-; EDA_TEST_BENCH_NAME                  ; lcd_sync_test                          ; --             ; --          ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --             ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --             ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --             ; --          ; --             ;
-; MISC_FILE                            ; PLL_VGA_inst.v                         ; --             ; --          ; --             ;
-; MISC_FILE                            ; PLL_VGA_bb.v                           ; --             ; --          ; --             ;
-; MISC_FILE                            ; PLL_VGA.ppf                            ; --             ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --             ; lcd_sync    ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --             ; lcd_sync    ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --             ; lcd_sync    ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --             ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --             ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; lcd_sync                               ; VGA_controller ; --          ; --             ;
-+--------------------------------------+----------------------------------------+----------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++--------------------------------------+----------------------------------------+----------------+-------------+-----------------+
+; Assignment Name                      ; Value                                  ; Default Value  ; Entity Name ; Section Id      ;
++--------------------------------------+----------------------------------------+----------------+-------------+-----------------+
+; COMPILER_SIGNATURE_ID                ; 260097671512790.163708293808304        ; --             ; --          ; --              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --             ; --          ; lcd_sync_test   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --             ; --          ; barras_lcd_test ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; barras_lcd_test                        ; --             ; --          ; eda_simulation  ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --             ; --          ; eda_simulation  ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>         ; --          ; --              ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --             ; --          ; eda_simulation  ;
+; EDA_TEST_BENCH_FILE                  ; lcd_sync_test.v                        ; --             ; --          ; lcd_sync_test   ;
+; EDA_TEST_BENCH_FILE                  ; barras_lcd_test.v                      ; --             ; --          ; barras_lcd_test ;
+; EDA_TEST_BENCH_MODULE_NAME           ; lcd_sync_test                          ; --             ; --          ; lcd_sync_test   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; barras_lcd_test                        ; --             ; --          ; barras_lcd_test ;
+; EDA_TEST_BENCH_NAME                  ; lcd_sync_test                          ; --             ; --          ; eda_simulation  ;
+; EDA_TEST_BENCH_NAME                  ; barras_lcd_test                        ; --             ; --          ; eda_simulation  ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --             ; --          ; eda_simulation  ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --             ; --          ; --              ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --             ; --          ; --              ;
+; MISC_FILE                            ; PLL_VGA_inst.v                         ; --             ; --          ; --              ;
+; MISC_FILE                            ; PLL_VGA_bb.v                           ; --             ; --          ; --              ;
+; MISC_FILE                            ; PLL_VGA.ppf                            ; --             ; --          ; --              ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --             ; barras_lcd  ; Top             ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --             ; barras_lcd  ; Top             ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --             ; barras_lcd  ; Top             ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --             ; --          ; --              ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --          ; --              ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --             ; --          ; --              ;
+; TOP_LEVEL_ENTITY                     ; barras_lcd                             ; VGA_controller ; --          ; --              ;
++--------------------------------------+----------------------------------------+----------------+-------------+-----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -105,12 +109,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4784 MB             ; 00:00:31                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 5685 MB             ; 00:00:19                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4677 MB             ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4766 MB             ; 00:00:28                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 5683 MB             ; 00:00:18                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4676 MB             ; 00:00:04                           ;
 ; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4835 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:33     ; --                      ; --                  ; 00:00:58                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4644 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:54                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

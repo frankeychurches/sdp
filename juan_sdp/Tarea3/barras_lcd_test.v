@@ -1,27 +1,29 @@
 `timescale 1 ns/ 100 ps
 
-module lcd_sync_test();
+module barras_lcd_test();
 
 localparam T = 20;
 
 reg CLK, RST;
 wire NCLK, GREST, HD, VD, DEN;
 
-wire [9:0] FILA;
-wire [10:0] COLUMNA;
+wire [7:0] R, G, B;
 
-lcd_sync DUV
+
+barras_lcd barras_lcd_inst
 (
-	.CLK(CLK) ,	// input  CLK_
-	.RST_N(RST) ,	// input  RST_N_
-	.NCLK(NCLK) ,	// output  NCLK_
-	.GREST(GREST) ,	// output  GREST_
-	.HD(HD) ,	// output  HD_
-	.VD(VD) ,	// output  VD_
-	.DEN(DEN) ,	// output  DEN_
-	.fila(FILA) ,	// output [10:0] fila_
-	.columna(COLUMNA) 	// output [9:0] columna_
+	.CLK(CLK) ,	// input  CLK_sig
+	.RST(RST) ,	// input  RST_sig
+	.NCLK(NCLK) ,	// output  NCLK_sig
+	.GREST(GREST) ,	// output  GREST_sig
+	.HD(HD) ,	// output  HD_sig
+	.VD(VD) ,	// output  VD_sig
+	.DEN(DEN) ,	// output  DEN_sig
+	.R(R) ,	// output [7:0] R_sig
+	.G(G) ,	// output [7:0] G_sig
+	.B(B) 	// output [7:0] B_sig
 );
+
 
 // Definicion del reloj
 always

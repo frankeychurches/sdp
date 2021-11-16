@@ -20,91 +20,103 @@
 					"strict" : false
 				},
 				{
-					"name" : "fila[0]",
+					"name" : "R[0]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[1]",
+					"name" : "R[1]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[2]",
+					"name" : "R[2]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[3]",
+					"name" : "R[3]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[4]",
+					"name" : "R[4]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[5]",
+					"name" : "R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[6]",
+					"name" : "R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[7]",
+					"name" : "R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[8]",
+					"name" : "G[0]",
 					"strict" : false
 				},
 				{
-					"name" : "fila[9]",
+					"name" : "G[1]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[0]",
+					"name" : "G[2]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[1]",
+					"name" : "G[3]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[2]",
+					"name" : "G[4]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[3]",
+					"name" : "G[5]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[4]",
+					"name" : "G[6]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[5]",
+					"name" : "G[7]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[6]",
+					"name" : "B[0]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[7]",
+					"name" : "B[1]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[8]",
+					"name" : "B[2]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[9]",
+					"name" : "B[3]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[10]",
+					"name" : "B[4]",
 					"strict" : false
 				},
 				{
-					"name" : "RST_N",
+					"name" : "B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
 					"strict" : false
 				}
 			]
