@@ -7,8 +7,8 @@ localparam T = 20;
 reg CLK, RST;
 wire NCLK, GREST, HD, VD, DEN;
 
-wire [10:0] FILA;
-wire [9:0] COLUMNA;
+wire [9:0] FILA;
+wire [10:0] COLUMNA;
 
 lcd_sync DUV
 (
@@ -33,16 +33,21 @@ end
 initial begin
     CLK = 0;
     RST = 0;
-    repeat(2) @ (negedge CLK);
+    repeat(5) @ (negedge CLK);
     RST = 1;
+	repeat(5) @ (negedge CLK);
 	$display("SIMULANDO!");
-//    repeat(523) @ (negedge CLK);
-//    repeat(1054) @ (negedge CLK);
-    repeat(1000000) @ (negedge CLK);
-	$display("Fin de simulacion!");
+	ONE_ROW();
 	$stop;
 
 end
 
+
+task ONE_ROW();
+begin 
+	repeat(2) @(negedge CLK);
+	#(T*5000);
+end
+endtask
 
 endmodule

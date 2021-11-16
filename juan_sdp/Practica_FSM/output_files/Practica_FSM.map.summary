@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Failed - Tue Nov 02 17:05:39 2021
+Analysis & Synthesis Status : Successful - Tue Nov 16 09:52:13 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Practica_FSM
 Top-level Entity Name : Practica_FSM
 Family : Cyclone IV E
-Total logic elements : N/A until Partition Merge
-    Total combinational functions : N/A until Partition Merge
-    Dedicated logic registers : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total memory bits : N/A until Partition Merge
-Embedded Multiplier 9-bit elements : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
+Total logic elements : 15
+    Total combinational functions : 15
+    Dedicated logic registers : 4
+Total registers : 4
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica_FSM
-Tue Nov 02 17:05:39 2021
+Tue Nov 16 09:52:13 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -10,7 +10,16 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Practica_FSM|estado_actual
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Practica_FSM
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +45,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Nov 02 17:05:39 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 16 09:52:13 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Practica_FSM                                ;
 ; Top-level Entity Name              ; Practica_FSM                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 15                                          ;
+;     Total combinational functions  ; 15                                          ;
+;     Dedicated logic registers      ; 4                                           ;
+; Total registers                    ; 4                                           ;
+; Total pins                         ; 8                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -148,11 +157,147 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; Practica_FSM.v                   ; yes             ; User Verilog HDL File  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/Practica_FSM.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 15              ;
+;                                             ;                 ;
+; Total combinational functions               ; 15              ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 8               ;
+;     -- 3 input functions                    ; 4               ;
+;     -- <=2 input functions                  ; 3               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 15              ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 4               ;
+;     -- Dedicated logic registers            ; 4               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 8               ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; estado_actual~5 ;
+; Maximum fan-out                             ; 8               ;
+; Total fan-out                               ; 76              ;
+; Average fan-out                             ; 2.17            ;
++---------------------------------------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; |Practica_FSM              ; 15 (15)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |Practica_FSM       ; Practica_FSM ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  User-Encoded
++------------------------------------------------------------------------------------------+
+; State Machine - |Practica_FSM|estado_actual                                              ;
++------------------+-----------------+-----------------+-----------------+-----------------+
+; Name             ; estado_actual~7 ; estado_actual~6 ; estado_actual~5 ; estado_actual~4 ;
++------------------+-----------------+-----------------+-----------------+-----------------+
+; estado_actual.S1 ; 0               ; 0               ; 0               ; 0               ;
+; estado_actual.S0 ; 0               ; 0               ; 1               ; 0               ;
+; estado_actual.S2 ; 0               ; 0               ; 0               ; 1               ;
+; estado_actual.S3 ; 0               ; 1               ; 1               ; 1               ;
+; estado_actual.S4 ; 0               ; 1               ; 0               ; 1               ;
+; estado_actual.S5 ; 1               ; 0               ; 0               ; 0               ;
++------------------+-----------------+-----------------+-----------------+-----------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Practica_FSM|estado_actual ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Practica_FSM ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; S0             ; 0000  ; Unsigned Binary                                     ;
+; S1             ; 0010  ; Unsigned Binary                                     ;
+; S2             ; 0011  ; Unsigned Binary                                     ;
+; S3             ; 0101  ; Unsigned Binary                                     ;
+; S4             ; 0111  ; Unsigned Binary                                     ;
+; S5             ; 1010  ; Unsigned Binary                                     ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 8                           ;
+; cycloneiii_ff         ; 4                           ;
+;     CLR               ; 3                           ;
+;     CLR SLD           ; 1                           ;
+; cycloneiii_lcell_comb ; 17                          ;
+;     normal            ; 17                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.44                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,7 +306,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Nov 02 17:05:23 2021
+    Info: Processing started: Tue Nov 16 09:51:57 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica_FSM -c Practica_FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -169,16 +314,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file practic
     Info (12023): Found entity 1: Practica_FSM File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/Practica_FSM.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file test_fsm.v
     Info (12023): Found entity 1: tb_fsm_gen File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/test_fsm.v Line: 3
-Error (10161): Verilog HDL error at test_fsm.v(22): object "Practica_FSM_inst" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/test_fsm.v Line: 22
-Error (10161): Verilog HDL error at test_fsm.v(23): object "Practica_FSM_inst" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/test_fsm.v Line: 23
-Error (10161): Verilog HDL error at test_fsm.v(24): object "Practica_FSM_inst" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/test_fsm.v Line: 24
-Error (10161): Verilog HDL error at test_fsm.v(25): object "Practica_FSM_inst" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/test_fsm.v Line: 25
-Error (10161): Verilog HDL error at test_fsm.v(26): object "Practica_FSM_inst" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/test_fsm.v Line: 26
-Error (10161): Verilog HDL error at test_fsm.v(27): object "Practica_FSM_inst" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Practica_FSM/test_fsm.v Line: 27
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 1 warning
-    Error: Peak virtual memory: 4703 megabytes
-    Error: Processing ended: Tue Nov 02 17:05:39 2021
-    Error: Elapsed time: 00:00:16
-    Error: Total CPU time (on all processors): 00:00:37
+Info (12127): Elaborating entity "Practica_FSM" for the top level hierarchy
+Warning (284006): Flipped 1 bits in user-encoded state machine |Practica_FSM|estado_actual
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 15 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Tue Nov 16 09:52:13 2021
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:39
 
 

@@ -4,8 +4,8 @@ module lcd_sync (
 
 input CLK, RST_N;
 output NCLK, GREST, HD, VD, DEN;
-output [10:0] fila;
-output [9:0] columna; 
+output [9:0] fila;
+output [10:0] columna; 
 
 //Falta definir si son de tipo wire o reg
 
@@ -26,10 +26,10 @@ PLL_VGA	PLL_VGA_inst (
 n_counter hcount (
     .clk ( NCLK ),
     .reset ( RST_N ),
-    .enable (1),
-    .up_down (1),
-    .TC ( TC_hcount ),
-    .count ( columna )
+    .enable (1'b1),
+    .up_down (1'b1),
+    .count ( columna ),
+    .TC ( TC_hcount )
 );
 
 
@@ -37,9 +37,9 @@ n_counter vcount (
     .clk ( NCLK ),
     .reset ( RST_N ),
     .enable ( TC_hcount ),
-    .up_down (1),
-    .TC ( TC_vcount ),
-    .count ( fila )
+    .up_down (1'b1),
+    .count ( fila ),
+    .TC ( TC_vcount )
 );
 
 

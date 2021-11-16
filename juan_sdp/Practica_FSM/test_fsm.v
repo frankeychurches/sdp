@@ -19,12 +19,12 @@ Practica_FSM DUV (
 
 
 
-defparam Practica_FSM_inst.S0 = 'b0000;
-defparam Practica_FSM_inst.S1 = 'b0010;
-defparam Practica_FSM_inst.S2 = 'b0011;
-defparam Practica_FSM_inst.S3 = 'b0101;
-defparam Practica_FSM_inst.S4 = 'b0111;
-defparam Practica_FSM_inst.S5 = 'b1010;
+defparam DUV.S0 = 'b0000;
+defparam DUV.S1 = 'b0010;
+defparam DUV.S2 = 'b0011;
+defparam DUV.S3 = 'b0101;
+defparam DUV.S4 = 'b0111;
+defparam DUV.S5 = 'b1010;
 
 initial begin
     CLK = 0;

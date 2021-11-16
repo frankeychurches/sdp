@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/simulation/qsim
+vlcd_sync
+Z1 !s110 1637046473
+!i10b 1
+!s100 33@AOfLSnkn39j0_`SzTF1
+I0>j1DglMz:EP88U^Q^Y]n3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1637046470
+8VGA_controller.vo
+FVGA_controller.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1637046473.000000
+!s107 VGA_controller.vo|
+!s90 -work|work|VGA_controller.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vlcd_sync_vlg_vec_tst
+R1
+!i10b 1
+!s100 JoJlNT4gG_E>_4BIUhF<e0
+I::DSRYJAoVDhTCbcWUFXN1
+R2
+R0
+w1637046468
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

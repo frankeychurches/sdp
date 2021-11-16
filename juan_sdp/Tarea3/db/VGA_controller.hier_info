@@ -16,7 +16,6 @@ fila[6] << n_counter:vcount.count
 fila[7] << n_counter:vcount.count
 fila[8] << n_counter:vcount.count
 fila[9] << n_counter:vcount.count
-fila[10] << n_counter:vcount.count
 columna[0] << n_counter:hcount.count
 columna[1] << n_counter:hcount.count
 columna[2] << n_counter:hcount.count
@@ -27,6 +26,7 @@ columna[6] << n_counter:hcount.count
 columna[7] << n_counter:hcount.count
 columna[8] << n_counter:hcount.count
 columna[9] << n_counter:hcount.count
+columna[10] << n_counter:hcount.count
 
 
 |lcd_sync|PLL_VGA:PLL_VGA_inst

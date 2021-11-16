@@ -12,59 +12,59 @@
 # 
 # vlog -vlog01compat -work work +incdir+D:/Juan/Escritorio/Master/Cuatrimestre\ A/Sistemas\ Digitales\ Programables/sdp/juan_sdp/Tarea3 {D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:22 on Nov 16,2021
+# Start time: 10:04:54 on Nov 16,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3" D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v 
 # -- Compiling module lcd_sync
 # 
 # Top level modules:
 # 	lcd_sync
-# End time: 00:21:22 on Nov 16,2021, Elapsed time: 0:00:00
+# End time: 10:04:54 on Nov 16,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Juan/Escritorio/Master/Cuatrimestre\ A/Sistemas\ Digitales\ Programables/sdp/juan_sdp/Tarea3 {D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/PLL_VGA.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:22 on Nov 16,2021
+# Start time: 10:04:54 on Nov 16,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3" D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/PLL_VGA.v 
 # -- Compiling module PLL_VGA
 # 
 # Top level modules:
 # 	PLL_VGA
-# End time: 00:21:22 on Nov 16,2021, Elapsed time: 0:00:00
+# End time: 10:04:55 on Nov 16,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Juan/Escritorio/Master/Cuatrimestre\ A/Sistemas\ Digitales\ Programables/sdp/juan_sdp/Tarea3/db {D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/pll_vga_altpll.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:22 on Nov 16,2021
+# Start time: 10:04:55 on Nov 16,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db" D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/pll_vga_altpll.v 
 # -- Compiling module PLL_VGA_altpll
 # 
 # Top level modules:
 # 	PLL_VGA_altpll
-# End time: 00:21:22 on Nov 16,2021, Elapsed time: 0:00:00
+# End time: 10:04:55 on Nov 16,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Juan/Escritorio/Master/Cuatrimestre\ A/Sistemas\ Digitales\ Programables/sdp/juan_sdp/Tarea3 {D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:22 on Nov 16,2021
+# Start time: 10:04:55 on Nov 16,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3" D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v 
 # -- Compiling module n_counter
 # 
 # Top level modules:
 # 	n_counter
-# End time: 00:21:22 on Nov 16,2021, Elapsed time: 0:00:00
+# End time: 10:04:55 on Nov 16,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+D:/Juan/Escritorio/Master/Cuatrimestre\ A/Sistemas\ Digitales\ Programables/sdp/juan_sdp/Tarea3 {D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync_test.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:22 on Nov 16,2021
+# Start time: 10:04:55 on Nov 16,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3" D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync_test.v 
 # -- Compiling module lcd_sync_test
 # 
 # Top level modules:
 # 	lcd_sync_test
-# End time: 00:21:22 on Nov 16,2021, Elapsed time: 0:00:00
+# End time: 10:04:55 on Nov 16,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  lcd_sync_test
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" lcd_sync_test 
-# Start time: 00:21:23 on Nov 16,2021
+# Start time: 10:04:55 on Nov 16,2021
 # Loading work.lcd_sync_test
 # Loading work.lcd_sync
 # Loading work.PLL_VGA
@@ -76,16 +76,6 @@
 # Loading altera_mf_ver.cda_m_cntr
 # Loading altera_mf_ver.cda_n_cntr
 # Loading altera_mf_ver.cda_scale_cntr
-# ** Warning: (vsim-3015) D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v(26): [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v(29).
-#    Time: 0 ps  Iteration: 0  Instance: /lcd_sync_test/DUV/hcount File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v
-# ** Warning: (vsim-3015) D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v(26): [PCDPC] - Port size (1) does not match connection size (32) for port 'up_down'. The port definition is at: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v(29).
-#    Time: 0 ps  Iteration: 0  Instance: /lcd_sync_test/DUV/hcount File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v
-# ** Warning: (vsim-3015) D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v(26): [PCDPC] - Port size (11) does not match connection size (10) for port 'count'. The port definition is at: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v(29).
-#    Time: 0 ps  Iteration: 0  Instance: /lcd_sync_test/DUV/hcount File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v
-# ** Warning: (vsim-3015) D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v(36): [PCDPC] - Port size (1) does not match connection size (32) for port 'up_down'. The port definition is at: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v(29).
-#    Time: 0 ps  Iteration: 0  Instance: /lcd_sync_test/DUV/vcount File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v
-# ** Warning: (vsim-3015) D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v(36): [PCDPC] - Port size (10) does not match connection size (11) for port 'count'. The port definition is at: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v(29).
-#    Time: 0 ps  Iteration: 0  Instance: /lcd_sync_test/DUV/vcount File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v
 # 
 # add wave *
 # view structure
@@ -93,8 +83,11 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# SIMULANDO!
 #  Note : Cyclone IV E PLL locked to incoming clock
 # Time: 90000  Instance: lcd_sync_test.DUV.PLL_VGA_inst.altpll_component.cycloneiii_pll.pll3
-# End time: 00:22:29 on Nov 16,2021, Elapsed time: 0:01:06
-# Errors: 0, Warnings: 5
+# SIMULANDO!
+# ** Note: $stop    : D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync_test.v(41)
+#    Time: 100240 ns  Iteration: 0  Instance: /lcd_sync_test
+# Break in Module lcd_sync_test at D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync_test.v line 41
+# End time: 10:05:48 on Nov 16,2021, Elapsed time: 0:00:53
+# Errors: 0, Warnings: 0
