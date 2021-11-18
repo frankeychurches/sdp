@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/simulation/modelsim
 vbarras_lcd
-Z1 !s110 1637084297
+Z1 !s110 1637223075
 !i10b 1
 !s100 CKKQ<kN18m@m;0D26c8;e3
 IPmRl]KBDaj3zKL2coKfc11
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1637084297.000000
+Z4 !s108 1637223074.000000
 !s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/barras_lcd.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/barras_lcd.v|
 !i113 1
@@ -31,7 +31,7 @@ Z5 o-vlog01compat -work work
 Z6 !s92 -vlog01compat -work work {+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3}
 Z7 tCvgOpt 0
 vbarras_lcd_test
-Z8 !s110 1637084298
+R1
 !i10b 1
 !s100 ]c[QJBb^IagLNmMdXi`J^0
 I[6_279T3gc7`>o1g7VR:a3
@@ -45,7 +45,7 @@ R3
 r1
 !s85 0
 31
-!s108 1637084298.000000
+Z8 !s108 1637223075.000000
 !s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/barras_lcd_test.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/barras_lcd_test.v|
 !i113 1
@@ -53,13 +53,13 @@ R5
 R6
 R7
 vlcd_sync
-R1
+Z9 !s110 1637223074
 !i10b 1
-!s100 <CT0E]iPf>gk0@Q;WDJWN1
-IK8HK1d;55WC`Oi<cg2_:K0
+!s100 f[]Y:=mg64z2j7ABjb2[D0
+I3e9GUSU@?a:4cKo?Ge2QG2
 R2
 R0
-w1637051222
+w1637218426
 8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v
 FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v
 L0 1
@@ -75,7 +75,7 @@ R5
 R6
 R7
 vn_counter
-R8
+R1
 !i10b 1
 !s100 Zj`5IX_@_6]7`SJ0Gh_W=2
 I0TAGcLQldB1Bn6VBVma:]1
@@ -85,12 +85,12 @@ w1636915254
 8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v
 FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v
 FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/MathFun.vh
-Z9 L0 29
+Z10 L0 29
 R3
 r1
 !s85 0
 31
-R4
+R8
 !s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/MathFun.vh|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v|
 !i113 1
@@ -98,7 +98,7 @@ R5
 R6
 R7
 vPLL_VGA
-R1
+R9
 !i10b 1
 !s100 CWaWVdCC;6Pd]:NjG;ILZ0
 IfZR0kazU_^b]VUmT]_4?^3
@@ -130,12 +130,12 @@ R0
 w1637013043
 8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/pll_vga_altpll.v
 FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/pll_vga_altpll.v
-R9
+R10
 R3
 r1
 !s85 0
 31
-R4
+R8
 !s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/pll_vga_altpll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/pll_vga_altpll.v|
 !i113 1

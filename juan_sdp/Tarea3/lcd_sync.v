@@ -10,7 +10,7 @@ output [10:0] columna;
 //Falta definir si son de tipo wire o reg
 
 
-wire NCLK, TC_hcount, TC_vcount;
+wire TC_hcount, TC_vcount;
 
 
 defparam hcount.fin_cuenta = 1056;
@@ -43,7 +43,7 @@ n_counter vcount (
 );
 
 
-assign DEN = (columna >= 216 && columna <= 1015 && fila >= 35 && fila <= 514 ) ? 1:0;
+assign DEN = ((columna >= 216 && columna <= 1015) && (fila >= 35 && fila <= 514)) ? 1:0;
 assign GREST = RST_N;
 assign VD = ~TC_vcount;
 assign HD = ~TC_hcount;
