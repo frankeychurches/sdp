@@ -28,7 +28,7 @@ lcd_sync lcd_sync_inst
 
 
 always @(COLUMNA) begin
-    if(COLUMNA >= offset && COLUMNA <= (offset + step))
+    if(COLUMNA >= offset && COLUMNA <= (offset + step)) //OJO porque no estamos considerando el porch superior e inferior. Afecta?
         begin
             R = 8'b11111111;
             G = 8'b11111111;

@@ -7,7 +7,6 @@ output NCLK, GREST, HD, VD, DEN;
 output [9:0] fila;
 output [10:0] columna; 
 
-//Falta definir si son de tipo wire o reg
 
 
 wire TC_hcount, TC_vcount;

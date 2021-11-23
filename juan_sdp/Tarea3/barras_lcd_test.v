@@ -25,11 +25,8 @@ barras_lcd barras_lcd_inst
 );
 
 
-// Definicion del reloj
-always
-begin
-   #(T/2) CLK = ~CLK; 
-end 
+integer fd;
+event cierraFichero;
 
 
 initial begin
@@ -39,9 +36,36 @@ initial begin
     RST = 1;
 	repeat(5) @ (negedge CLK);
 	$display("SIMULANDO!");
-	ALL_ROWS();
+	//ALL_ROWS();
+	
+	@(posedge VD)
+	$display("Fin de la simulacion\n");
+	-> cierraFichero;
+	#10;
 	$stop;
 end
+
+initial begin 
+	fd = $fopen("vga.txt", "w");
+	@(cierraFichero);
+	disable guardaFichero;
+	$display("Cierro fichero");
+	$fclose(fd);
+end
+
+initial forever begin: guardaFichero
+	@(posedge CLK)
+	$fwrite(fd, "%0t ps: %b %b %b %b %b %b\n", $time, HD, VD, DEN, R, G, B);
+end
+
+
+
+// Definicion del reloj
+always
+begin
+   #(T/2) CLK = ~CLK; 
+end 
+
 
 
 task ONE_ROW();
