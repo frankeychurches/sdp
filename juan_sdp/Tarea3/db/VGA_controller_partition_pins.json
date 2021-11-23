@@ -20,103 +20,91 @@
 					"strict" : false
 				},
 				{
-					"name" : "R[0]",
+					"name" : "fila[0]",
 					"strict" : false
 				},
 				{
-					"name" : "R[1]",
+					"name" : "fila[1]",
 					"strict" : false
 				},
 				{
-					"name" : "R[2]",
+					"name" : "fila[2]",
 					"strict" : false
 				},
 				{
-					"name" : "R[3]",
+					"name" : "fila[3]",
 					"strict" : false
 				},
 				{
-					"name" : "R[4]",
+					"name" : "fila[4]",
 					"strict" : false
 				},
 				{
-					"name" : "R[5]",
+					"name" : "fila[5]",
 					"strict" : false
 				},
 				{
-					"name" : "R[6]",
+					"name" : "fila[6]",
 					"strict" : false
 				},
 				{
-					"name" : "R[7]",
+					"name" : "fila[7]",
 					"strict" : false
 				},
 				{
-					"name" : "G[0]",
+					"name" : "fila[8]",
 					"strict" : false
 				},
 				{
-					"name" : "G[1]",
+					"name" : "fila[9]",
 					"strict" : false
 				},
 				{
-					"name" : "G[2]",
+					"name" : "columna[0]",
 					"strict" : false
 				},
 				{
-					"name" : "G[3]",
+					"name" : "columna[1]",
 					"strict" : false
 				},
 				{
-					"name" : "G[4]",
+					"name" : "columna[2]",
 					"strict" : false
 				},
 				{
-					"name" : "G[5]",
+					"name" : "columna[3]",
 					"strict" : false
 				},
 				{
-					"name" : "G[6]",
+					"name" : "columna[4]",
 					"strict" : false
 				},
 				{
-					"name" : "G[7]",
+					"name" : "columna[5]",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "columna[6]",
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "columna[7]",
 					"strict" : false
 				},
 				{
-					"name" : "B[2]",
+					"name" : "columna[8]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "columna[9]",
 					"strict" : false
 				},
 				{
-					"name" : "B[4]",
+					"name" : "columna[10]",
 					"strict" : false
 				},
 				{
-					"name" : "B[5]",
-					"strict" : false
-				},
-				{
-					"name" : "B[6]",
-					"strict" : false
-				},
-				{
-					"name" : "B[7]",
-					"strict" : false
-				},
-				{
-					"name" : "RST",
+					"name" : "RST_N",
 					"strict" : false
 				}
 			]

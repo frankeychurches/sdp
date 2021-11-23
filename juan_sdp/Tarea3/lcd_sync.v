@@ -16,10 +16,11 @@ defparam hcount.fin_cuenta = 1056;
 defparam vcount.fin_cuenta = 525;
 
 
-PLL_VGA	PLL_VGA_inst (
+pll_ltm	pll_ltm_inst (
 	.inclk0 ( CLK ),
 	.c0 ( NCLK )
 	);
+
 
 
 n_counter hcount (

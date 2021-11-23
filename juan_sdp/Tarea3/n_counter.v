@@ -45,6 +45,9 @@ begin
 		
 	else
         if (enable)
+			  if(count == fin_cuenta)
+                count <= 0;
+			 else
             if (up_down)
                 count <= count + 1;
             else

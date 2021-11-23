@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Nov 23 16:32:12 2021
+Analysis & Synthesis Status : Successful - Tue Nov 23 18:19:10 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : VGA_controller
-Top-level Entity Name : barras_lcd
+Top-level Entity Name : lcd_sync
 Family : Cyclone IV E
-Total logic elements : 78
-    Total combinational functions : 78
+Total logic elements : 41
+    Total combinational functions : 41
     Dedicated logic registers : 21
 Total registers : 21
-Total pins : 31
+Total pins : 28
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
