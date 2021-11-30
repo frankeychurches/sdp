@@ -8,7 +8,7 @@
 // Nombre del archivo: n_counter.v
 //
 // Descripción: Este código de verilog implementa un contador bidireccional 
-// parametrizable de N bits. Las entradas y salidas de este programa son:
+// parametrizable de hasta fin_cuenta - 1 con N bits. Las entradas y salidas de este programa son:
 // 1. clk -> Reloj activo por flanco de subida  (Entrada)
 // 2. reset -> Reset síncrono activo a nivel bajo (Entrada)
 // 3. enable -> Habilitador de cuenta y funcionamiento (Entrada)
@@ -18,7 +18,7 @@
 
 //
 // --------------------------------------------------------------------
-// Versión: V1.0| Fecha Modificación: 11/11/2021
+// Versión: V2.0| Fecha Modificación: 15/11/2021
 //
 // Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
 // Ordenador de trabajo: Portátil
@@ -45,13 +45,16 @@ begin
 		
 	else
         if (enable)
-			  if(count == fin_cuenta)
-                count <= 0;
-			 else
-            if (up_down)
-                count <= count + 1;
+            if(up_down)
+			    if(count == fin_cuenta - 1)
+                    count <= 0;
+                else
+                    count <= count + 1;
             else
-                count <= count - 1;
+			    if(count == 0)
+                    count <= fin_cuenta - 1;
+                else
+                    count <= count - 1;
         else
             count <= count;  
 end

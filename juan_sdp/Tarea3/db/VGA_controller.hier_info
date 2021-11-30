@@ -1,40 +1,74 @@
-|lcd_sync
+|caracteres_lcd
+CLK => CLK.IN1
+RST => RST.IN1
+NCLK << NCLK.DB_MAX_OUTPUT_PORT_TYPE
+GREST << lcd_sync:lcd_sync_inst.GREST
+HD << lcd_sync:lcd_sync_inst.HD
+VD << lcd_sync:lcd_sync_inst.VD
+DEN << lcd_sync:lcd_sync_inst.DEN
+R[0] << selec_color:selec_color_inst.R
+R[1] << selec_color:selec_color_inst.R
+R[2] << selec_color:selec_color_inst.R
+R[3] << selec_color:selec_color_inst.R
+R[4] << selec_color:selec_color_inst.R
+R[5] << selec_color:selec_color_inst.R
+R[6] << selec_color:selec_color_inst.R
+R[7] << selec_color:selec_color_inst.R
+G[0] << selec_color:selec_color_inst.G
+G[1] << selec_color:selec_color_inst.G
+G[2] << selec_color:selec_color_inst.G
+G[3] << selec_color:selec_color_inst.G
+G[4] << selec_color:selec_color_inst.G
+G[5] << selec_color:selec_color_inst.G
+G[6] << selec_color:selec_color_inst.G
+G[7] << selec_color:selec_color_inst.G
+B[0] << selec_color:selec_color_inst.B
+B[1] << selec_color:selec_color_inst.B
+B[2] << selec_color:selec_color_inst.B
+B[3] << selec_color:selec_color_inst.B
+B[4] << selec_color:selec_color_inst.B
+B[5] << selec_color:selec_color_inst.B
+B[6] << selec_color:selec_color_inst.B
+B[7] << selec_color:selec_color_inst.B
+
+
+|caracteres_lcd|lcd_sync:lcd_sync_inst
 CLK => CLK.IN1
 RST_N => RST_N.IN2
-NCLK << NCLK.DB_MAX_OUTPUT_PORT_TYPE
-GREST << RST_N.DB_MAX_OUTPUT_PORT_TYPE
-HD << TC_hcount.DB_MAX_OUTPUT_PORT_TYPE
-VD << n_counter:vcount.TC
-DEN << DEN.DB_MAX_OUTPUT_PORT_TYPE
-fila[0] << n_counter:vcount.count
-fila[1] << n_counter:vcount.count
-fila[2] << n_counter:vcount.count
-fila[3] << n_counter:vcount.count
-fila[4] << n_counter:vcount.count
-fila[5] << n_counter:vcount.count
-fila[6] << n_counter:vcount.count
-fila[7] << n_counter:vcount.count
-fila[8] << n_counter:vcount.count
-fila[9] << n_counter:vcount.count
-columna[0] << n_counter:hcount.count
-columna[1] << n_counter:hcount.count
-columna[2] << n_counter:hcount.count
-columna[3] << n_counter:hcount.count
-columna[4] << n_counter:hcount.count
-columna[5] << n_counter:hcount.count
-columna[6] << n_counter:hcount.count
-columna[7] << n_counter:hcount.count
-columna[8] << n_counter:hcount.count
-columna[9] << n_counter:hcount.count
-columna[10] << n_counter:hcount.count
+NCLK <= NCLK.DB_MAX_OUTPUT_PORT_TYPE
+GREST <= RST_N.DB_MAX_OUTPUT_PORT_TYPE
+HD <= TC_hcount.DB_MAX_OUTPUT_PORT_TYPE
+VD <= n_counter:vcount.TC
+DEN <= DEN.DB_MAX_OUTPUT_PORT_TYPE
+fila[0] <= n_counter:vcount.count
+fila[1] <= n_counter:vcount.count
+fila[2] <= n_counter:vcount.count
+fila[3] <= n_counter:vcount.count
+fila[4] <= n_counter:vcount.count
+fila[5] <= n_counter:vcount.count
+fila[6] <= n_counter:vcount.count
+fila[7] <= n_counter:vcount.count
+fila[8] <= n_counter:vcount.count
+fila[9] <= n_counter:vcount.count
+columna[0] <= n_counter:hcount.count
+columna[1] <= n_counter:hcount.count
+columna[2] <= n_counter:hcount.count
+columna[3] <= n_counter:hcount.count
+columna[4] <= n_counter:hcount.count
+columna[5] <= n_counter:hcount.count
+columna[6] <= n_counter:hcount.count
+columna[7] <= n_counter:hcount.count
+columna[8] <= n_counter:hcount.count
+columna[9] <= n_counter:hcount.count
+columna[10] <= n_counter:hcount.count
 
 
-|lcd_sync|pll_ltm:pll_ltm_inst
+|caracteres_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst
 inclk0 => sub_wire1[0].IN1
 c0 <= altpll:altpll_component.clk
 
 
-|lcd_sync|pll_ltm:pll_ltm_inst|altpll:altpll_component
+|caracteres_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component
 inclk[0] => pll_ltm_altpll:auto_generated.inclk[0]
 inclk[1] => pll_ltm_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
@@ -94,7 +128,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|lcd_sync|pll_ltm:pll_ltm_inst|altpll:altpll_component|pll_ltm_altpll:auto_generated
+|caracteres_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component|pll_ltm_altpll:auto_generated
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1
 clk[2] <= pll1.CLK2
@@ -104,7 +138,7 @@ inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
 
 
-|lcd_sync|n_counter:hcount
+|caracteres_lcd|lcd_sync:lcd_sync_inst|n_counter:hcount
 clk => count[0]~reg0.CLK
 clk => count[1]~reg0.CLK
 clk => count[2]~reg0.CLK
@@ -165,7 +199,7 @@ count[10] <= count[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 TC <= TC.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lcd_sync|n_counter:vcount
+|caracteres_lcd|lcd_sync:lcd_sync_inst|n_counter:vcount
 clk => count[0]~reg0.CLK
 clk => count[1]~reg0.CLK
 clk => count[2]~reg0.CLK
@@ -219,5 +253,227 @@ count[7] <= count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count[8] <= count[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count[9] <= count[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 TC <= TC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|caracteres_lcd|char_rom:char_rom_inst
+NCLK => NCLK.IN1
+fila[0] => ~NO_FANOUT~
+fila[1] => dir[0].IN1
+fila[2] => dir[1].IN1
+fila[3] => dir[2].IN1
+fila[4] => ~NO_FANOUT~
+fila[5] => ~NO_FANOUT~
+fila[6] => ~NO_FANOUT~
+fila[7] => ~NO_FANOUT~
+fila[8] => ~NO_FANOUT~
+fila[9] => ~NO_FANOUT~
+columna[0] => ~NO_FANOUT~
+columna[1] => Mux0.IN2
+columna[2] => Mux0.IN1
+columna[3] => Mux0.IN0
+columna[4] => ~NO_FANOUT~
+columna[5] => ~NO_FANOUT~
+columna[6] => ~NO_FANOUT~
+columna[7] => ~NO_FANOUT~
+columna[8] => ~NO_FANOUT~
+columna[9] => ~NO_FANOUT~
+columna[10] => ~NO_FANOUT~
+caracter[0] => dir[3].IN1
+caracter[1] => dir[4].IN1
+caracter[2] => dir[5].IN1
+caracter[3] => dir[6].IN1
+caracter[4] => dir[7].IN1
+caracter[5] => dir[8].IN1
+pixel_on_off <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|caracteres_lcd|char_rom:char_rom_inst|ROM_char:ROM_char_inst
+address[0] => address[0].IN1
+address[1] => address[1].IN1
+address[2] => address[2].IN1
+address[3] => address[3].IN1
+address[4] => address[4].IN1
+address[5] => address[5].IN1
+address[6] => address[6].IN1
+address[7] => address[7].IN1
+address[8] => address[8].IN1
+clock => clock.IN1
+q[0] <= altsyncram:altsyncram_component.q_a
+q[1] <= altsyncram:altsyncram_component.q_a
+q[2] <= altsyncram:altsyncram_component.q_a
+q[3] <= altsyncram:altsyncram_component.q_a
+q[4] <= altsyncram:altsyncram_component.q_a
+q[5] <= altsyncram:altsyncram_component.q_a
+q[6] <= altsyncram:altsyncram_component.q_a
+q[7] <= altsyncram:altsyncram_component.q_a
+
+
+|caracteres_lcd|char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component
+wren_a => ~NO_FANOUT~
+rden_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => ~NO_FANOUT~
+data_a[0] => ~NO_FANOUT~
+data_a[1] => ~NO_FANOUT~
+data_a[2] => ~NO_FANOUT~
+data_a[3] => ~NO_FANOUT~
+data_a[4] => ~NO_FANOUT~
+data_a[5] => ~NO_FANOUT~
+data_a[6] => ~NO_FANOUT~
+data_a[7] => ~NO_FANOUT~
+data_b[0] => ~NO_FANOUT~
+address_a[0] => altsyncram_p7a1:auto_generated.address_a[0]
+address_a[1] => altsyncram_p7a1:auto_generated.address_a[1]
+address_a[2] => altsyncram_p7a1:auto_generated.address_a[2]
+address_a[3] => altsyncram_p7a1:auto_generated.address_a[3]
+address_a[4] => altsyncram_p7a1:auto_generated.address_a[4]
+address_a[5] => altsyncram_p7a1:auto_generated.address_a[5]
+address_a[6] => altsyncram_p7a1:auto_generated.address_a[6]
+address_a[7] => altsyncram_p7a1:auto_generated.address_a[7]
+address_a[8] => altsyncram_p7a1:auto_generated.address_a[8]
+address_b[0] => ~NO_FANOUT~
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_p7a1:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+clocken2 => ~NO_FANOUT~
+clocken3 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_p7a1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_p7a1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_p7a1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_p7a1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_p7a1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_p7a1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_p7a1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_p7a1:auto_generated.q_a[7]
+q_b[0] <= <GND>
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
+
+
+|caracteres_lcd|char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component|altsyncram_p7a1:auto_generated
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[0] => ram_block1a4.PORTAADDR
+address_a[0] => ram_block1a5.PORTAADDR
+address_a[0] => ram_block1a6.PORTAADDR
+address_a[0] => ram_block1a7.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+address_a[1] => ram_block1a4.PORTAADDR1
+address_a[1] => ram_block1a5.PORTAADDR1
+address_a[1] => ram_block1a6.PORTAADDR1
+address_a[1] => ram_block1a7.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[2] => ram_block1a3.PORTAADDR2
+address_a[2] => ram_block1a4.PORTAADDR2
+address_a[2] => ram_block1a5.PORTAADDR2
+address_a[2] => ram_block1a6.PORTAADDR2
+address_a[2] => ram_block1a7.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_a[3] => ram_block1a3.PORTAADDR3
+address_a[3] => ram_block1a4.PORTAADDR3
+address_a[3] => ram_block1a5.PORTAADDR3
+address_a[3] => ram_block1a6.PORTAADDR3
+address_a[3] => ram_block1a7.PORTAADDR3
+address_a[4] => ram_block1a0.PORTAADDR4
+address_a[4] => ram_block1a1.PORTAADDR4
+address_a[4] => ram_block1a2.PORTAADDR4
+address_a[4] => ram_block1a3.PORTAADDR4
+address_a[4] => ram_block1a4.PORTAADDR4
+address_a[4] => ram_block1a5.PORTAADDR4
+address_a[4] => ram_block1a6.PORTAADDR4
+address_a[4] => ram_block1a7.PORTAADDR4
+address_a[5] => ram_block1a0.PORTAADDR5
+address_a[5] => ram_block1a1.PORTAADDR5
+address_a[5] => ram_block1a2.PORTAADDR5
+address_a[5] => ram_block1a3.PORTAADDR5
+address_a[5] => ram_block1a4.PORTAADDR5
+address_a[5] => ram_block1a5.PORTAADDR5
+address_a[5] => ram_block1a6.PORTAADDR5
+address_a[5] => ram_block1a7.PORTAADDR5
+address_a[6] => ram_block1a0.PORTAADDR6
+address_a[6] => ram_block1a1.PORTAADDR6
+address_a[6] => ram_block1a2.PORTAADDR6
+address_a[6] => ram_block1a3.PORTAADDR6
+address_a[6] => ram_block1a4.PORTAADDR6
+address_a[6] => ram_block1a5.PORTAADDR6
+address_a[6] => ram_block1a6.PORTAADDR6
+address_a[6] => ram_block1a7.PORTAADDR6
+address_a[7] => ram_block1a0.PORTAADDR7
+address_a[7] => ram_block1a1.PORTAADDR7
+address_a[7] => ram_block1a2.PORTAADDR7
+address_a[7] => ram_block1a3.PORTAADDR7
+address_a[7] => ram_block1a4.PORTAADDR7
+address_a[7] => ram_block1a5.PORTAADDR7
+address_a[7] => ram_block1a6.PORTAADDR7
+address_a[7] => ram_block1a7.PORTAADDR7
+address_a[8] => ram_block1a0.PORTAADDR8
+address_a[8] => ram_block1a1.PORTAADDR8
+address_a[8] => ram_block1a2.PORTAADDR8
+address_a[8] => ram_block1a3.PORTAADDR8
+address_a[8] => ram_block1a4.PORTAADDR8
+address_a[8] => ram_block1a5.PORTAADDR8
+address_a[8] => ram_block1a6.PORTAADDR8
+address_a[8] => ram_block1a7.PORTAADDR8
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a3.CLK0
+clock0 => ram_block1a4.CLK0
+clock0 => ram_block1a5.CLK0
+clock0 => ram_block1a6.CLK0
+clock0 => ram_block1a7.CLK0
+q_a[0] <= ram_block1a0.PORTADATAOUT
+q_a[1] <= ram_block1a1.PORTADATAOUT
+q_a[2] <= ram_block1a2.PORTADATAOUT
+q_a[3] <= ram_block1a3.PORTADATAOUT
+q_a[4] <= ram_block1a4.PORTADATAOUT
+q_a[5] <= ram_block1a5.PORTADATAOUT
+q_a[6] <= ram_block1a6.PORTADATAOUT
+q_a[7] <= ram_block1a7.PORTADATAOUT
+
+
+|caracteres_lcd|selec_color:selec_color_inst
+selector => Decoder0.IN0
+R[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+R[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+R[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+R[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+R[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+R[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+G[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+G[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+G[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+G[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+G[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+G[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+G[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+G[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+B[0] <= <GND>
+B[1] <= <GND>
+B[2] <= <GND>
+B[3] <= <GND>
+B[4] <= <GND>
+B[5] <= <GND>
+B[6] <= <GND>
+B[7] <= <GND>
 
 

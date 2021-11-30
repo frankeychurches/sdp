@@ -1,0 +1,16 @@
+module caracteres_lcd (
+    CLK, RST, NCLK, GREST, HD, VD, DEN, R, G, B
+);
+    
+
+input CLK, RST;
+output NCLK, GREST, HD, VD, DEN;
+output [7:0] R,G,B;
+
+
+
+
+
+
+
+endmodule

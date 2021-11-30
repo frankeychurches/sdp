@@ -8,8 +8,11 @@ output [7:0] R, G, B;
 wire [9:0] fila;
 wire [10:0] columna;
 wire DEN_sig;
-reg [19:0] dir;
+wire [19:0] dir;
 wire [23:0] q_sig;
+
+wire [7:0] filax2;
+wire [8:0] columnax2;
 
 lcd_sync lcd_sync_inst
 (
@@ -25,18 +28,25 @@ lcd_sync lcd_sync_inst
 );
 
 
-// Direccionamiento
-always @(fila, columna) begin
-	if(DEN_sig)
-		dir = {columna, fila};
-end
+// Direccionamiento X-Y
+
+assign filax2={fila-35}>>1; 
+assign columnax2={columna-216}>>1;
+
+assign dir = {filax2,columnax2};
+
 
 
 ROM_image	ROM_image_inst (
 	.address ( dir ),
 	.clock ( NCLK ),
 	.q ( q_sig )
-	);
+);
+
+
+assign R= {q_sig [15:11], q_sig [15:13]};
+assign G= {q_sig [10:5], q_sig [10:9]};
+assign B= {q_sig [4:0], q_sig [4:2]};
 
 
 
