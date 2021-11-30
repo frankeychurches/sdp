@@ -8,8 +8,8 @@ output [7:0] R, G, B;
 wire [9:0] fila;
 wire [10:0] columna;
 wire DEN_sig;
-wire [19:0] dir;
-wire [23:0] q_sig;
+wire [16:0] dir;
+wire [15:0] q_sig;
 
 wire [7:0] filax2;
 wire [8:0] columnax2;
@@ -31,11 +31,9 @@ lcd_sync lcd_sync_inst
 // Direccionamiento X-Y
 
 assign filax2={fila-35}>>1; 
-assign columnax2={columna-216}>>1;
+assign columnax2={columna-215}>>1;
 
 assign dir = {filax2,columnax2};
-
-
 
 ROM_image	ROM_image_inst (
 	.address ( dir ),

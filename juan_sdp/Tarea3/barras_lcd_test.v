@@ -67,20 +67,4 @@ begin
 end 
 
 
-
-task ONE_ROW();
-begin 
-	repeat(2) @(negedge CLK);
-	#(T*2030);
-end
-endtask
-
-
-task ALL_ROWS();
-begin 
-	repeat(2) @(negedge CLK);
-	#(T*2030*525);
-end
-endtask
-
 endmodule

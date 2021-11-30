@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_controller
-Tue Nov 30 18:07:34 2021
+Tue Nov 30 19:04:59 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -17,14 +17,14 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component|altsyncram_p7a1:auto_generated
+ 12. Source assignments for ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated
  13. Parameter Settings for User Entity Instance: lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component
  14. Parameter Settings for User Entity Instance: lcd_sync:lcd_sync_inst|n_counter:hcount
  15. Parameter Settings for User Entity Instance: lcd_sync:lcd_sync_inst|n_counter:vcount
- 16. Parameter Settings for User Entity Instance: char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: ROM_image:ROM_image_inst|altsyncram:altsyncram_component
  17. altpll Parameter Settings by Entity Instance
  18. altsyncram Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "char_rom:char_rom_inst"
+ 19. Port Connectivity Checks: "ROM_image:ROM_image_inst"
  20. Port Connectivity Checks: "lcd_sync:lcd_sync_inst|n_counter:vcount"
  21. Port Connectivity Checks: "lcd_sync:lcd_sync_inst|n_counter:hcount"
  22. Post-Synthesis Netlist Statistics for Top Partition
@@ -55,18 +55,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 30 18:07:34 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 30 19:04:59 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; VGA_controller                              ;
-; Top-level Entity Name              ; caracteres_lcd                              ;
+; Top-level Entity Name              ; imagen_lcd                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 45                                          ;
-;     Total combinational functions  ; 45                                          ;
-;     Dedicated logic registers      ; 21                                          ;
-; Total registers                    ; 21                                          ;
+; Total logic elements               ; 247                                         ;
+;     Total combinational functions  ; 247                                         ;
+;     Dedicated logic registers      ; 25                                          ;
+; Total registers                    ; 25                                          ;
 ; Total pins                         ; 31                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 64                                          ;
+; Total memory bits                  ; 1,966,080                                   ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; caracteres_lcd     ; VGA_controller     ;
+; Top-level entity name                                                      ; imagen_lcd         ; VGA_controller     ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -171,7 +171,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -183,11 +185,9 @@ refer to the applicable agreement for further details.
 ; n_counter.v                      ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v            ;         ;
 ; MathFun.vh                       ; yes             ; User Unspecified File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/MathFun.vh             ;         ;
 ; lcd_sync.v                       ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v             ;         ;
+; imagen_lcd.v                     ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/imagen_lcd.v           ;         ;
+; ROM_image.v                      ; yes             ; User Wizard-Generated File             ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_image.v            ;         ;
 ; pll_ltm.v                        ; yes             ; User Wizard-Generated File             ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/pll_ltm.v              ;         ;
-; caracteres_lcd.v                 ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v       ;         ;
-; ROM_char.v                       ; yes             ; User Wizard-Generated File             ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_char.v             ;         ;
-; char_rom.v                       ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.v             ;         ;
-; selec_color.v                    ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/selec_color.v          ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altpll.tdf                                                               ;         ;
 ; aglobal171.inc                   ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/aglobal171.inc                                                           ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/stratix_pll.inc                                                          ;         ;
@@ -202,8 +202,10 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altrom.inc                                                               ;         ;
 ; altram.inc                       ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altram.inc                                                               ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc                                                             ;         ;
-; db/altsyncram_p7a1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_p7a1.tdf ;         ;
-; char_rom.mif                     ; yes             ; Auto-Found Memory Initialization File  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.mif           ;         ;
+; db/altsyncram_96b1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf ;         ;
+; imagen_rgb_16_xy.mif             ; yes             ; Auto-Found Memory Initialization File  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/imagen_rgb_16_xy.mif   ;         ;
+; db/decode_3aa.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/decode_3aa.tdf      ;         ;
+; db/mux_8qb.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/mux_8qb.tdf         ;         ;
 +----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -212,24 +214,24 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                              ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 45                                                                                                                 ;
+; Estimated Total logic elements              ; 247                                                                                                                ;
 ;                                             ;                                                                                                                    ;
-; Total combinational functions               ; 45                                                                                                                 ;
+; Total combinational functions               ; 247                                                                                                                ;
 ; Logic element usage by number of LUT inputs ;                                                                                                                    ;
-;     -- 4 input functions                    ; 18                                                                                                                 ;
-;     -- 3 input functions                    ; 5                                                                                                                  ;
-;     -- <=2 input functions                  ; 22                                                                                                                 ;
+;     -- 4 input functions                    ; 188                                                                                                                ;
+;     -- 3 input functions                    ; 20                                                                                                                 ;
+;     -- <=2 input functions                  ; 39                                                                                                                 ;
 ;                                             ;                                                                                                                    ;
 ; Logic elements by mode                      ;                                                                                                                    ;
-;     -- normal mode                          ; 26                                                                                                                 ;
-;     -- arithmetic mode                      ; 19                                                                                                                 ;
+;     -- normal mode                          ; 213                                                                                                                ;
+;     -- arithmetic mode                      ; 34                                                                                                                 ;
 ;                                             ;                                                                                                                    ;
-; Total registers                             ; 21                                                                                                                 ;
-;     -- Dedicated logic registers            ; 21                                                                                                                 ;
+; Total registers                             ; 25                                                                                                                 ;
+;     -- Dedicated logic registers            ; 25                                                                                                                 ;
 ;     -- I/O registers                        ; 0                                                                                                                  ;
 ;                                             ;                                                                                                                    ;
 ; I/O pins                                    ; 31                                                                                                                 ;
-; Total memory bits                           ; 64                                                                                                                 ;
+; Total memory bits                           ; 1966080                                                                                                            ;
 ;                                             ;                                                                                                                    ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                                                  ;
 ;                                             ;                                                                                                                    ;
@@ -237,49 +239,50 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                                                                  ;
 ;                                             ;                                                                                                                    ;
 ; Maximum fan-out node                        ; lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component|pll_ltm_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 31                                                                                                                 ;
-; Total fan-out                               ; 288                                                                                                                ;
-; Average fan-out                             ; 2.10                                                                                                               ;
+; Maximum fan-out                             ; 267                                                                                                                ;
+; Total fan-out                               ; 4629                                                                                                               ;
+; Average fan-out                             ; 8.05                                                                                                               ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                     ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name     ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |caracteres_lcd                              ; 45 (0)              ; 21 (0)                    ; 64          ; 0            ; 0       ; 0         ; 31   ; 0            ; |caracteres_lcd                                                                                                              ; caracteres_lcd  ; work         ;
-;    |char_rom:char_rom_inst|                  ; 5 (5)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|char_rom:char_rom_inst                                                                                       ; char_rom        ; work         ;
-;       |ROM_char:ROM_char_inst|               ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|char_rom:char_rom_inst|ROM_char:ROM_char_inst                                                                ; ROM_char        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_p7a1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component|altsyncram_p7a1:auto_generated ; altsyncram_p7a1 ; work         ;
-;    |lcd_sync:lcd_sync_inst|                  ; 40 (11)             ; 21 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|lcd_sync:lcd_sync_inst                                                                                       ; lcd_sync        ; work         ;
-;       |n_counter:hcount|                     ; 16 (16)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|lcd_sync:lcd_sync_inst|n_counter:hcount                                                                      ; n_counter       ; work         ;
-;       |n_counter:vcount|                     ; 13 (13)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|lcd_sync:lcd_sync_inst|n_counter:vcount                                                                      ; n_counter       ; work         ;
-;       |pll_ltm:pll_ltm_inst|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst                                                                  ; pll_ltm         ; work         ;
-;          |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component                                          ; altpll          ; work         ;
-;             |pll_ltm_altpll:auto_generated|  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |caracteres_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component|pll_ltm_altpll:auto_generated            ; pll_ltm_altpll  ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                  ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Entity Name     ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |imagen_lcd                                 ; 247 (17)            ; 25 (0)                    ; 1966080     ; 0            ; 0       ; 0         ; 31   ; 0            ; |imagen_lcd                                                                                                                ; imagen_lcd      ; work         ;
+;    |ROM_image:ROM_image_inst|               ; 191 (0)             ; 4 (0)                     ; 1966080     ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|ROM_image:ROM_image_inst                                                                                       ; ROM_image       ; work         ;
+;       |altsyncram:altsyncram_component|     ; 191 (0)             ; 4 (0)                     ; 1966080     ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|ROM_image:ROM_image_inst|altsyncram:altsyncram_component                                                       ; altsyncram      ; work         ;
+;          |altsyncram_96b1:auto_generated|   ; 191 (0)             ; 4 (4)                     ; 1966080     ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated                        ; altsyncram_96b1 ; work         ;
+;             |decode_3aa:rden_decode|        ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|decode_3aa:rden_decode ; decode_3aa      ; work         ;
+;             |mux_8qb:mux2|                  ; 176 (176)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|mux_8qb:mux2           ; mux_8qb         ; work         ;
+;    |lcd_sync:lcd_sync_inst|                 ; 39 (9)              ; 21 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|lcd_sync:lcd_sync_inst                                                                                         ; lcd_sync        ; work         ;
+;       |n_counter:hcount|                    ; 16 (16)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|lcd_sync:lcd_sync_inst|n_counter:hcount                                                                        ; n_counter       ; work         ;
+;       |n_counter:vcount|                    ; 14 (14)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|lcd_sync:lcd_sync_inst|n_counter:vcount                                                                        ; n_counter       ; work         ;
+;       |pll_ltm:pll_ltm_inst|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst                                                                    ; pll_ltm         ; work         ;
+;          |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component                                            ; altpll          ; work         ;
+;             |pll_ltm_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |imagen_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component|pll_ltm_altpll:auto_generated              ; pll_ltm_altpll  ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                          ;
-+-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
-; Name                                                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
-+-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
-; char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component|altsyncram_p7a1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; ./char_rom.mif ;
-+-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+------------------------+
+; Name                                                                                               ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                    ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+------------------------+
+; ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 122880       ; 24           ; --           ; --           ; 2949120 ; ./imagen_rgb_16_xy.mif ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                           ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                               ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------------------+-----------------+
-; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |caracteres_lcd|char_rom:char_rom_inst|ROM_char:ROM_char_inst ; ROM_char.v      ;
-; Altera ; ALTPLL       ; 17.1    ; N/A          ; N/A          ; |caracteres_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst   ; pll_ltm.v       ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------------------+-----------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                     ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                         ; IP Include File ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |imagen_lcd|ROM_image:ROM_image_inst                    ; ROM_image.v     ;
+; Altera ; ALTPLL       ; 17.1    ; N/A          ; N/A          ; |imagen_lcd|lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst ; pll_ltm.v       ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------+-----------------+
 
 
 +------------------------------------------------------+
@@ -287,7 +290,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 25    ;
 ; Number of registers using Synchronous Clear  ; 21    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -297,23 +300,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |caracteres_lcd|lcd_sync:lcd_sync_inst|n_counter:hcount|count[5] ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |caracteres_lcd|lcd_sync:lcd_sync_inst|n_counter:vcount|count[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |imagen_lcd|lcd_sync:lcd_sync_inst|n_counter:hcount|count[5] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |imagen_lcd|lcd_sync:lcd_sync_inst|n_counter:vcount|count[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component|altsyncram_p7a1:auto_generated ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                    ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                     ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                               ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                ;
++---------------------------------+--------------------+------+--------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -712,64 +715,64 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+----------------------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                                           ;
-+------------------------------------+----------------------+----------------------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                        ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                   ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                 ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                        ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                                                        ;
-; WIDTH_A                            ; 8                    ; Signed Integer                                                 ;
-; WIDTHAD_A                          ; 9                    ; Signed Integer                                                 ;
-; NUMWORDS_A                         ; 512                  ; Signed Integer                                                 ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                        ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                        ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                        ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                        ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                        ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                        ;
-; WIDTH_B                            ; 1                    ; Untyped                                                        ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                                        ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                                        ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                        ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                        ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                        ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                        ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                        ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                        ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                        ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                        ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                        ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                        ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                        ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                 ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                        ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                        ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                        ;
-; INIT_FILE                          ; ./char_rom.mif       ; Untyped                                                        ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                        ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                        ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                        ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                                        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                        ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                        ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                        ;
-; CBXI_PARAMETER                     ; altsyncram_p7a1      ; Untyped                                                        ;
-+------------------------------------+----------------------+----------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM_image:ROM_image_inst|altsyncram:altsyncram_component ;
++------------------------------------+------------------------+-----------------------------------------+
+; Parameter Name                     ; Value                  ; Type                                    ;
++------------------------------------+------------------------+-----------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                      ; Untyped                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                     ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                    ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE                          ;
+; WIDTH_BYTEENA                      ; 1                      ; Untyped                                 ;
+; OPERATION_MODE                     ; ROM                    ; Untyped                                 ;
+; WIDTH_A                            ; 24                     ; Signed Integer                          ;
+; WIDTHAD_A                          ; 17                     ; Signed Integer                          ;
+; NUMWORDS_A                         ; 122880                 ; Signed Integer                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                                 ;
+; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                                 ;
+; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                   ; Untyped                                 ;
+; INDATA_ACLR_A                      ; NONE                   ; Untyped                                 ;
+; BYTEENA_ACLR_A                     ; NONE                   ; Untyped                                 ;
+; WIDTH_B                            ; 1                      ; Untyped                                 ;
+; WIDTHAD_B                          ; 1                      ; Untyped                                 ;
+; NUMWORDS_B                         ; 1                      ; Untyped                                 ;
+; INDATA_REG_B                       ; CLOCK1                 ; Untyped                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                 ; Untyped                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1                 ; Untyped                                 ;
+; ADDRESS_REG_B                      ; CLOCK1                 ; Untyped                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED           ; Untyped                                 ;
+; BYTEENA_REG_B                      ; CLOCK1                 ; Untyped                                 ;
+; INDATA_ACLR_B                      ; NONE                   ; Untyped                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                   ; Untyped                                 ;
+; ADDRESS_ACLR_B                     ; NONE                   ; Untyped                                 ;
+; OUTDATA_ACLR_B                     ; NONE                   ; Untyped                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                   ; Untyped                                 ;
+; BYTEENA_ACLR_B                     ; NONE                   ; Untyped                                 ;
+; WIDTH_BYTEENA_A                    ; 1                      ; Signed Integer                          ;
+; WIDTH_BYTEENA_B                    ; 1                      ; Untyped                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                   ; Untyped                                 ;
+; BYTE_SIZE                          ; 8                      ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE              ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ   ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ   ; Untyped                                 ;
+; INIT_FILE                          ; ./imagen_rgb_16_xy.mif ; Untyped                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A                 ; Untyped                                 ;
+; MAXIMUM_DEPTH                      ; 0                      ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                 ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                 ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                 ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                 ; Untyped                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN        ; Untyped                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                                 ;
+; ENABLE_ECC                         ; FALSE                  ; Untyped                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                                 ;
+; WIDTH_ECCSTATUS                    ; 3                      ; Untyped                                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E           ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_96b1        ; Untyped                                 ;
++------------------------------------+------------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -790,34 +793,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+---------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                          ;
-+-------------------------------------------+-------------------------------------------------------------------------------+
-; Name                                      ; Value                                                                         ;
-+-------------------------------------------+-------------------------------------------------------------------------------+
-; Number of entity instances                ; 1                                                                             ;
-; Entity Instance                           ; char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                                           ;
-;     -- WIDTH_A                            ; 8                                                                             ;
-;     -- NUMWORDS_A                         ; 512                                                                           ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                  ;
-;     -- WIDTH_B                            ; 1                                                                             ;
-;     -- NUMWORDS_B                         ; 1                                                                             ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                        ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                  ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                          ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                     ;
-+-------------------------------------------+-------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                     ;
++-------------------------------------------+----------------------------------------------------------+
+; Name                                      ; Value                                                    ;
++-------------------------------------------+----------------------------------------------------------+
+; Number of entity instances                ; 1                                                        ;
+; Entity Instance                           ; ROM_image:ROM_image_inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                      ;
+;     -- WIDTH_A                            ; 24                                                       ;
+;     -- NUMWORDS_A                         ; 122880                                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                             ;
+;     -- WIDTH_B                            ; 1                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                ;
++-------------------------------------------+----------------------------------------------------------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "char_rom:char_rom_inst" ;
-+----------------+-------+----------+----------------+
-; Port           ; Type  ; Severity ; Details        ;
-+----------------+-------+----------+----------------+
-; caracter[5..1] ; Input ; Info     ; Stuck at GND   ;
-; caracter[0]    ; Input ; Info     ; Stuck at VCC   ;
-+----------------+-------+----------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ROM_image:ROM_image_inst"                                                                                                ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                  ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (24 bits) is wider than the port expression (16 bits) it drives; bit(s) "q[23..16]" have no fanouts ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -845,23 +847,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 31                          ;
-; cycloneiii_ff         ; 21                          ;
+; cycloneiii_ff         ; 25                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 11                          ;
-; cycloneiii_lcell_comb ; 47                          ;
-;     arith             ; 19                          ;
-;         2 data inputs ; 19                          ;
-;     normal            ; 28                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 18                          ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 247                         ;
+;     arith             ; 34                          ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 213                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 188                         ;
 ; cycloneiii_pll        ; 1                           ;
-; cycloneiii_ram_block  ; 8                           ;
+; cycloneiii_ram_block  ; 240                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.43                        ;
+; Average LUT depth     ; 3.27                        ;
 +-----------------------+-----------------------------+
 
 
@@ -870,7 +873,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -880,7 +883,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Nov 30 18:07:20 2021
+    Info: Processing started: Tue Nov 30 19:04:44 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_controller -c VGA_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -908,8 +911,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file char_ro
     Info (12023): Found entity 1: char_rom File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file selec_color.v
     Info (12023): Found entity 1: selec_color File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/selec_color.v Line: 1
-Info (12127): Elaborating entity "caracteres_lcd" for the top level hierarchy
-Info (12128): Elaborating entity "lcd_sync" for hierarchy "lcd_sync:lcd_sync_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 26
+Info (12127): Elaborating entity "imagen_lcd" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at imagen_lcd.v(33): truncated value with size 32 to match size of target (8) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/imagen_lcd.v Line: 33
+Warning (10230): Verilog HDL assignment warning at imagen_lcd.v(34): truncated value with size 32 to match size of target (9) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/imagen_lcd.v Line: 34
+Info (12128): Elaborating entity "lcd_sync" for hierarchy "lcd_sync:lcd_sync_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/imagen_lcd.v Line: 28
 Warning (10230): Verilog HDL assignment warning at lcd_sync.v(46): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v Line: 46
 Info (12128): Elaborating entity "pll_ltm" for hierarchy "lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v Line: 22
 Info (12128): Elaborating entity "altpll" for hierarchy "lcd_sync:lcd_sync_inst|pll_ltm:pll_ltm_inst|altpll:altpll_component" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/pll_ltm.v Line: 90
@@ -982,52 +987,169 @@ Warning (10230): Verilog HDL assignment warning at n_counter.v(52): truncated va
 Warning (10230): Verilog HDL assignment warning at n_counter.v(55): truncated value with size 32 to match size of target (10) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v Line: 55
 Warning (10230): Verilog HDL assignment warning at n_counter.v(57): truncated value with size 32 to match size of target (10) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v Line: 57
 Warning (10230): Verilog HDL assignment warning at n_counter.v(62): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v Line: 62
-Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:char_rom_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 37
-Info (12128): Elaborating entity "ROM_char" for hierarchy "char_rom:char_rom_inst|ROM_char:ROM_char_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.v Line: 34
-Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_char.v Line: 81
-Info (12130): Elaborated megafunction instantiation "char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_char.v Line: 81
-Info (12133): Instantiated megafunction "char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component" with the following parameter: File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_char.v Line: 81
+Info (12128): Elaborating entity "ROM_image" for hierarchy "ROM_image:ROM_image_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/imagen_lcd.v Line: 42
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_image.v Line: 81
+Info (12130): Elaborated megafunction instantiation "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_image.v Line: 81
+Info (12133): Instantiated megafunction "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" with the following parameter: File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_image.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "./char_rom.mif"
+    Info (12134): Parameter "init_file" = "./imagen_rgb_16_xy.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "numwords_a" = "122880"
     Info (12134): Parameter "operation_mode" = "ROM"
     Info (12134): Parameter "outdata_aclr_a" = "NONE"
     Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "widthad_a" = "9"
-    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "widthad_a" = "17"
+    Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_p7a1.tdf
-    Info (12023): Found entity 1: altsyncram_p7a1 File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_p7a1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_p7a1" for hierarchy "char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component|altsyncram_p7a1:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "selec_color" for hierarchy "selec_color:selec_color_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 47
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "B[0]" is stuck at GND File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 8
-    Warning (13410): Pin "B[1]" is stuck at GND File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 8
-    Warning (13410): Pin "B[2]" is stuck at GND File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 8
-    Warning (13410): Pin "B[3]" is stuck at GND File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 8
-    Warning (13410): Pin "B[4]" is stuck at GND File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 8
-    Warning (13410): Pin "B[5]" is stuck at GND File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 8
-    Warning (13410): Pin "B[6]" is stuck at GND File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 8
-    Warning (13410): Pin "B[7]" is stuck at GND File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_96b1.tdf
+    Info (12023): Found entity 1: altsyncram_96b1 File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 31
+Info (12128): Elaborating entity "altsyncram_96b1" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_3aa.tdf
+    Info (12023): Found entity 1: decode_3aa File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/decode_3aa.tdf Line: 22
+Info (12128): Elaborating entity "decode_3aa" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|decode_3aa:rden_decode" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_8qb.tdf
+    Info (12023): Found entity 1: mux_8qb File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/mux_8qb.tdf Line: 22
+Info (12128): Elaborating entity "mux_8qb" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|mux_8qb:mux2" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 40
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a16" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 377
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a17" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 398
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a18" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 419
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a19" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 440
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a20" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 461
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a21" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 482
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a22" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 503
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a23" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 524
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a40" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 881
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a41" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 902
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a42" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 923
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a43" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 944
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a44" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 965
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a45" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 986
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a46" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1007
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a47" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1028
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a64" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1385
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a65" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1406
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a66" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1427
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a67" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1448
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a68" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1469
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a69" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1490
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a70" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1511
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a71" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1532
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a88" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1889
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a89" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1910
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a90" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1931
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a91" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1952
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a92" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1973
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a93" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 1994
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a94" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2015
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a95" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2036
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a112" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2393
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a113" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2414
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a114" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2435
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a115" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2456
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a116" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2477
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a117" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2498
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a118" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2519
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a119" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2540
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a136" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2897
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a137" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2918
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a138" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2939
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a139" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2960
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a140" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 2981
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a141" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3002
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a142" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3023
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a143" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3044
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a160" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3401
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a161" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3422
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a162" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3443
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a163" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3464
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a164" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3485
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a165" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3506
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a166" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3527
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a167" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3548
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a184" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3905
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a185" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3926
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a186" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3947
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a187" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3968
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a188" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 3989
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a189" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4010
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a190" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4031
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a191" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4052
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a208" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4409
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a209" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4430
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a210" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4451
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a211" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4472
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a212" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4493
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a213" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4514
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a214" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4535
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a215" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4556
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a232" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4913
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a233" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4934
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a234" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4955
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a235" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4976
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a236" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 4997
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a237" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5018
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a238" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5039
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a239" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5060
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a256" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5417
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a257" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5438
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a258" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5459
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a259" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5480
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a260" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5501
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a261" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5522
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a262" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5543
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a263" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5564
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a280" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5921
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a281" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5942
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a282" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5963
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a283" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 5984
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a284" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6005
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a285" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6026
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a286" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6047
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a287" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6068
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a304" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6425
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a305" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6446
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a306" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6467
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a307" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6488
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a308" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6509
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a309" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6530
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a310" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6551
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a311" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6572
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a328" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6929
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a329" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6950
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a330" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6971
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a331" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 6992
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a332" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7013
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a333" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7034
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a334" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7055
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a335" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7076
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a352" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7433
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a353" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7454
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a354" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7475
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a355" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7496
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a356" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7517
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a357" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7538
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a358" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7559
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_96b1:auto_generated|ram_block1a359" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_96b1.tdf Line: 7580
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "char_rom:char_rom_inst|ROM_char:ROM_char_inst|altsyncram:altsyncram_component|altsyncram_p7a1:auto_generated|ALTSYNCRAM" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_p7a1.tdf Line: 31
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 85 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 523 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 45 logic cells
-    Info (21064): Implemented 8 RAM segments
+    Info (21061): Implemented 251 logic cells
+    Info (21064): Implemented 240 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Tue Nov 30 18:07:34 2021
-    Info: Elapsed time: 00:00:14
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 135 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Tue Nov 30 19:04:59 2021
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:30
 
 
