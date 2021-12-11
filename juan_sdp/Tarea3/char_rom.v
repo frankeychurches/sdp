@@ -1,3 +1,31 @@
+// --------------------------------------------------------------------
+// Universitat Politècnica de València
+// Departamento de Ingeniería Electrónica
+// --------------------------------------------------------------------
+// Sistemas Digitales Programables MUISE
+// Curso 2021 - 2022
+// --------------------------------------------------------------------
+// Nombre del archivo: char_rom.v
+//
+// Descripción: Este código de verilog implementa un multiplexor que 
+// dependiendo de los 3 bits LSB del vector columna, va cogiendo
+// los valores de visualización de pixel (1) o pixel apagado (0).
+// 
+// Las entradas y salidas de este programa son:
+// 1. NCLK -> Señal de reloj (50 MHz)  (Entrada)
+// 2. fila -> Valor del array de filas (Entrada)
+// 3. columna -> Habilitador de cuenta y funcionamiento (Entrada)
+// 4. caracter -> Dirección de la cuenta. 1 - arriba, 2 - abajo (Entrada)
+// 5. pixel_on_off -> Valor actual de la cuenta (Salida)
+//
+// --------------------------------------------------------------------
+// Versión: V2.0| Fecha Modificación: 11/12/2021
+//
+// Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
+// Ordenador de trabajo: Portátil
+//
+// --------------------------------------------------------------------
+
 module char_rom (NCLK, fila, columna, caracter, pixel_on_off);
 
 input NCLK;

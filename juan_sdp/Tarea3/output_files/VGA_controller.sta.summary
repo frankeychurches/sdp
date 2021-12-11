@@ -3,11 +3,11 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'lcd_sync_inst|pll_ltm_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 29.310
+Slack : 36.096
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'lcd_sync_inst|pll_ltm_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.447
+Slack : 0.347
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
@@ -19,11 +19,11 @@ Slack : 19.709
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'lcd_sync_inst|pll_ltm_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 30.310
+Slack : 36.426
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'lcd_sync_inst|pll_ltm_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.404
+Slack : 0.346
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
@@ -35,11 +35,11 @@ Slack : 19.710
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'lcd_sync_inst|pll_ltm_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 34.041
+Slack : 38.163
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'lcd_sync_inst|pll_ltm_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.202
+Slack : 0.136
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
@@ -47,7 +47,7 @@ Slack : 9.574
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lcd_sync_inst|pll_ltm_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.749
+Slack : 19.753
 TNS   : 0.000
 
 ------------------------------------------------------------

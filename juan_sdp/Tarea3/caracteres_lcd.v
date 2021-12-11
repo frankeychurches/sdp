@@ -1,3 +1,35 @@
+// --------------------------------------------------------------------
+// Universitat Politècnica de València
+// Departamento de Ingeniería Electrónica
+// --------------------------------------------------------------------
+// Sistemas Digitales Programables MUISE
+// Curso 2021 - 2022
+// --------------------------------------------------------------------
+// Nombre del archivo: caracteres_lcd.v
+//
+// Descripción: Este código de verilog implementa la muestra de caracteres 
+// por pantalla, declarando el barrido inicial de la pantalla (lcd_sync),
+// seguido de la ROM para mostrar el pixel del caracter o el fondo (char_rom),
+// así como la selección del color del fondo (amarillo) y del pixel (negro). 
+// 
+// Las entradas y salidas de este programa son:
+// 1. CLK -> Señal de reloj (50 MHz)  (Entrada)
+// 2. RST -> Reset síncrono activo a nivel bajo (Entrada)
+// 3. NCLK -> Reloj de la pantalla a 25 MHz (Salida)
+// 4. GREST -> Reset  síncrono activo a nivel bajo (Salida)
+// 5. HD -> Fin de fila (Salida)
+// 6. VD ->  Fin de la pantalla (salida)
+// 7. DEN ->  Enable de activación cuando se llega a la zona de visualización (Salida)
+// 8. R, G, B ->  Codificación de colores RGB. Tamaño 8 bits (salida)
+//
+// --------------------------------------------------------------------
+// Versión: V2.0| Fecha Modificación: 11/12/2021
+//
+// Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
+// Ordenador de trabajo: Portátil
+//
+// --------------------------------------------------------------------
+
 module caracteres_lcd (
     CLK, RST, NCLK, GREST, HD, VD, DEN, R, G, B
 );

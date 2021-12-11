@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Nov 30 19:04:59 2021
+Analysis & Synthesis Status : Successful - Sat Dec 11 15:58:24 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : VGA_controller
-Top-level Entity Name : imagen_lcd
+Top-level Entity Name : caracteres_lcd
 Family : Cyclone IV E
-Total logic elements : 247
-    Total combinational functions : 247
-    Dedicated logic registers : 25
-Total registers : 25
+Total logic elements : 45
+    Total combinational functions : 45
+    Dedicated logic registers : 21
+Total registers : 21
 Total pins : 31
 Total virtual pins : 0
-Total memory bits : 1,966,080
+Total memory bits : 64
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 1

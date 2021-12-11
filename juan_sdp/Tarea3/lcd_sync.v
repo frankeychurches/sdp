@@ -1,3 +1,36 @@
+// --------------------------------------------------------------------
+// Universitat Politècnica de València
+// Departamento de Ingeniería Electrónica
+// --------------------------------------------------------------------
+// Sistemas Digitales Programables MUISE
+// Curso 2021 - 2022
+// --------------------------------------------------------------------
+// Nombre del archivo: lcd_sync.v
+//
+// Descripción: Este código de verilog implementa las señales de datos y 
+// sincronismo de la pantalla, mediante dos contadores (uno horizontal
+// y otro vertical) encargados de marcar el fin de línea (horz) y el 
+// cambio de línea (vert). 
+//
+// Las entradas y salidas de este programa son:
+// 1. CLK -> Señal de reloj (50 MHz)  (Entrada)
+// 2. RST_N -> Reset síncrono activo a nivel bajo (Entrada)
+// 3. NCLK -> Reloj de la pantalla a 25 MHz (Salida)
+// 4. GREST -> Reset  síncrono activo a nivel bajo (Salida)
+// 5. HD -> Fin de fila (Salida)
+// 6. VD ->  Fin de la pantalla (salida)
+// 7. DEN ->  Enable de activación cuando se llega a la zona de visualización (Salida)
+// 8. fila ->  Vector de filas (salida)
+// 9. columna ->  Vector de columnas (salida)
+//
+// --------------------------------------------------------------------
+// Versión: V2.0| Fecha Modificación: 11/12/2021
+//
+// Autor(es): Juan Platero Avello y Francisco José Llave Iglesias
+// Ordenador de trabajo: Portátil
+//
+// --------------------------------------------------------------------
+
 module lcd_sync (
     CLK, RST_N, NCLK, GREST, HD, VD, DEN, fila, columna
 );
