@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_controller
-Sat Dec 11 15:58:24 2021
+Sat Dec 11 18:43:19 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 11 15:58:24 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 11 18:43:19 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; VGA_controller                              ;
 ; Top-level Entity Name              ; caracteres_lcd                              ;
@@ -175,36 +175,36 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                        ; Library ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; n_counter.v                      ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v            ;         ;
-; MathFun.vh                       ; yes             ; User Unspecified File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/MathFun.vh             ;         ;
-; lcd_sync.v                       ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v             ;         ;
-; pll_ltm.v                        ; yes             ; User Wizard-Generated File             ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/pll_ltm.v              ;         ;
-; caracteres_lcd.v                 ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v       ;         ;
-; ROM_char.v                       ; yes             ; User Wizard-Generated File             ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_char.v             ;         ;
-; char_rom.v                       ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.v             ;         ;
-; selec_color.v                    ; yes             ; User Verilog HDL File                  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/selec_color.v          ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altpll.tdf                                                               ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/aglobal171.inc                                                           ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/stratix_pll.inc                                                          ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/stratixii_pll.inc                                                        ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/cycloneii_pll.inc                                                        ;         ;
-; db/pll_ltm_altpll.v              ; yes             ; Auto-Generated Megafunction            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/pll_ltm_altpll.v    ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                                                           ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                                                    ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc                                                              ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc                                                           ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc                                                            ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altrom.inc                                                               ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altram.inc                                                               ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc                                                             ;         ;
-; db/altsyncram_p7a1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_p7a1.tdf ;         ;
-; char_rom.mif                     ; yes             ; Auto-Found Memory Initialization File  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.mif           ;         ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                        ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; char_rom.mif                     ; yes             ; User Memory Initialization File  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.mif           ;         ;
+; n_counter.v                      ; yes             ; User Verilog HDL File            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/n_counter.v            ;         ;
+; MathFun.vh                       ; yes             ; User Unspecified File            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/MathFun.vh             ;         ;
+; lcd_sync.v                       ; yes             ; User Verilog HDL File            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/lcd_sync.v             ;         ;
+; pll_ltm.v                        ; yes             ; User Wizard-Generated File       ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/pll_ltm.v              ;         ;
+; caracteres_lcd.v                 ; yes             ; User Verilog HDL File            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v       ;         ;
+; ROM_char.v                       ; yes             ; User Wizard-Generated File       ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/ROM_char.v             ;         ;
+; char_rom.v                       ; yes             ; User Verilog HDL File            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.v             ;         ;
+; selec_color.v                    ; yes             ; User Verilog HDL File            ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/selec_color.v          ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/altpll.tdf                                                               ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/aglobal171.inc                                                           ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/stratix_pll.inc                                                          ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/stratixii_pll.inc                                                        ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/cycloneii_pll.inc                                                        ;         ;
+; db/pll_ltm_altpll.v              ; yes             ; Auto-Generated Megafunction      ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/pll_ltm_altpll.v    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                                                           ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                                                    ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc                                                              ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc                                                           ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc                                                            ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/altrom.inc                                                               ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/altram.inc                                                               ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc                                                             ;         ;
+; db/altsyncram_p7a1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/db/altsyncram_p7a1.tdf ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -870,7 +870,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -880,7 +880,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Dec 11 15:58:10 2021
+    Info: Processing started: Sat Dec 11 18:42:57 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_controller -c VGA_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1025,9 +1025,9 @@ Info (21057): Implemented 85 device resources after synthesis - the final resour
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Sat Dec 11 15:58:24 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Sat Dec 11 18:43:19 2021
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:48
 
 

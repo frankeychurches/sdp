@@ -1,7 +1,7 @@
 Quartus Prime Archive log --	D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/QAR2.qarlog
 
 Archive:	D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/QAR2.qar
-Date:		Sat Dec 11 15:57:30 2021
+Date:		Sat Dec 11 18:42:47 2021
 Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 	=========== Files Selected: ===========
@@ -19,6 +19,7 @@ D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/jua
 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/barras_lcd.v
 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/barras_lcd_test.v
 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/caracteres_lcd.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.mif
 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/char_rom.v
 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/imagen_lcd.v
 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/imagen_rgb_16_xy.mif
@@ -32,7 +33,7 @@ D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/jua
 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/pll_ltm_inst.v
 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/Tarea3/selec_color.v
 d:/quartus/quartus/bin64/assignment_defaults.qdf
-	======= Total: 27 files to archive =======
+	======= Total: 28 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.

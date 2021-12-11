@@ -1,5 +1,5 @@
 Archive Project report for VGA_controller
-Sat Dec 11 15:59:44 2021
+Sat Dec 11 18:44:13 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Sat Dec 11 15:59:44 2021 ;
+; Archive Project Status ; Successful - Sat Dec 11 18:44:13 2021 ;
 ; Revision Name          ; VGA_controller                        ;
 ; Top-level Entity Name  ; caracteres_lcd                        ;
 ; Family                 ; Cyclone IV E                          ;
@@ -60,9 +60,9 @@ Info: Generated report 'VGA_controller.archive.rpt'
 Info (23030): Evaluation of Tcl script d:/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Sat Dec 11 15:59:44 2021
+    Info: Processing ended: Sat Dec 11 18:44:13 2021
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +--------------------------------------------------+
@@ -77,6 +77,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; char_rom.v                                       ;
 ; d:/quartus/quartus/bin64/assignment_defaults.qdf ;
 ; imagen_lcd.v                                     ;
+; imagen_rgb_16_xy.mif                             ;
 ; lcd_sync.v                                       ;
 ; lcd_sync_test.v                                  ;
 ; MathFun.vh                                       ;
