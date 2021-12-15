@@ -1,0 +1,26 @@
+
+module ADC_CONTROL_HEX(
+					iCLK,
+					iRST_n,
+					oADC_DIN,
+					oADC_DCLK,
+					oSCEN,
+					iADC_DOUT,
+					iADC_BUSY,
+					iADC_PENIRQ_n,
+					oX_COORD,
+					oY_COORD
+					);
+
+input					iCLK;
+input					iRST_n;
+input					iADC_DOUT;
+input					iADC_PENIRQ_n;
+input					iADC_BUSY;
+output				oADC_DIN;
+output				oADC_DCLK;
+output				oSCEN;
+output	[11:0]	oX_COORD;
+output	[11:0]	oY_COORD;
+    
+endmodule

@@ -1,0 +1,138 @@
+Flow report for Touch_Control
+Wed Dec 15 13:10:43 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed Dec 15 13:10:43 2021       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Touch_Control                               ;
+; Top-level Entity Name              ; ADC_CONTROL_HEX                             ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE115F29C7                               ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 123 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 123 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 46 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 46                                          ;
+; Total pins                         ; 50 / 529 ( 9 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/15/2021 13:09:58 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Touch_Control       ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                   ;
++--------------------------------------+----------------------------------------+---------------+-----------------+------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name     ; Section Id       ;
++--------------------------------------+----------------------------------------+---------------+-----------------+------------------+
+; COMPILER_SIGNATURE_ID                ; 260097671512790.163957019721168        ; --            ; --              ; --               ;
+; EDA_DESIGN_INSTANCE_NAME             ; ADC_CONTROL                            ; --            ; --              ; tb_Touch_Control ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Touch_Control                       ; --            ; --              ; eda_simulation   ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --              ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --              ; --               ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --              ; eda_simulation   ;
+; EDA_TEST_BENCH_FILE                  ; EMULE_ADC.vo                           ; --            ; --              ; tb_Touch_Control ;
+; EDA_TEST_BENCH_FILE                  ; tb_Touch_Control.v                     ; --            ; --              ; tb_Touch_Control ;
+; EDA_TEST_BENCH_FILE                  ; MFB.v                                  ; --            ; --              ; tb_Touch_Control ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_Touch_Control                       ; --            ; --              ; tb_Touch_Control ;
+; EDA_TEST_BENCH_NAME                  ; tb_Touch_Control                       ; --            ; --              ; eda_simulation   ;
+; EDA_TIME_SCALE                       ; 1 ns                                   ; --            ; --              ; eda_simulation   ;
+; ENABLE_SIGNALTAP                     ; Off                                    ; --            ; --              ; --               ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --              ; --               ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --              ; --               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; ADC_CONTROL_HEX ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; ADC_CONTROL_HEX ; Top              ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; ADC_CONTROL_HEX ; Top              ;
+; TOP_LEVEL_ENTITY                     ; ADC_CONTROL_HEX                        ; Touch_Control ; --              ; --               ;
+; USE_SIGNALTAP_FILE                   ; stp02.stp                              ; --            ; --              ; --               ;
++--------------------------------------+----------------------------------------+---------------+-----------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4765 MB             ; 00:00:31                           ;
+; Fitter                    ; 00:00:19     ; 1.0                     ; 5690 MB             ; 00:00:30                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4676 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4835 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4647 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:40     ; --                      ; --                  ; 00:01:09                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-SPK378I9  ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Touch_Control -c Touch_Control
+quartus_fit --read_settings_files=off --write_settings_files=off Touch_Control -c Touch_Control
+quartus_asm --read_settings_files=off --write_settings_files=off Touch_Control -c Touch_Control
+quartus_sta Touch_Control -c Touch_Control
+quartus_eda --read_settings_files=off --write_settings_files=off Touch_Control -c Touch_Control
+
+
+
