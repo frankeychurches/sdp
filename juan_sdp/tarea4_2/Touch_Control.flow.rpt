@@ -1,5 +1,5 @@
 Flow report for Touch_Control
-Wed Dec 15 13:10:43 2021
+Wed Dec 15 21:26:21 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 15 13:10:43 2021       ;
+; Flow Status                        ; Successful - Wed Dec 15 21:26:21 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Touch_Control                               ;
 ; Top-level Entity Name              ; ADC_CONTROL_HEX                             ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 123 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 123 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 46 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 46                                          ;
+; Total logic elements               ; 155 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 155 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 71 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 71                                          ;
 ; Total pins                         ; 50 / 529 ( 9 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/15/2021 13:09:58 ;
+; Start date & time ; 12/15/2021 21:25:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Touch_Control       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-----------------+------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name     ; Section Id       ;
 +--------------------------------------+----------------------------------------+---------------+-----------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 260097671512790.163957019721168        ; --            ; --              ; --               ;
+; COMPILER_SIGNATURE_ID                ; 260097671512790.163959993612032        ; --            ; --              ; --               ;
 ; EDA_DESIGN_INSTANCE_NAME             ; ADC_CONTROL                            ; --            ; --              ; tb_Touch_Control ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Touch_Control                       ; --            ; --              ; eda_simulation   ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --              ; eda_simulation   ;
@@ -103,12 +103,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4765 MB             ; 00:00:31                           ;
-; Fitter                    ; 00:00:19     ; 1.0                     ; 5690 MB             ; 00:00:30                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4676 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4835 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4647 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:40     ; --                      ; --                  ; 00:01:09                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4764 MB             ; 00:00:32                           ;
+; Fitter                    ; 00:00:19     ; 1.0                     ; 5687 MB             ; 00:00:31                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4681 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4837 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4647 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:42     ; --                      ; --                  ; 00:01:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -60,7 +60,7 @@ output	[11:0]	oX_COORD;
 output	[11:0]	oY_COORD;
 
 
-wire dclk, half_dclk, trans_en, fin_80;
+wire dclk, half_dclk, trans_en, fin_80, wait_en, wait_irq;
 wire [6:0] count_80; // La habiamos declarado como un bit y tiene 7!!!!
 
 n_counter n_counter_inst
@@ -74,20 +74,36 @@ n_counter n_counter_inst
 );
 
 defparam n_counter_inst.fin_cuenta = 80;
-//defparam n_counter_inst.N = ;
 
+
+n_counter n_counter_wait
+(
+	.clk(iCLK) ,	// input  CLK
+	.reset(iRST_n) ,	// input  RST_n
+	.enable(wait_en) ,	// input  enable_sig
+	.up_down(1) ,	// input  up_down_sig
+	.count() ,	// output [N-1:0] count_sig
+	.TC(wait_irq) 	// output  TC_sig
+);
+
+defparam n_counter_wait.fin_cuenta = 25000000;
 
 adc_fsm adc_fsm_inst
 (
-	.CLK(iCLK) ,	// input  CLK
-	.RST_n(iRST_n) ,	// input  RST_n
+	.CLK(iCLK) ,	// input  CLK_sig
+	.RST_n(iRST_n) ,	// input  RST_n_sig
 	.Enable1(dclk) ,	// input  Enable1_sig
 	.Enable2(fin_80) ,	// input  Enable2_sig
+	.wait_irq(wait_irq) ,	// input  wait_irq_sig
 	.ADC_CS(oSCEN) ,	// output  ADC_CS_sig
 	.ADC_PENIRQ_n(iADC_PENIRQ_n) ,	// input  ADC_PENIRQ_n_sig
+	.wait_en(wait_en) ,	// output  wait_en_sig
 	.Ena_trans(trans_en) ,	// output  Ena_trans_sig
 	.Fin_trans() 	// output  Fin_trans_sig
 );
+
+
+
 
 
 adc_dclk_cnt adc_dclk_cnt_inst
@@ -101,15 +117,7 @@ adc_dclk_cnt adc_dclk_cnt_inst
 
 defparam adc_dclk_cnt_inst.fin_cuenta = ADC_DCLK_CNT;
 
-
-adc_dclk_gen adc_dclk_gen_inst
-(
-	.CLK(iCLK) ,	// input  CLK
-	.RST_n(iRST_n) ,	// input  RST_n
-	.Enable(dclk) ,	// input  Enable_sig
-	.ADC_DCLK(oADC_DCLK) 	// output  ADC_DCLK
-);
-
+assign oADC_DCLK=count_80[0];
 
 adc_din_gen adc_din_gen_inst
 (

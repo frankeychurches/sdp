@@ -1,0 +1,26 @@
+Quartus Prime Archive log --	D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/tarea4_1.qarlog
+
+Archive:	D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/tarea4_1.qar
+Date:		Wed Dec 15 21:28:59 2021
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/EMULE_ADC.vo
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/MFB.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/Touch_Control.qpf
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/Touch_Control.qsf
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/Touch_Control_assignment_defaults.qdf
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_gen.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_din_gen.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dout_coord.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_fsm.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/assignment_defaults.qdf
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/mathfun.vh
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/n_counter.v
+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/tb_Touch_Control.v
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

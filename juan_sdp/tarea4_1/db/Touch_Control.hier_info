@@ -1,8 +1,8 @@
 |ADC_CONTROL
-iCLK => iCLK.IN6
-iRST_n => iRST_n.IN6
+iCLK => iCLK.IN5
+iRST_n => iRST_n.IN5
 oADC_DIN << adc_din_gen:adc_din_gen_inst.ADC_DIN
-oADC_DCLK << adc_dclk_gen:adc_dclk_gen_inst.ADC_DCLK
+oADC_DCLK << count_80[0].DB_MAX_OUTPUT_PORT_TYPE
 oSCEN << adc_fsm:adc_fsm_inst.ADC_CS
 iADC_DOUT => iADC_DOUT.IN1
 iADC_BUSY => ~NO_FANOUT~
@@ -116,13 +116,6 @@ Enable => count.OUTPUTSELECT
 Enable => count.OUTPUTSELECT
 TC_2 <= TC_2.DB_MAX_OUTPUT_PORT_TYPE
 TC <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ADC_CONTROL|adc_dclk_gen:adc_dclk_gen_inst
-CLK => ADC_DCLK~reg0.CLK
-RST_n => ADC_DCLK.OUTPUTSELECT
-Enable => ADC_DCLK.DATAB
-ADC_DCLK <= ADC_DCLK~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ADC_CONTROL|adc_din_gen:adc_din_gen_inst

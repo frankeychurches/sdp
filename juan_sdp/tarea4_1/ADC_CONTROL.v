@@ -101,14 +101,16 @@ adc_dclk_cnt adc_dclk_cnt_inst
 
 defparam adc_dclk_cnt_inst.fin_cuenta = ADC_DCLK_CNT;
 
+assign oADC_DCLK=count_80[0];
 
-adc_dclk_gen adc_dclk_gen_inst
-(
-	.CLK(iCLK) ,	// input  CLK
-	.RST_n(iRST_n) ,	// input  RST_n
-	.Enable(dclk) ,	// input  Enable_sig
-	.ADC_DCLK(oADC_DCLK) 	// output  ADC_DCLK
-);
+
+//adc_dclk_gen adc_dclk_gen_inst
+//(
+//	.CLK(iCLK) ,	// input  CLK
+//	.RST_n(iRST_n) ,	// input  RST_n
+//	.Enable(dclk) ,	// input  Enable_sig
+//	.ADC_DCLK(oADC_DCLK) 	// output  ADC_DCLK
+//);
 
 
 adc_din_gen adc_din_gen_inst

@@ -68,17 +68,17 @@ CHIP  "Touch_Control"  ASSIGNED TO AN: EP4CE6E22C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-oX_COORD[8]                  : 1         : output : 3.3-V LVTTL       :         : 1         : N              
-oX_COORD[3]                  : 2         : output : 3.3-V LVTTL       :         : 1         : N              
-oY_COORD[0]                  : 3         : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 1         :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 2         :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 3         :        :                   :         : 1         :                
 GND                          : 4         : gnd    :                   :         :           :                
 VCCINT                       : 5         : power  :                   : 1.2V    :           :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 6         : input  : 3.3-V LVTTL       :         : 1         : N              
-oY_COORD[4]                  : 7         : output : 3.3-V LVTTL       :         : 1         : N              
+oX_COORD[4]                  : 7         : output : 3.3-V LVTTL       :         : 1         : N              
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 8         : input  : 3.3-V LVTTL       :         : 1         : N              
 nSTATUS                      : 9         :        :                   :         : 1         :                
-oX_COORD[4]                  : 10        : output : 3.3-V LVTTL       :         : 1         : N              
-iADC_DOUT                    : 11        : input  : 3.3-V LVTTL       :         : 1         : N              
+oY_COORD[0]                  : 10        : output : 3.3-V LVTTL       :         : 1         : N              
+oY_COORD[1]                  : 11        : output : 3.3-V LVTTL       :         : 1         : N              
 ~ALTERA_DCLK~                : 12        : output : 3.3-V LVTTL       :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 13        : input  : 3.3-V LVTTL       :         : 1         : N              
 nCONFIG                      : 14        :        :                   :         : 1         :                
@@ -95,48 +95,48 @@ iRST_n                       : 24        : input  : 3.3-V LVTTL       :         
 iADC_BUSY                    : 25        : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 26        : power  :                   : 3.3V    : 2         :                
 GND                          : 27        : gnd    :                   :         :           :                
-oX_COORD[0]                  : 28        : output : 3.3-V LVTTL       :         : 2         : N              
+oX_COORD[11]                 : 28        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : 29        : power  :                   : 1.2V    :           :                
-oY_COORD[5]                  : 30        : output : 3.3-V LVTTL       :         : 2         : N              
-oY_COORD[1]                  : 31        : output : 3.3-V LVTTL       :         : 2         : N              
-oX_COORD[6]                  : 32        : output : 3.3-V LVTTL       :         : 2         : N              
-oX_COORD[7]                  : 33        : output : 3.3-V LVTTL       :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 34        :        :                   :         : 2         :                
+oX_COORD[7]                  : 30        : output : 3.3-V LVTTL       :         : 2         : N              
+oY_COORD[6]                  : 31        : output : 3.3-V LVTTL       :         : 2         : N              
+oX_COORD[1]                  : 32        : output : 3.3-V LVTTL       :         : 2         : N              
+oX_COORD[6]                  : 33        : output : 3.3-V LVTTL       :         : 2         : N              
+oX_COORD[10]                 : 34        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCA1                        : 35        : power  :                   : 2.5V    :           :                
 GNDA1                        : 36        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 37        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 38        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 39        :        :                   :         : 3         :                
+oX_COORD[2]                  : 38        : output : 3.3-V LVTTL       :         : 3         : N              
+oX_COORD[3]                  : 39        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 40        : power  :                   : 3.3V    : 3         :                
 GND                          : 41        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 42        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 43        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 44        :        :                   :         : 3         :                
+oY_COORD[10]                 : 42        : output : 3.3-V LVTTL       :         : 3         : N              
+oADC_DCLK                    : 43        : output : 3.3-V LVTTL       :         : 3         : N              
+oY_COORD[7]                  : 44        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCINT                       : 45        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 46        :        :                   :         : 3         :                
+oY_COORD[8]                  : 46        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 47        : power  :                   : 3.3V    : 3         :                
 GND                          : 48        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 49        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 50        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 51        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 52        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 53        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 54        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 55        :        :                   :         : 4         :                
+oSCEN                        : 49        : output : 3.3-V LVTTL       :         : 3         : N              
+oX_COORD[8]                  : 50        : output : 3.3-V LVTTL       :         : 3         : N              
+oY_COORD[11]                 : 51        : output : 3.3-V LVTTL       :         : 3         : N              
+oADC_DIN                     : 52        : output : 3.3-V LVTTL       :         : 3         : N              
+oX_COORD[5]                  : 53        : output : 3.3-V LVTTL       :         : 3         : N              
+iADC_PENIRQ_n                : 54        : input  : 3.3-V LVTTL       :         : 4         : N              
+oY_COORD[9]                  : 55        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 56        : power  :                   : 3.3V    : 4         :                
 GND                          : 57        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 58        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 59        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 60        :        :                   :         : 4         :                
+oX_COORD[0]                  : 58        : output : 3.3-V LVTTL       :         : 4         : N              
+oY_COORD[5]                  : 59        : output : 3.3-V LVTTL       :         : 4         : N              
+oY_COORD[4]                  : 60        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCINT                       : 61        : power  :                   : 1.2V    :           :                
 VCCIO4                       : 62        : power  :                   : 3.3V    : 4         :                
 GND                          : 63        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 64        :        :                   :         : 4         :                
+oY_COORD[3]                  : 64        : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 65        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 66        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 67        :        :                   :         : 4         :                
+oY_COORD[2]                  : 67        : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 68        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 69        :        :                   :         : 4         :                
+iADC_DOUT                    : 69        : input  : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 70        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 71        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 72        :        :                   :         : 4         :                
@@ -186,30 +186,30 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 115       :        :                   :      
 VCCINT                       : 116       : power  :                   : 1.2V    :           :                
 VCCIO7                       : 117       : power  :                   : 3.3V    : 7         :                
 GND                          : 118       : gnd    :                   :         :           :                
-oX_COORD[9]                  : 119       : output : 3.3-V LVTTL       :         : 7         : N              
-oY_COORD[10]                 : 120       : output : 3.3-V LVTTL       :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 119       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 120       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 121       :        :                   :         : 7         :                
 VCCIO7                       : 122       : power  :                   : 3.3V    : 7         :                
 GND                          : 123       : gnd    :                   :         :           :                
-oY_COORD[6]                  : 124       : output : 3.3-V LVTTL       :         : 7         : N              
-oADC_DCLK                    : 125       : output : 3.3-V LVTTL       :         : 7         : N              
-oX_COORD[2]                  : 126       : output : 3.3-V LVTTL       :         : 7         : N              
-oX_COORD[1]                  : 127       : output : 3.3-V LVTTL       :         : 7         : N              
-oADC_DIN                     : 128       : output : 3.3-V LVTTL       :         : 8         : N              
-oX_COORD[11]                 : 129       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 124       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 125       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 126       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 127       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 128       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 129       :        :                   :         : 8         :                
 VCCIO8                       : 130       : power  :                   : 3.3V    : 8         :                
 GND                          : 131       : gnd    :                   :         :           :                
-oX_COORD[5]                  : 132       : output : 3.3-V LVTTL       :         : 8         : N              
-oY_COORD[7]                  : 133       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 132       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 133       :        :                   :         : 8         :                
 VCCINT                       : 134       : power  :                   : 1.2V    :           :                
-oY_COORD[8]                  : 135       : output : 3.3-V LVTTL       :         : 8         : N              
-oX_COORD[10]                 : 136       : output : 3.3-V LVTTL       :         : 8         : N              
-oY_COORD[9]                  : 137       : output : 3.3-V LVTTL       :         : 8         : N              
-oSCEN                        : 138       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 135       :        :                   :         : 8         :                
+oX_COORD[9]                  : 136       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 137       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 138       :        :                   :         : 8         :                
 VCCIO8                       : 139       : power  :                   : 3.3V    : 8         :                
 GND                          : 140       : gnd    :                   :         :           :                
-oY_COORD[11]                 : 141       : output : 3.3-V LVTTL       :         : 8         : N              
-iADC_PENIRQ_n                : 142       : input  : 3.3-V LVTTL       :         : 8         : N              
-oY_COORD[3]                  : 143       : output : 3.3-V LVTTL       :         : 8         : N              
-oY_COORD[2]                  : 144       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 141       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 142       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 143       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 144       :        :                   :         : 8         :                
 GND                          : EPAD      :        :                   :         :           :                

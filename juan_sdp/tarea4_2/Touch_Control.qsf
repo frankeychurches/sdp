@@ -71,9 +71,6 @@ set_global_assignment -name VERILOG_FILE adc_din_gen.v
 set_global_assignment -name VERILOG_FILE adc_dclk_gen.v
 set_global_assignment -name VERILOG_FILE adc_dclk_cnt.v
 set_global_assignment -name VERILOG_FILE ADC_CONTROL.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_location_assignment PIN_Y2 -to iCLK
@@ -126,4 +123,7 @@ set_location_assignment PIN_AH19 -to SEG5[3]
 set_location_assignment PIN_AG19 -to SEG5[2]
 set_location_assignment PIN_AF18 -to SEG5[1]
 set_location_assignment PIN_AH18 -to SEG5[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

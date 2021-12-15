@@ -28,19 +28,19 @@
 //
 // --------------------------------------------------------------------
 
-module adc_fsm (
-    CLK, RST_n, Enable1, Enable2, ADC_CS, 
-    ADC_PENIRQ_n, Ena_trans, Fin_trans
+module adc_fsm(
+    CLK, RST_n, Enable1, Enable2, wait_irq, ADC_CS, 
+    ADC_PENIRQ_n, wait_en, Ena_trans, Fin_trans
 );
 
-input CLK, RST_n, ADC_PENIRQ_n, Enable1, Enable2;
-output reg ADC_CS, Ena_trans, Fin_trans;
+input CLK, RST_n, ADC_PENIRQ_n, Enable1, Enable2, wait_irq;
+output reg ADC_CS, Ena_trans, Fin_trans, wait_en;
 
 // Declare state register
-reg		[1:0]state;
+reg		[2:0]state;
 
 // Declare states
-parameter S0 = 0, S1 = 1, S2 = 2, S3 = 3;
+parameter S0 = 0, S1 = 1, S2 = 2, S3 = 3, S4 = 4;
 
 // Output depends only on the state
 always @ (state) begin
@@ -50,30 +50,42 @@ always @ (state) begin
                 Ena_trans = 1'b0; 
                 Fin_trans = 1'b0; 
                 ADC_CS = 1'b0;
+                wait_en = 1'b0;
             end
         S1:
             begin
                 Ena_trans = 1'b0; 
                 Fin_trans = 1'b0; 
                 ADC_CS = 1'b0;
+                wait_en = 1'b0;
             end
         S2:
             begin
                 Ena_trans = 1'b1; 
                 Fin_trans = 1'b0; 
                 ADC_CS = 1'b1;
+                wait_en = 1'b0;
             end
         S3:
             begin
                 Ena_trans = 1'b0; 
                 Fin_trans = 1'b1; 
                 ADC_CS = 1'b0;
+                wait_en = 1'b0;
+            end
+        S4:
+            begin
+                Ena_trans = 1'b0; 
+                Fin_trans = 1'b0; 
+                ADC_CS = 1'b0;
+                wait_en = 1'b1;
             end
         default:
             begin
                 Ena_trans = 1'b0; 
                 Fin_trans = 1'b0; 
                 ADC_CS = 1'b0;
+                wait_en = 1'b0;
             end
     endcase
 end
@@ -97,7 +109,12 @@ always @ (posedge CLK or negedge RST_n) begin
                 else
                     state <= S2;
             S3:
+                    state <= S4;
+            S4:
+                if (wait_irq)
                     state <= S0;
+                else
+                    state <= S4;
         default: state <= S0;
         
         endcase

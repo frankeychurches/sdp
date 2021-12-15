@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Touch_Control
-Wed Dec 15 12:21:11 2021
+Wed Dec 15 21:28:18 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -52,15 +52,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 15 12:21:11 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 15 21:28:18 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Touch_Control                               ;
 ; Top-level Entity Name              ; ADC_CONTROL                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 85                                          ;
-;     Total combinational functions  ; 85                                          ;
-;     Dedicated logic registers      ; 46                                          ;
-; Total registers                    ; 46                                          ;
+; Total logic elements               ; 83                                          ;
+;     Total combinational functions  ; 83                                          ;
+;     Dedicated logic registers      ; 45                                          ;
+; Total registers                    ; 45                                          ;
 ; Total pins                         ; 32                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -167,8 +167,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -181,7 +180,6 @@ refer to the applicable agreement for further details.
 ; adc_fsm.v                        ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_fsm.v        ;         ;
 ; adc_dout_coord.v                 ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dout_coord.v ;         ;
 ; adc_din_gen.v                    ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_din_gen.v    ;         ;
-; adc_dclk_gen.v                   ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_gen.v   ;         ;
 ; adc_dclk_cnt.v                   ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v   ;         ;
 ; ADC_CONTROL.v                    ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v    ;         ;
 ; mathfun.vh                       ; yes             ; Auto-Found Unspecified File  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/mathfun.vh       ;         ;
@@ -193,20 +191,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 85         ;
+; Estimated Total logic elements              ; 83         ;
 ;                                             ;            ;
-; Total combinational functions               ; 85         ;
+; Total combinational functions               ; 83         ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 39         ;
-;     -- 3 input functions                    ; 19         ;
-;     -- <=2 input functions                  ; 27         ;
+;     -- 4 input functions                    ; 40         ;
+;     -- 3 input functions                    ; 17         ;
+;     -- <=2 input functions                  ; 26         ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 71         ;
+;     -- normal mode                          ; 69         ;
 ;     -- arithmetic mode                      ; 14         ;
 ;                                             ;            ;
-; Total registers                             ; 46         ;
-;     -- Dedicated logic registers            ; 46         ;
+; Total registers                             ; 45         ;
+;     -- Dedicated logic registers            ; 45         ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
 ; I/O pins                                    ; 32         ;
@@ -214,8 +212,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; iCLK~input ;
-; Maximum fan-out                             ; 46         ;
-; Total fan-out                               ; 477        ;
+; Maximum fan-out                             ; 45         ;
+; Total fan-out                               ; 471        ;
 ; Average fan-out                             ; 2.45       ;
 +---------------------------------------------+------------+
 
@@ -225,9 +223,8 @@ refer to the applicable agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name  ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+--------------+
-; |ADC_CONTROL                        ; 85 (0)              ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |ADC_CONTROL                                ; ADC_CONTROL  ; work         ;
-;    |adc_dclk_cnt:adc_dclk_cnt_inst| ; 16 (16)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL|adc_dclk_cnt:adc_dclk_cnt_inst ; adc_dclk_cnt ; work         ;
-;    |adc_dclk_gen:adc_dclk_gen_inst| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL|adc_dclk_gen:adc_dclk_gen_inst ; adc_dclk_gen ; work         ;
+; |ADC_CONTROL                        ; 83 (0)              ; 45 (0)                    ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |ADC_CONTROL                                ; ADC_CONTROL  ; work         ;
+;    |adc_dclk_cnt:adc_dclk_cnt_inst| ; 15 (15)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL|adc_dclk_cnt:adc_dclk_cnt_inst ; adc_dclk_cnt ; work         ;
 ;    |adc_din_gen:adc_din_gen_inst|   ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL|adc_din_gen:adc_din_gen_inst   ; adc_din_gen  ; work         ;
 ;    |adc_dout:adc_dout_inst|         ; 50 (50)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL|adc_dout:adc_dout_inst         ; adc_dout     ; work         ;
 ;    |adc_fsm:adc_fsm_inst|           ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL|adc_fsm:adc_fsm_inst           ; adc_fsm      ; work         ;
@@ -265,7 +262,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 46    ;
+; Total registers                              ; 45    ;
 ; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 29    ;
@@ -281,7 +278,7 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ADC_CONTROL|adc_dclk_cnt:adc_dclk_cnt_inst|count[2] ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ADC_CONTROL|n_counter:n_counter_inst|count[5]       ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ADC_CONTROL|n_counter:n_counter_inst|count[0]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -357,22 +354,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 32                          ;
-; cycloneiii_ff         ; 46                          ;
+; cycloneiii_ff         ; 45                          ;
 ;     CLR               ; 28                          ;
 ;     CLR SCLR          ; 1                           ;
 ;     ENA SCLR          ; 16                          ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 85                          ;
+; cycloneiii_lcell_comb ; 83                          ;
 ;     arith             ; 14                          ;
 ;         2 data inputs ; 14                          ;
-;     normal            ; 71                          ;
+;     normal            ; 69                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 39                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 2.98                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -381,7 +377,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -391,7 +387,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Dec 15 12:20:55 2021
+    Info: Processing started: Wed Dec 15 21:28:05 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Touch_Control -c Touch_Control
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -424,9 +420,8 @@ Info (12128): Elaborating entity "adc_dclk_cnt" for hierarchy "adc_dclk_cnt:adc_
 Warning (10230): Verilog HDL assignment warning at adc_dclk_cnt.v(52): truncated value with size 32 to match size of target (9) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v Line: 52
 Warning (10230): Verilog HDL assignment warning at adc_dclk_cnt.v(57): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v Line: 57
 Warning (10230): Verilog HDL assignment warning at adc_dclk_cnt.v(58): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v Line: 58
-Info (12128): Elaborating entity "adc_dclk_gen" for hierarchy "adc_dclk_gen:adc_dclk_gen_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v Line: 111
-Info (12128): Elaborating entity "adc_din_gen" for hierarchy "adc_din_gen:adc_din_gen_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v Line: 121
-Info (12128): Elaborating entity "adc_dout" for hierarchy "adc_dout:adc_dout_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v Line: 134
+Info (12128): Elaborating entity "adc_din_gen" for hierarchy "adc_din_gen:adc_din_gen_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v Line: 123
+Info (12128): Elaborating entity "adc_dout" for hierarchy "adc_dout:adc_dout_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v Line: 136
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
@@ -435,15 +430,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "iADC_BUSY" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v Line: 55
-Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 115 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 85 logic cells
+    Info (21061): Implemented 83 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4775 megabytes
-    Info: Processing ended: Wed Dec 15 12:21:11 2021
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Wed Dec 15 21:28:18 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:32
 
 
 +------------------------------------------+

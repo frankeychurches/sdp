@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Touch_Control
-Wed Dec 15 13:10:11 2021
+Wed Dec 15 21:25:49 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -19,14 +19,16 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst
  13. Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst
- 14. Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst
- 15. Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst
- 16. Port Connectivity Checks: "ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst"
- 17. Port Connectivity Checks: "ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+ 14. Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_wait
+ 15. Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst
+ 16. Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst
+ 17. Port Connectivity Checks: "ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst"
+ 18. Port Connectivity Checks: "ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_wait"
+ 19. Port Connectivity Checks: "ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -52,15 +54,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 15 13:10:11 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 15 21:25:49 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Touch_Control                               ;
 ; Top-level Entity Name              ; ADC_CONTROL_HEX                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 123                                         ;
-;     Total combinational functions  ; 123                                         ;
-;     Dedicated logic registers      ; 46                                          ;
-; Total registers                    ; 46                                          ;
+; Total logic elements               ; 155                                         ;
+;     Total combinational functions  ; 155                                         ;
+;     Dedicated logic registers      ; 71                                          ;
+; Total registers                    ; 71                                          ;
 ; Total pins                         ; 50                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -183,7 +185,6 @@ refer to the applicable agreement for further details.
 ; adc_fsm.v                        ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/adc_fsm.v         ;         ;
 ; adc_dout_coord.v                 ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/adc_dout_coord.v  ;         ;
 ; adc_din_gen.v                    ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/adc_din_gen.v     ;         ;
-; adc_dclk_gen.v                   ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/adc_dclk_gen.v    ;         ;
 ; adc_dclk_cnt.v                   ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/adc_dclk_cnt.v    ;         ;
 ; ADC_CONTROL.v                    ; yes             ; User Verilog HDL File        ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v     ;         ;
 ; mathfun.vh                       ; yes             ; Auto-Found Unspecified File  ; D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/mathfun.vh        ;         ;
@@ -195,20 +196,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 123        ;
+; Estimated Total logic elements              ; 155        ;
 ;                                             ;            ;
-; Total combinational functions               ; 123        ;
+; Total combinational functions               ; 155        ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 77         ;
-;     -- 3 input functions                    ; 18         ;
-;     -- <=2 input functions                  ; 28         ;
+;     -- 4 input functions                    ; 82         ;
+;     -- 3 input functions                    ; 21         ;
+;     -- <=2 input functions                  ; 52         ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 109        ;
-;     -- arithmetic mode                      ; 14         ;
+;     -- normal mode                          ; 117        ;
+;     -- arithmetic mode                      ; 38         ;
 ;                                             ;            ;
-; Total registers                             ; 46         ;
-;     -- Dedicated logic registers            ; 46         ;
+; Total registers                             ; 71         ;
+;     -- Dedicated logic registers            ; 71         ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
 ; I/O pins                                    ; 50         ;
@@ -216,9 +217,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; iCLK~input ;
-; Maximum fan-out                             ; 46         ;
-; Total fan-out                               ; 664        ;
-; Average fan-out                             ; 2.47       ;
+; Maximum fan-out                             ; 71         ;
+; Total fan-out                               ; 842        ;
+; Average fan-out                             ; 2.58       ;
 +---------------------------------------------+------------+
 
 
@@ -227,14 +228,14 @@ refer to the applicable agreement for further details.
 +----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Entity Name     ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------+-----------------+--------------+
-; |ADC_CONTROL_HEX                       ; 123 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |ADC_CONTROL_HEX                                                             ; ADC_CONTROL_HEX ; work         ;
-;    |ADC_CONTROL:ADC_CONTROL_inst|      ; 81 (0)              ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst                                ; ADC_CONTROL     ; work         ;
-;       |adc_dclk_cnt:adc_dclk_cnt_inst| ; 17 (17)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst ; adc_dclk_cnt    ; work         ;
-;       |adc_dclk_gen:adc_dclk_gen_inst| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_gen:adc_dclk_gen_inst ; adc_dclk_gen    ; work         ;
+; |ADC_CONTROL_HEX                       ; 155 (0)             ; 71 (0)                    ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |ADC_CONTROL_HEX                                                             ; ADC_CONTROL_HEX ; work         ;
+;    |ADC_CONTROL:ADC_CONTROL_inst|      ; 113 (0)             ; 71 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst                                ; ADC_CONTROL     ; work         ;
+;       |adc_dclk_cnt:adc_dclk_cnt_inst| ; 15 (15)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst ; adc_dclk_cnt    ; work         ;
 ;       |adc_din_gen:adc_din_gen_inst|   ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_din_gen:adc_din_gen_inst   ; adc_din_gen     ; work         ;
-;       |adc_dout:adc_dout_inst|         ; 44 (44)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_dout:adc_dout_inst         ; adc_dout        ; work         ;
-;       |adc_fsm:adc_fsm_inst|           ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst           ; adc_fsm         ; work         ;
+;       |adc_dout:adc_dout_inst|         ; 42 (42)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_dout:adc_dout_inst         ; adc_dout        ; work         ;
+;       |adc_fsm:adc_fsm_inst|           ; 6 (6)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst           ; adc_fsm         ; work         ;
 ;       |n_counter:n_counter_inst|       ; 12 (12)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst       ; n_counter       ; work         ;
+;       |n_counter:n_counter_wait|       ; 36 (36)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_wait       ; n_counter       ; work         ;
 ;    |hex7seg:hex7seg0|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|hex7seg:hex7seg0                                            ; hex7seg         ; work         ;
 ;    |hex7seg:hex7seg1|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|hex7seg:hex7seg1                                            ; hex7seg         ; work         ;
 ;    |hex7seg:hex7seg2|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADC_CONTROL_HEX|hex7seg:hex7seg2                                            ; hex7seg         ; work         ;
@@ -248,14 +249,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------+
 ; State Machine - |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst|state ;
-+----------+----------+----------+----------+----------------------------------------------+
-; Name     ; state.S3 ; state.S2 ; state.S1 ; state.S0                                     ;
-+----------+----------+----------+----------+----------------------------------------------+
-; state.S0 ; 0        ; 0        ; 0        ; 0                                            ;
-; state.S1 ; 0        ; 0        ; 1        ; 1                                            ;
-; state.S2 ; 0        ; 1        ; 0        ; 1                                            ;
-; state.S3 ; 1        ; 0        ; 0        ; 1                                            ;
-+----------+----------+----------+----------+----------------------------------------------+
++----------+----------+----------+----------+----------+-----------------------------------+
+; Name     ; state.S3 ; state.S2 ; state.S1 ; state.S0 ; state.S4                          ;
++----------+----------+----------+----------+----------+-----------------------------------+
+; state.S0 ; 0        ; 0        ; 0        ; 0        ; 0                                 ;
+; state.S1 ; 0        ; 0        ; 1        ; 1        ; 0                                 ;
+; state.S2 ; 0        ; 1        ; 0        ; 1        ; 0                                 ;
+; state.S3 ; 1        ; 0        ; 0        ; 1        ; 0                                 ;
+; state.S4 ; 0        ; 0        ; 0        ; 1        ; 1                                 ;
++----------+----------+----------+----------+----------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -274,12 +276,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 46    ;
-; Number of registers using Synchronous Clear  ; 17    ;
+; Total registers                              ; 71    ;
+; Number of registers using Synchronous Clear  ; 42    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 29    ;
+; Number of registers using Asynchronous Clear ; 30    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 41    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -289,8 +291,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; 4:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_wait|count[5]       ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[2] ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[5]       ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ADC_CONTROL_HEX|ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 
 
@@ -317,6 +320,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_wait ;
++----------------+----------+------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                   ;
++----------------+----------+------------------------------------------------------------------------+
+; fin_cuenta     ; 25000000 ; Signed Integer                                                         ;
+; N              ; 25       ; Signed Integer                                                         ;
++----------------+----------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst ;
 +----------------+-------+-----------------------------------------------------------------------+
@@ -326,6 +340,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; S1             ; 1     ; Signed Integer                                                        ;
 ; S2             ; 2     ; Signed Integer                                                        ;
 ; S3             ; 3     ; Signed Integer                                                        ;
+; S4             ; 4     ; Signed Integer                                                        ;
 +----------------+-------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -350,6 +365,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-----------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_wait"                                                                                                                                    ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; up_down     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; up_down[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; count       ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst"                                                                                                                                   ;
 +-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -366,22 +392,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 50                          ;
-; cycloneiii_ff         ; 46                          ;
-;     CLR               ; 28                          ;
+; cycloneiii_ff         ; 71                          ;
+;     CLR               ; 29                          ;
 ;     CLR SCLR          ; 1                           ;
-;     ENA SCLR          ; 16                          ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 123                         ;
-;     arith             ; 14                          ;
-;         2 data inputs ; 14                          ;
-;     normal            ; 109                         ;
+;     ENA SCLR          ; 41                          ;
+; cycloneiii_lcell_comb ; 155                         ;
+;     arith             ; 38                          ;
+;         2 data inputs ; 38                          ;
+;     normal            ; 117                         ;
 ;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 11                          ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 77                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 82                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.37                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -400,7 +425,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Dec 15 13:09:57 2021
+    Info: Processing started: Wed Dec 15 21:25:35 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Touch_Control -c Touch_Control
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -434,16 +459,20 @@ Warning (10230): Verilog HDL assignment warning at n_counter.v(54): truncated va
 Warning (10230): Verilog HDL assignment warning at n_counter.v(57): truncated value with size 32 to match size of target (7) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/n_counter.v Line: 57
 Warning (10230): Verilog HDL assignment warning at n_counter.v(59): truncated value with size 32 to match size of target (7) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/n_counter.v Line: 59
 Warning (10230): Verilog HDL assignment warning at n_counter.v(64): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/n_counter.v Line: 64
-Info (12128): Elaborating entity "adc_fsm" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 90
-Info (12128): Elaborating entity "adc_dclk_cnt" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 100
+Info (12128): Elaborating entity "n_counter" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_wait" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 87
+Warning (10230): Verilog HDL assignment warning at n_counter.v(54): truncated value with size 32 to match size of target (25) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/n_counter.v Line: 54
+Warning (10230): Verilog HDL assignment warning at n_counter.v(57): truncated value with size 32 to match size of target (25) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/n_counter.v Line: 57
+Warning (10230): Verilog HDL assignment warning at n_counter.v(59): truncated value with size 32 to match size of target (25) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/n_counter.v Line: 59
+Warning (10230): Verilog HDL assignment warning at n_counter.v(64): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/n_counter.v Line: 64
+Info (12128): Elaborating entity "adc_fsm" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_fsm:adc_fsm_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 103
+Info (12128): Elaborating entity "adc_dclk_cnt" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 116
 Warning (10230): Verilog HDL assignment warning at adc_dclk_cnt.v(52): truncated value with size 32 to match size of target (9) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/adc_dclk_cnt.v Line: 52
 Warning (10230): Verilog HDL assignment warning at adc_dclk_cnt.v(57): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/adc_dclk_cnt.v Line: 57
 Warning (10230): Verilog HDL assignment warning at adc_dclk_cnt.v(58): truncated value with size 32 to match size of target (1) File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/adc_dclk_cnt.v Line: 58
-Info (12128): Elaborating entity "adc_dclk_gen" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_gen:adc_dclk_gen_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 111
-Info (12128): Elaborating entity "adc_din_gen" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_din_gen:adc_din_gen_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 121
-Info (12128): Elaborating entity "adc_dout" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_dout:adc_dout_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 134
+Info (12128): Elaborating entity "adc_din_gen" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_din_gen:adc_din_gen_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 129
+Info (12128): Elaborating entity "adc_dout" for hierarchy "ADC_CONTROL:ADC_CONTROL_inst|adc_dout:adc_dout_inst" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL.v Line: 142
 Info (12128): Elaborating entity "hex7seg" for hierarchy "hex7seg:hex7seg0" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL_HEX.v Line: 57
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/Touch_Control.map.smsg
@@ -451,15 +480,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "iADC_BUSY" File: D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_2/ADC_CONTROL_HEX.v Line: 23
-Info (21057): Implemented 173 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 205 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 123 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4765 megabytes
-    Info: Processing ended: Wed Dec 15 13:10:11 2021
+    Info (21061): Implemented 155 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Wed Dec 15 21:25:49 2021
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Total CPU time (on all processors): 00:00:32
 
 
 +------------------------------------------+

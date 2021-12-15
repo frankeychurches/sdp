@@ -7,137 +7,115 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/simulation/modelsim
+Z0 dD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/simulation/modelsim
 vADC_CONTROL
-Z1 !s110 1639558871
+Z1 !s110 1639597829
 !i10b 1
-!s100 GiKHhz]PDHHmQc90D1G>M0
-I38We9kjcInBoVGzKTTe@O3
+!s100 :Da_15EE0P]]I2MP?SAc93
+IO:[J7zTfK[8nc[Z07Y02?3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1639512158
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/ADC_CONTROL.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/ADC_CONTROL.v
+w1639597773
+8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v
+FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v
 L0 32
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1639558871.000000
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/ADC_CONTROL.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/ADC_CONTROL.v|
+Z4 !s108 1639597829.000000
+!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/ADC_CONTROL.v|
 !i113 1
 Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work {+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored}
+Z6 !s92 -vlog01compat -work work {+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1}
 Z7 tCvgOpt 0
 n@a@d@c_@c@o@n@t@r@o@l
 vadc_dclk_cnt
 R1
 !i10b 1
 !s100 ?^CE3IjKliIlY?P;14b7U3
-I[W>J9V4WPlz138^4gF?eC1
+I4VSK_7oCLck_h?M32@@Sc0
 R2
 R0
 w1639331634
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dclk_cnt.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dclk_cnt.v
-Z8 FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/MathFun.vh
+8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v
+FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v
+Z8 FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/MathFun.vh
 Z9 L0 31
 R3
 r1
 !s85 0
 31
 R4
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/MathFun.vh|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dclk_cnt.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dclk_cnt.v|
-!i113 1
-R5
-R6
-R7
-vadc_dclk_gen
-Z10 !s110 1639558870
-!i10b 1
-!s100 Q:SJHm6JiFZLjS=mX>nj70
-IUL>21k`V>G_6SAa6:<Lic1
-R2
-R0
-w1639331207
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dclk_gen.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dclk_gen.v
-R9
-R3
-r1
-!s85 0
-31
-Z11 !s108 1639558870.000000
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dclk_gen.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dclk_gen.v|
+!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/MathFun.vh|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dclk_cnt.v|
 !i113 1
 R5
 R6
 R7
 vadc_din_gen
-R10
+R1
 !i10b 1
 !s100 FnH@@:R_YQ5WMUid5Z?9b0
-Ih;O7S4XhF:QR4j[E8@Ydb3
+I[OXDFlmLok3I1?WI2AeY`2
 R2
 R0
 w1639510547
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_din_gen.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_din_gen.v
+8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_din_gen.v
+FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_din_gen.v
 R9
 R3
 r1
 !s85 0
 31
-R11
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_din_gen.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_din_gen.v|
+Z10 !s108 1639597828.000000
+!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_din_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_din_gen.v|
 !i113 1
 R5
 R6
 R7
 vadc_dout
-Z12 !s110 1639558869
+Z11 !s110 1639597828
 !i10b 1
 !s100 XdBj=RETe`Z@_8fGHW>_n1
-Ia38>E7XV=h39MFzUSS@ZH1
+IRQKm?zZRW8B^<3_;jE:7<2
 R2
 R0
 w1639504985
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dout_coord.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dout_coord.v
+8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dout_coord.v
+FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dout_coord.v
 R9
 R3
 r1
 !s85 0
 31
-Z13 !s108 1639558869.000000
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dout_coord.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_dout_coord.v|
+R10
+!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dout_coord.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_dout_coord.v|
 !i113 1
 R5
 R6
 R7
 vadc_fsm
-R12
+R11
 !i10b 1
 !s100 kJ^=EKRMAgF^jKiEkRIg71
-IWnff18lm;8jC_^BgA[:D^3
+IXV8mK`9a>S1k]i@0X]JUk2
 R2
 R0
 w1639501358
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_fsm.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_fsm.v
+8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_fsm.v
+FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_fsm.v
 R9
 R3
 r1
 !s85 0
 31
-R13
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_fsm.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/adc_fsm.v|
+R10
+!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_fsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/adc_fsm.v|
 !i113 1
 R5
 R6
@@ -146,20 +124,20 @@ vEMULE_ADC
 R1
 !i10b 1
 !s100 UaiHJ:fjeGoEG7E[mW0DN1
-I4BzamYlSEl4Uk5]=KgKoX0
+Ib3B[fn4N19>b[9JPWhRnI2
 R2
 R0
-Z14 w1578405516
-Z15 8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/EMULE_ADC.vo
-Z16 FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/EMULE_ADC.vo
+Z12 w1578405516
+Z13 8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/EMULE_ADC.vo
+Z14 FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/EMULE_ADC.vo
 R9
 R3
 r1
 !s85 0
 31
 R4
-Z17 !s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/EMULE_ADC.vo|
-Z18 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/EMULE_ADC.vo|
+Z15 !s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/EMULE_ADC.vo|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/EMULE_ADC.vo|
 !i113 1
 R5
 R6
@@ -169,42 +147,42 @@ vhard_block
 R1
 !i10b 1
 !s100 >laX15THYXa=cXPBVzSI80
-IeF`hZz?VzK0RO@lM88QS`2
+IIeY8QTNji;JM]CNeD:BOQ1
 R2
 R0
+R12
+R13
 R14
-R15
-R16
 L0 2921
 R3
 r1
 !s85 0
 31
 R4
-R17
-R18
+R15
+R16
 !i113 1
 R5
 R6
 R7
 vMFB
-Z19 !s110 1639558872
+Z17 !s110 1639597830
 !i10b 1
 !s100 d1Ac^>T8QTPDP;kcGZ2]T2
-IKi0W41CIokeZQMA40`g040
+IJ1CjaV`>cLa46Dc9h?DLW1
 R2
 R0
 w1513091802
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/MFB.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/MFB.v
+8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/MFB.v
+FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/MFB.v
 L0 14
 R3
 r1
 !s85 0
 31
-Z20 !s108 1639558872.000000
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/MFB.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/MFB.v|
+Z18 !s108 1639597830.000000
+!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/MFB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/MFB.v|
 !i113 1
 R5
 R6
@@ -214,12 +192,12 @@ vn_counter
 R1
 !i10b 1
 !s100 bg<0Ld`mIFLkQ480B6ZdS0
-Iml>?Q:EQG2iBCP`_BF7`>2
+IM6STg]O87`Z?_g;ilgjNe2
 R2
 R0
 w1639331255
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/n_counter.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/n_counter.v
+8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/n_counter.v
+FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/n_counter.v
 R8
 R9
 R3
@@ -227,30 +205,30 @@ r1
 !s85 0
 31
 R4
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/MathFun.vh|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/n_counter.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/n_counter.v|
+!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/MathFun.vh|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/n_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/n_counter.v|
 !i113 1
 R5
 R6
 R7
 vtb_Touch_Control
-R19
+R17
 !i10b 1
 !s100 n]o>90UPC=oieVmW29O6@2
-IcB0z?Yl9T26K[ZFbYBMU<3
+I9g3b0zmi;^da?Z5P6zd5c2
 R2
 R0
 w1513091848
-8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/tb_Touch_Control.v
-FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/tb_Touch_Control.v
+8D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/tb_Touch_Control.v
+FD:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/tb_Touch_Control.v
 L0 18
 R3
 r1
 !s85 0
 31
-R20
-!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/tb_Touch_Control.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_restored/tb_Touch_Control.v|
+R18
+!s107 D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/tb_Touch_Control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1|D:/Juan/Escritorio/Master/Cuatrimestre A/Sistemas Digitales Programables/sdp/juan_sdp/tarea4_1/tb_Touch_Control.v|
 !i113 1
 R5
 R6
