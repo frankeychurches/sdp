@@ -1,0 +1,194 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: 10CL120(Y|Z)/EP3C120/.. (0x020F70DD)" sof_file="Touch_Control.sof">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <global_info>
+    <multi attribute="column width" size="23" value="34,34,65,74,68,78,95,96,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <single attribute="active instance" value="0"/>
+    <single attribute="lock mode" value="0"/>
+    <multi attribute="frame size" size="2" value="1920,1017"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <multi attribute="jtag widget size" size="2" value="348,135"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+  </global_info>
+  <instance enabled="true" entity_name="sld_signaltap" is_auto_node="yes" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="data horizontal scroll position" value="4086"/>
+      <single attribute="zoom level numerator" value="128"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="768"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <multi attribute="timebars" size="0" value=""/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2021/12/21 17:38:28  #0">
+      <clock name="iCLK" polarity="posedge" tap_mode="classic"/>
+      <config pipeline_level="0" ram_type="AUTO" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="32768" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[0]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[1]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[2]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[3]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[4]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[5]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[6]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[7]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[8]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[1]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[2]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[3]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[4]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[5]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[6]~reg0" tap_mode="classic"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[1]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[2]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[3]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[4]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[5]~reg0" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[6]~reg0" tap_mode="classic"/>
+          <wire name="iADC_BUSY" tap_mode="classic"/>
+          <wire name="iADC_DOUT" tap_mode="classic"/>
+          <wire name="iADC_PENIRQ_n" tap_mode="classic"/>
+          <wire name="oADC_DCLK" tap_mode="classic"/>
+          <wire name="oADC_DIN" tap_mode="classic"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[0]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[1]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[2]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[3]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[4]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[5]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[6]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[7]" tap_mode="classic"/>
+          <wire name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[8]" tap_mode="classic"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <unified_setup_data_view>
+          <node data_index="5" duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="oSCEN" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+          <node data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="iADC_BUSY" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <node data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" level-0="dont_care" name="iADC_PENIRQ_n" storage_index="2" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <node data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="oADC_DIN" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+          <node data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="iADC_DOUT" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <node data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="oADC_DCLK" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+          <node is_selected="false" level-0="alt_or" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0..6]" order="lsb_to_msb" radix="unsigned_dec" state="collapse" storage-0="alt_or" type="register">
+            <node data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="high" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0]~reg0" tap_mode="classic" trigger_index="9" type="unknown"/>
+            <node data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[1]~reg0" tap_mode="classic" trigger_index="10" type="unknown"/>
+            <node data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="high" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[2]~reg0" tap_mode="classic" trigger_index="11" type="unknown"/>
+            <node data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[3]~reg0" tap_mode="classic" trigger_index="12" type="unknown"/>
+            <node data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[4]~reg0" tap_mode="classic" trigger_index="13" type="unknown"/>
+            <node data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[5]~reg0" tap_mode="classic" trigger_index="14" type="unknown"/>
+            <node data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[6]~reg0" tap_mode="classic" trigger_index="15" type="unknown"/>
+          </node>
+          <node is_selected="true" level-0="alt_or" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[8..0]" order="msb_to_lsb" storage-0="alt_or" type="register">
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[8]" storage-0="low" storage_index="8" tap_mode="classic" trigger_index="8" type="unknown"/>
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[7]" storage-0="high" storage_index="7" tap_mode="classic" trigger_index="7" type="unknown"/>
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[6]" storage-0="low" storage_index="6" tap_mode="classic" trigger_index="6" type="unknown"/>
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[5]" storage-0="high" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[4]" storage-0="high" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[3]" storage-0="low" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[2]" storage-0="low" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[1]" storage-0="high" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+            <node duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[0]" storage-0="low" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          </node>
+        </unified_setup_data_view>
+        <data_view>
+          <net data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="iADC_BUSY" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <net data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" level-0="dont_care" name="iADC_PENIRQ_n" storage_index="2" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <net data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="oADC_DIN" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+          <net data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="iADC_DOUT" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <net data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="oADC_DCLK" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+          <bus is_selected="false" level-0="alt_or" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0..6]" order="lsb_to_msb" radix="unsigned_dec" state="collapse" storage-0="alt_or" type="register">
+            <net data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="high" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0]~reg0" tap_mode="classic" trigger_index="9" type="unknown"/>
+            <net data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[1]~reg0" tap_mode="classic" trigger_index="10" type="unknown"/>
+            <net data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="high" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[2]~reg0" tap_mode="classic" trigger_index="11" type="unknown"/>
+            <net data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[3]~reg0" tap_mode="classic" trigger_index="12" type="unknown"/>
+            <net data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[4]~reg0" tap_mode="classic" trigger_index="13" type="unknown"/>
+            <net data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[5]~reg0" tap_mode="classic" trigger_index="14" type="unknown"/>
+            <net data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[6]~reg0" tap_mode="classic" trigger_index="15" type="unknown"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <net data_index="5" duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="oSCEN" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+          <net data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="iADC_BUSY" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <net data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" level-0="dont_care" name="iADC_PENIRQ_n" storage_index="2" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <net data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="oADC_DIN" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+          <net data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="iADC_DOUT" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <net data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="false" name="oADC_DCLK" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+          <bus is_selected="false" level-0="alt_or" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0..6]" order="lsb_to_msb" radix="unsigned_dec" state="collapse" storage-0="alt_or" type="register">
+            <net data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="high" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0]~reg0" tap_mode="classic" trigger_index="9" type="unknown"/>
+            <net data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[1]~reg0" tap_mode="classic" trigger_index="10" type="unknown"/>
+            <net data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="high" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[2]~reg0" tap_mode="classic" trigger_index="11" type="unknown"/>
+            <net data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[3]~reg0" tap_mode="classic" trigger_index="12" type="unknown"/>
+            <net data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[4]~reg0" tap_mode="classic" trigger_index="13" type="unknown"/>
+            <net data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[5]~reg0" tap_mode="classic" trigger_index="14" type="unknown"/>
+            <net data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="false" is_trigger_input="true" level-0="low" name="ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[6]~reg0" tap_mode="classic" trigger_index="15" type="unknown"/>
+          </bus>
+          <bus is_selected="true" level-0="alt_or" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[8..0]" order="msb_to_lsb" storage-0="alt_or" type="register">
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[8]" storage-0="low" storage_index="8" tap_mode="classic" trigger_index="8" type="unknown"/>
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[7]" storage-0="high" storage_index="7" tap_mode="classic" trigger_index="7" type="unknown"/>
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[6]" storage-0="low" storage_index="6" tap_mode="classic" trigger_index="6" type="unknown"/>
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[5]" storage-0="high" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[4]" storage-0="high" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[3]" storage-0="low" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[2]" storage-0="low" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[1]" storage-0="high" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+            <net duplicate_name_allowed="false" is_data_input="false" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[0]" storage-0="low" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          </bus>
+        </setup_view>
+        <trigger_in_editor/>
+        <trigger_out_editor/>
+      </presentation>
+      <trigger CRC="CAE091BD" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2021/12/21 17:38:28  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="conditional" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">'ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[0]~reg0' == high &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[1]~reg0' == low &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[2]~reg0' == high &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[3]~reg0' == low &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[4]~reg0' == low &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[5]~reg0' == low &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|n_counter:n_counter_inst|count[6]~reg0' == low
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>111111111
+            <pwr_up_transitional>111111111</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[0]' == low &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[1]' == high &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[2]' == low &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[3]' == low &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[4]' == high &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[5]' == high &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[6]' == low &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[7]' == high &amp;&amp; 'ADC_CONTROL:ADC_CONTROL_inst|adc_dclk_cnt:adc_dclk_cnt_inst|count[8]' == low
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+        <log>
+          <data global_temp="1" name="log: Trig @ 2021/12/21 17:44:51 (0:0:5.2 elapsed)" power_up_mode="false" sample_depth="320" trigger_position="5">000000000001100000000011010000000000110000000010001000000000101000000010011000000001111000000111000100000100100100000110010100000100110100000110001100000101101100000111011100000100111100000110000010010100100010010110010010000100110010000110001010001100101010001110011010001100111010001110000110001100100110001110010110000100110110000110001110001100101110001110011110000100111110000110000001001101100001001111010001000101110001000111001001000100101001000110011001001101111001001111000101001100100101001110010101000100110101000110001101000101101101000111011101000100111101000110000011010100100011010110010011001100110011001110001011000100101011000110011011000100111011000110000111000100100111000110010111000100110111000110001111000100101111000110011111001100111111001110000000101100100000101110010000101100110000101110001000100100101000100110011000101100111000101110000100100100100100100110010100100100110100100110001100100100101100100010011100100000111100100010000000000001100000000011010000000000110000000010001000000000101000000010011000000001111000000011000100000100100100000110010100000100110100000110001100000101101100000111011100000100111100000110000010010100100010010110010010000100110010000110001010001100101010001110011010001100111010001110000110001100100110001110010110000100110110000110001110000100101110000110011110000100111110000110000001001101100001001111010001001101110001001111001001001100101001001110011001000101111001000111000101001100100101001110010101000100110101000110001101000101101101000111011101000100111101000110000011010100100011010110010011001100110011001110001011000100101011000110011011001100111011001110000111000100100111000110010111000100110111000110001111001100101111001110011111000100111111000110000000101100100000101110010000101100110000101110001000100100101000100110011000100100111000100110000100100100100100100110010100100100110100100010001100100000101100100010011100100000111100100010000000000001100000000011010000000000110000000010001000000000101000000010011000000001111000000011000100000100100100000110010100000100110100000110001100000101101100000111011100000100111100000110000010010100100010010110010010000100110010000110001010001100101010001110011010000100111010000110000110001100100110001110010110000100110110000110001110001100101110001110011110000100111110000110000001001101100001001111010001001101110001001111001001001100101001001110011001000101111001000111000101001100100101001110010101000100110101000110001101000101101101000111011101000100111101000110000011010100100011010110010011001100110011001110001011000100101011000110011011001100111011001110000111000100100111000110010111001100110111001110001111001100101111001110011111000100111111000110000000100100100000100110010000100100110000100110001000100100101000100110011000101100111000101110000100101100100100101110010100100100110100100010001100100000101100100010011100100000111100100010000000000001100000000011010000000000110000000010001000000000101000000010011000000001111000000011000100000100100100000110010100000100110100000110001100000101101100000111011100000100111100000110000010010100100010010110010010000100110010000110001010001100101010001110011010000100111010000110000110000100100110000110010110000100110110000110001110000100101110000110011110000100111110000110000001001101100001001111010001001101110001001111001001000100101001000110011001000101111001000111000101000100100101000110010101000100110101000110001101000101101101000111011101000100111101000110000011010100100011010110010011000100110011000110001011000100101011000110011011001100111011001110000111001100100111001110010111001100110111001110001111001100101111001110011111001100111111001110000000101100100000101110010000101100110000101110001000101100101000101110011000100100111000100110000100100100100100100110010100100100110100100110001100100000101100100010011100100000111100100010</data>
+          <extradata>BBBBBUBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</extradata>
+        </log>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+</session>
